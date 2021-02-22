@@ -6,15 +6,15 @@ from .forms import LoginForm
 
 
 def home_page(request):
-    context = {
-                    "title": "Home Page",
-                    "content": "Welcome to Home Page",
-              }
-
     # Conteúdo da home_page para usuários válidos.
     if request.user.is_authenticated:
-        context["log_in"] = "User logged in"
-    return render(request, "home.html", context)
+        context = {
+            "log_in": "User logged in",
+        }
+        return render(request, "home.html", context)
+    else:
+        return redirect("/login")
+
 
 
 def login_page(request):
@@ -42,7 +42,7 @@ def login_page(request):
             print(request.user.is_authenticated)
             print("Valid login")
             # Redireciona para uma página de sucesso.
-            return redirect("/")
+            return redirect("/home")
         else:
             # Retorna uma mensagem de erro de 'invalid login'.
             print("Invalid login")

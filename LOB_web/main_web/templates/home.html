@@ -14,11 +14,11 @@
 
     <body>
         <div class='text-center'>
-            <h1>{{ title }}</h1>
-            <p>{{ content }}</p>
+            {% if request.user.is_authenticated %}
+            <h1>Home Page</h1>
+            <p>Welcome to Home Page</p>
         </div>
         <div class='container'>
-            {% if request.user.is_authenticated %}
             <div class='row'>
                 <div class='col'>
                     <h1>Redirected</h1>

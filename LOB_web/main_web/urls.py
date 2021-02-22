@@ -4,7 +4,7 @@ from django.urls import path
 from loginapp.views import login_page, home_page
 
 urlpatterns = [
-    path('', home_page),
+    path('home', home_page),
     path('login/', login_page),
     path('admin/', admin.site.urls),
 ]
