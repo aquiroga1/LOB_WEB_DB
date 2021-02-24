@@ -4,4 +4,4 @@ from django.shortcuts import render, HttpResponse
 
 def center(request):
 
-    return render(request, "ProjetowebApp/center.html")
+    return render(request, "appcenter/center.html")
