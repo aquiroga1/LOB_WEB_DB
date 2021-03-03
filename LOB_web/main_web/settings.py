@@ -89,16 +89,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.login_app.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.login_app.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.login_app.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.login_app.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -120,4 +120,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
+# Define a URL de acesso às mídias via servidor web.
 STATIC_URL = '/static/'
+
+# STATIC_ROOT é a pasta que vai realmente servir os estáticos do projeto em produção.
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), '')
+
+# Para especificar o caminho de um static local.
+STATICFILES_DIRS = [
+os.path.join(BASE_DIR, 'main_web/static')
+]
+

@@ -47,7 +47,11 @@ def login_page(request):
             # Retorna uma mensagem de erro de 'invalid login'.
             print("Invalid login")
 
-    return render(request, "auth/login.html", context)
+    return render(request, "login_app/login3.html", context)
 
 # O get_user_model serve para retornar o model de user ativo no momento.
 User = get_user_model()
+
+
+def index(request):
+    return HttpResponse('ADMIN PAGE')
