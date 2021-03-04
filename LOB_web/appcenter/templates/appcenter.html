@@ -1,4 +1,4 @@
-{% extends "ProjetowebApp/base.html" %}
+{% extends "main_web/base.html" %}
 
 {% load static %}
 
@@ -11,18 +11,12 @@
     <section class="page-section clearfix">
         <div class="container">
           <div class="intro">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{app.imagem.url}}" alt="", style="width: 50%;">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{app.icon.url}}" alt="", style="width: 50%;">
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
               <h2 class="section-heading mb-4" >
-                <span class="section-heading-lower", style="color: yellowgreen;">{{app.titulo}}</span>
-                <span class="section-heading-upper">{{app.conteudo}}</span>
+                <span class="section-heading-lower", style="color: yellowgreen;">{{app.title}}</span>
+                <span class="section-heading-upper">{{app.descrition}}</span>
               </h2>
-               
-              <div style="text-align: left; font-size: 0.8em;">
-            
-                Autor: {{app.autor}}
-            
-              </div>
             </div>
           </div>
         </div>
