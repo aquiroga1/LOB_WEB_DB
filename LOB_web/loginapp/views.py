@@ -3,6 +3,8 @@ from django.http import HttpResponse
 
 from django.contrib.auth import authenticate, login, get_user_model
 from .forms import LoginForm
+from django.contrib import messages
+
 
 
 def home_page(request):
@@ -46,8 +48,14 @@ def login_page(request):
         else:
             # Retorna uma mensagem de erro de 'invalid login'.
             print("Invalid login")
+            messages.error(request,'username or password not correct')
+            return redirect("/login")
 
-    return render(request, "auth/login.html", context)
+    return render(request, "login_app/login3.html", context)
 
 # O get_user_model serve para retornar o model de user ativo no momento.
 User = get_user_model()
+
+
+def index(request):
+    return HttpResponse('ADMIN PAGE')
