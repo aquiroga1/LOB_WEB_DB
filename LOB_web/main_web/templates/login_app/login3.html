@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+    {% load static %}
+
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/login_app/login3.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<div class="main">
+
+
+    <div class="container">
+<center>
+<div class="middle">
+      <div id="login">
+
+        <form action="." method="POST">
+             {% csrf_token %}
+          <fieldset class="clearfix">
+
+            <p ><span class="fa fa-user"></span>{{  form.username  }}</p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fa fa-lock"></span>{{  form.password  }}</p> <!-- JS because of IE support; better: placeholder="Password" -->
+
+             <div>
+                 <span style="width:48%; text-align:left; display: inline-block;"><a class="adminclass" href="{% url 'admin:index' %}">admin</a></span>
+                 <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="Sign In"></span>
+             </div>
+              {% for message in messages %}
+                  <div class="alert alert-success">
+                      <a class="close" href="#" data-dismiss="alert">×</a>
+                        {{ message }}
+                  </div>
+              {% endfor %}
+
+          </fieldset>
+<div class="clearfix"></div>
+        </form>
+
+        <div class="clearfix"></div>
+
+      </div> <!-- end login -->
+      <div class="logo">
+        <a href="https://mesquitarc.wixsite.com/lobunicamp">
+          <img width="100%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
+        </a>
+          <div class="clearfix"></div>
+      </div>
+
+      </div>
+</center>
+    </div>
+
+</div>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>
+
+
+
+<!--Paletas de cores do site:-->
+<!--Fundo de azul : Codigo #203354-->
+<!--Elementos do site de amarelo: Codigo #F9C70C-->

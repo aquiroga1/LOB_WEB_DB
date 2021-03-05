@@ -13,6 +13,14 @@
 
 
     <body>
+
+    <nav class="nav">
+      <a class="nav-link active" href="#">Ativo</a>
+      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link disabled" href="#">Desativado</a>
+    </nav>
+
         <div class='text-center'>
             {% if request.user.is_authenticated %}
             <h1>Home Page</h1>
