@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5007c93-be6a-4191-938d-53804a741d9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_web/static/css/login_app/logout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/static/css/appcenter/appcenter.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/appcenter/appcenter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/static/css/appcenter/appcenter1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/static/css/login_app/login2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/static/css/login_app/login3.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/login_app/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/static/css/login_app/mmmm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/static/css/login_app/signin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/appcenter/appcenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/appcenter/appcenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/login_app/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/login_app/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/login_app/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/login_app/logout.html" afterDir="false" />
-    </list>
+    <list default="true" id="f5007c93-be6a-4191-938d-53804a741d9c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
