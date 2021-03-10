@@ -124,3 +124,4 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), '')
 STATICFILES_DIRS = [
 os.path.join(BASE_DIR, 'main_web/static')
 ]
+LOGOUT_REDIRECT_URL = 'logout/'

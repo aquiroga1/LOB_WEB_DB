@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from .forms import LoginForm
 from django.contrib import messages
-
 
 
 def home_page(request):
@@ -44,14 +43,20 @@ def login_page(request):
             print(request.user.is_authenticated)
             print("Valid login")
             # Redireciona para uma página de sucesso.
-            return redirect("/home")
+            return redirect("/appcenter")
         else:
             # Retorna uma mensagem de erro de 'invalid login'.
             print("Invalid login")
             messages.error(request,'username or password not correct')
             return redirect("/login")
 
-    return render(request, "login_app/login3.html", context)
+    return render(request, "login_app/login.html", context)
+
+def logout_page(request):
+    if request.method == "POST":
+        logout(request)
+        return redirect('/home')
+    return render(request, "login_app/logout.html")
 
 # O get_user_model serve para retornar o model de user ativo no momento.
 User = get_user_model()
