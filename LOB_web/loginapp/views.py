@@ -47,16 +47,17 @@ def login_page(request):
         else:
             # Retorna uma mensagem de erro de 'invalid login'.
             print("Invalid login")
-            messages.error(request,'username or password not correct')
+            messages.error(request,'Incorrect username or password.')
             return redirect("/login")
 
     return render(request, "login_app/login.html", context)
 
 def logout_page(request):
-    if request.method == "POST":
-        logout(request)
-        return redirect('/home')
-    return render(request, "login_app/logout.html")
+    # if request.method == "POST":
+    messages.error(request, 'Disconnected user.')
+    logout(request)
+    return redirect("/login")
+    # return render(request, "login_app/logout.html")
 
 # O get_user_model serve para retornar o model de user ativo no momento.
 User = get_user_model()
