@@ -35,7 +35,7 @@ class Subjects(models.Model):
     skin_color = models.CharField(max_length=1, choices=skin_color_choices)
     handedness = models.CharField(max_length=1, choices=handedness_choices)
     scholar_level = models.CharField(max_length=1, choices=scholar_level_choices)
-    additional_info = models.IntegerField(max_length=15)
+    additional_info = models.CharField(max_length=100)
 
 
 

@@ -1,164 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
 
-{% load static %}
+    {% load static %}
 
-  <head>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="{% static 'css/appcenter/appcenter.css' %}" rel="stylesheet">
-      <link href="{% static 'css/login_app/logout.css' %}" rel="stylesheet">
-      <link href="{% static 'css/appcenter/appcenter.css' %}" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+<!--    CSS DO FOOTER-->
+    <link href="{% static 'css/login_app/logout.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-  </head>
+</head>
+<body>
 
-  <body class="text-center">
-  {% if request.user.is_authenticated %}
+<div class="main">
 
-  <div id="logout">
-    <span style="width:90%; text-align:right;  display: inline-block;">
-        <a href="{% url 'logout' %}">Logout</a>
-    </span>
-  </div>
-<!--        <div class='text-center'>-->
-<!--            <a class="nav-link" href="{% url 'logout' %}">Logout</a>-->
-<!--        </div>-->
+    <div id="logout">
+        <span style="width:10%">
+            <a style="width:100%" href="{% url 'logout' %}">Logout</a>
+        </span>
+    </div>
 
-    <section id="team" class="pb-5">
-      <div class="container">
-          <h5 class="section-title h1">APP CENTER</h5>
-          <div class="row">
-              <!-- Team member -->
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" >
-                    <div class="mainflip flip-0">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="{% static 'img/appcenter/curriculum.png' %}" alt="card image"></p>
-                                    <h4 class="card-title">Subjects</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Subjects</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
-                                    <a href="https://www.google.com"><button type="button" class="btn btn-primary">
-                                    Enter</button></a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-              <!-- Team member -->
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" >
-                    <div class="mainflip flip-0">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="{% static 'img/appcenter/computer.png' %}" alt="card image"></p>
-                                    <h4 class="card-title">Measurements</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Measurements</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
-                                    <a href="https://www.google.com"><button type="button" class="btn btn-primary">
-                                    Enter</button></a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-              <!-- Team member -->
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" >
-                    <div class="mainflip flip-0">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="{% static 'img/appcenter/view.png' %}" alt="card image"></p>
-                                    <h4 class="card-title">View Data</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">View Data</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
-                                    <a href="https://www.google.com"><button type="button" class="btn btn-primary">
-                                    Enter</button></a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-              <!-- Team member -->
-              <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" >
-                    <div class="mainflip flip-0">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="{% static 'img/appcenter/monitoring1.png' %}" alt="card image"></p>
-                                    <h4 class="card-title">Analysis</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Analysis</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
-                                    <a href="https://www.google.com"><button type="button" class="btn btn-primary">
-                                    Enter</button></a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-
-          </div>
-      </div>
-  </section>
+{% block content %}
 
 
+{% endblock %}
+</div>
 
-  {% endif %}
 
 <!-- Footer -->
-    <footer class="footer text-faded text-center py-5", style="background-color: #F9C70C;">
-      <div class="container">
+    <footer class="footer text-faded text-center py-5"; style="background-color: #F9C70C;">
         <p class="m-0 mbt1">&copy; LOB Unicamp 2021</p>
-      </div>
 	</footer>
-  </body>
+
+
+    <!-- Bootstrap -->
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
 </html>
+
+
+
+<!--Paletas de cores do site:-->
+<!--Fundo de azul : Codigo #203354-->
+<!--Elementos do site de amarelo: Codigo #F9C70C-->

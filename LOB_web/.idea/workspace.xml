@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5007c93-be6a-4191-938d-53804a741d9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subjectsapp/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_web/static/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_web/static/css/subjects_app/subjects.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcenter/templates/appcenter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/login_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/login_app/signin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subjectsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +65,11 @@
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\main_web\static\css\login_app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adrda\OneDrive\Documentos\lobweb\LOB_WEB_DB\LOB_web\main_web\templates" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\main_web" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\loginapp" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\loginapp\static\css\bootstrap" />
-      <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\loginapp\static\css\login_app" />
     </key>
   </component>
   <component name="RunManager">
