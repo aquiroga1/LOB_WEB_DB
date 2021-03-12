@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5007c93-be6a-4191-938d-53804a741d9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_web/static/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_web/static/css/subjects_app/subjects.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/login_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/login_app/signin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectsapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subjectsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,11 +61,11 @@
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\main_web\static\css\login_app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adrda\OneDrive\Documentos\lobweb\LOB_WEB_DB\LOB_web\main_web\templates" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\main_web" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\loginapp" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\loginapp\static\css\bootstrap" />
+      <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\loginapp\static\css\login_app" />
     </key>
   </component>
   <component name="RunManager">
@@ -165,14 +161,7 @@
       <option name="project" value="LOCAL" />
       <updated>1614813297120</updated>
     </task>
-    <task id="LOCAL-00007" summary="base.html working">
-      <created>1615555253485</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1615555253485</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +178,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="login_app" />
+                        <option value="subjects_app" />
                       </list>
                     </value>
                   </entry>
@@ -209,8 +198,7 @@
     <MESSAGE value="redirection to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="link redirecting to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="pulling login_app" />
-    <MESSAGE value="base.html working" />
-    <option name="LAST_COMMIT_MESSAGE" value="base.html working" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulling login_app" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

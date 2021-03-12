@@ -3,39 +3,45 @@ from django.db import models
 
 class Subjects(models.Model):
     gender_choices = [
-        ["F", "Female"],
-        ["M", "Male"],
-        ["N", "None of these options"]
+        ("F", "Female"),
+        ("M", "Male"),
     ]
     condition_choices = [
-        ["P", "Patient"],
-        ["N", "Not Patient"],
+        ("P", "Patient"),
+        ("H", "Healthy"),
     ]
     skin_color_choices = [
-        ["B", "Black"],
-        ["W", "White"],
-        ["N", "None of these options"]
+        ("B", "Black"),
+        ("W", "White"),
+        ("Y", "Yellow"),
+        ("BR", "Brown"),
+        ("N", "No info"),
     ]
     handedness_choices = [
-        ["L", "Left"],
-        ["R", "Right"],
+        ("L", "Left"),
+        ("R", "Right"),
+        ("N", "No info")
     ]
     scholar_level_choices = [
-        ["L", "Left"],
-        ["R", "Right"],
+        ("N", "No education"),
+        ("PS", "Pre school"),
+        ("E", "Elementary"),
+        ("HS", "Higher school"),
+        ("T", "Technical"),
     ]
 
     name = models.CharField(max_length=100, null=False)
-    email = models.EmailField(null=False)
-    telephone = models.CharField(max_length=12)
-    condition = models.CharField(max_length=1, choices=condition_choices)
-    gender = models.CharField(max_length=1, choices=gender_choices)
-    birth_date = models.DateField(auto_now=False, null=True, blank=True)
-    height = models.DecimalField(max_digits=2, decimal_places=1)
-    skin_color = models.CharField(max_length=1, choices=skin_color_choices)
-    handedness = models.CharField(max_length=1, choices=handedness_choices)
-    scholar_level = models.CharField(max_length=1, choices=scholar_level_choices)
-    additional_info = models.CharField(max_length=100)
+    email = models.EmailField(null=True)
+    telephone = models.CharField(max_length=100, null=True)
+    condition = models.CharField(max_length=20, null=False, choices=condition_choices)
+    gender = models.CharField(max_length=20, null=False, choices=gender_choices)
+    birth_date = models.DateField(auto_now=False, null=False, blank=True)
+    height = models.DecimalField(max_digits=3, decimal_places=2, null=True)
+    weight = models.DecimalField(max_digits=5, decimal_places=2, null=True)
+    skin_color = models.CharField(max_length=20, null=True, default='No info', choices=skin_color_choices)
+    handedness = models.CharField(max_length=20, null=False, default='No info', choices=handedness_choices)
+    scholar_level = models.CharField(max_length=20, null=False, default='No info', choices=scholar_level_choices)
+    additional_info = models.CharField(max_length=100, null=True)
 
 
 
