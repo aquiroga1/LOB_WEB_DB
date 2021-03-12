@@ -50,7 +50,7 @@ def login_page(request):
             messages.error(request,'Incorrect username or password.')
             return redirect("/login")
 
-    return render(request, "login_app/login.html", context)
+    return render(request, "base.html", context)
 
 def logout_page(request):
     # if request.method == "POST":
