@@ -1,8 +1,27 @@
-.clearfix {
-  *zoom: 1;
+input {
+	border: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 0;
+	-webkit-appearance: none;
+}
 
-  &:before,
-  &:after {
-    content: ' ';
-    display: table;
-  }
+input[type=submit] {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #F9C70C;
+  color: #00000;
+  font-weight: bold;
+  /* margin-bottom: 2em; */
+  text-transform: uppercase;
+  padding: 5px 10px;
+  height: 30px;
+}
+
+input[type="submit"]:hover {
+	background-color: white;
+	color: black
+}
+

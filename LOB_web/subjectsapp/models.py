@@ -11,16 +11,16 @@ class Subjects(models.Model):
         ("H", "Healthy"),
     ]
     skin_color_choices = [
+        ("N", "No info"),
         ("B", "Black"),
         ("W", "White"),
         ("Y", "Yellow"),
         ("BR", "Brown"),
-        ("N", "No info"),
     ]
     handedness_choices = [
+        ("N", "No info"),
         ("L", "Left"),
         ("R", "Right"),
-        ("N", "No info")
     ]
     scholar_level_choices = [
         ("N", "No education"),
@@ -41,7 +41,7 @@ class Subjects(models.Model):
     skin_color = models.CharField(max_length=20, null=True, default='No info', choices=skin_color_choices)
     handedness = models.CharField(max_length=20, null=False, default='No info', choices=handedness_choices)
     scholar_level = models.CharField(max_length=20, null=False, default='No info', choices=scholar_level_choices)
-    additional_info = models.CharField(max_length=100, null=True)
+    additional_info = models.TextField(max_length=200, null=True)
 
 
 

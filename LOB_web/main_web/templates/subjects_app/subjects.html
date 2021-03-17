@@ -1,19 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% extends "base.html" %}
-
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
+<link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
 
 {% block content %}
+<div class="container">
+    <div class="col-md-5">
+        <div id="formularios">
+            <form role="form" action="." method="POST">
+                {% csrf_token %}
+                <br style="clear:both">
+                        <h3 style="margin-bottom: 25px; text-align: center; color: white">Subjects Form</h3>
 
-{{ form.as_p }}
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                     <label for="id_name" class="input-group-text">Name:</label>
+                                </div>
+                                <input type="text" class="form-control" name="name" placeholder="Name" maxlength="100" required="" id="id_name">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                     <label for="id_email" class="input-group-text">Email:</label>
+                                </div>
+                                <input type="email" class="form-control" name="email" maxlength="254" required="" id="id_email">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                     <label for="id_telephone" class="input-group-text">Telephone:</label>
+                                </div>
+                                <input type="text" class="form-control" name="telephone" maxlength="100" required="" id="id_telephone">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_condition">Condition:</label>
+                                </div>
+                                <select class="custom-select" name="condition" required="" id="id_condition">
+                                  <option value="" selected="">---------</option>
+                                  <option value="P">Patient</option>
+                                  <option value="H">Healthy</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_gender">Gender:</label>
+                                </div>
+                                <select class="custom-select" name="gender" required="" id="id_gender">
+                                  <option value="" selected="">---------</option>
+                                  <option value="F">Female</option>
+                                  <option value="M">Male</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                     <label class="input-group-text" for="id_birth_date">Birth date:</label>
+                                </div>
+                                <input class="form-control" type="date" name="birth_date" id="id_birth_date">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                     <label class="input-group-text" for="id_height">Height:</label>
+                                </div>
+                                <input class="form-control" type="number" name="height" step="0.01" required="" id="id_height">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_weight">Weight:</label>
+                                </div>
+                                <input class="form-control" type="number" name="weight" step="0.01" required="" id="id_weight">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_skin_color">Skin color:</label>
+                                </div>
+                                <select class="custom-select" name="skin_color" id="id_skin_color">
+                                  <option value="N">No info</option>
+                                  <option value="B">Black</option>
+                                  <option value="W">White</option>
+                                  <option value="Y">Yellow</option>
+                                  <option value="BR">Brown</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_handedness">Handedness:</label>
+                                </div>
+                                <select class="custom-select" name="handedness" id="id_handedness">
+                                  <option value="N">No info</option>
+                                  <option value="L">Left</option>
+                                  <option value="R">Right</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label for="id_scholar_level" class="input-group-text">Scholar level:</label>
+                                </div>
+                                <select class="custom-select" name="scholar_level" id="id_scholar_level">
+                                      <option value="N">No education</option>
+                                      <option value="PS">Pre school</option>
+                                      <option value="E">Elementary</option>
+                                      <option value="HS">Higher school</option>
+                                      <option value="T">Technical</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group input-group-lg">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_additional_info">Additional info:</label>
+                                </div>
+                                <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" required="" id="id_additional_info"></textarea>
+                            </div>
+
+                <br style="clear:both">
+
+                <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+
+            </form>
+            <br style="clear:both">
+        </div>
+    </div>
+</div>
 
 {% endblock %}
-
-</body>
-</html>

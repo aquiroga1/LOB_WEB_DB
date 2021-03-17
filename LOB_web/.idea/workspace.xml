@@ -4,8 +4,13 @@
     <list default="true" id="f5007c93-be6a-4191-938d-53804a741d9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/static/css/subjects_app/subjects.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/subjects_app/subjects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subjectsapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subjectsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/subjects_app" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -58,6 +63,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adrda\OneDrive\Documentos\lobweb\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
+      <recent name="C:\Users\adrda\OneDrive\Documentos\lobweb\LOB_WEB_DB\LOB_web\main_web\static\css\subjects_app" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\main_web\static\css\login_app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
