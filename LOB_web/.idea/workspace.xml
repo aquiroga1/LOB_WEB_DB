@@ -4,8 +4,8 @@
     <list default="true" id="d2849fe3-b699-4e4d-89c3-d5702325fd5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/appcenter/appcenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/appcenter/appcenter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +118,7 @@
       <workItem from="1614620870283" duration="879000" />
       <workItem from="1614812603187" duration="392000" />
       <workItem from="1615224776326" duration="28000" />
-      <workItem from="1616206492913" duration="778000" />
+      <workItem from="1616206492913" duration="1494000" />
     </task>
     <task id="LOCAL-00001" summary="login form">
       <created>1613586231634</created>
@@ -176,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616206722479</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="subjects page to login if not logged in">
+      <created>1616207492897</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616207492897</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +222,8 @@
     <MESSAGE value="pulling login_app" />
     <MESSAGE value="login not working" />
     <MESSAGE value="commit null" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit null" />
+    <MESSAGE value="subjects page to login if not logged in" />
+    <option name="LAST_COMMIT_MESSAGE" value="subjects page to login if not logged in" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
