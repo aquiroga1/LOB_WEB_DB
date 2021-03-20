@@ -9,32 +9,82 @@
     <!-- Bootstrap -->
     <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
-<!--    CSS DO FOOTER-->
-    <link href="{% static 'css/login_app/logout.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style>
+input {
+	border: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 0;
+	-webkit-appearance: none;
+}
+input[type="submit"] {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #F9C70C;
+  color: #00000;
+  font-weight: bold;
+  /* margin-bottom: 2em; */
+  text-transform: uppercase;
+  padding: 5px 10px;
+  height: 30px;
+}
+
+input[type="submit"]:hover {
+	background-color: white;
+	color: black
+}
+
+a {
+	border: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 4em;
+	padding: 0;
+    -webkit-appearance: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #F9C70C;
+  color: black;
+  font-weight: bold;
+  /* margin-bottom: em; */
+  text-transform: uppercase;
+  padding: 5px 10px;
+  height: 30px;
+}
+
+a:hover {
+	background-color: white;
+	color: black
+}
+</style>
 
 </head>
 <body>
 
 <div class="main">
+    <span style="width:99%; text-align:right;  display: inline-block;">
+        <a href="{% url 'logout' %}">Logout</a>
+    </span>
+    <div class="container">
+        <center>
+        <div class="middle">
+            {% block content %}
 
-    <div id="logout">
-        <span style="width:10%">
-            <a style="width:100%" href="{% url 'logout' %}">Logout</a>
-        </span>
+
+            {% endblock %}
+        </div>
+        </center>
     </div>
+
 </div>
-
-
 <!-- Footer -->
-    <footer class="footer text-faded text-center py-5"; style="background-color: #F9C70C;">
-        <p class="m-0 mbt1">&copy; LOB Unicamp 2021</p>
+    <footer class="footer text-faded text-center py-5";>
+        <p class="m-0 mbt1" style="color: black">&copy; LOB Unicamp 2021</p>
 	</footer>
-
-
-    <!-- Bootstrap -->
-    <script src="{% static 'jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
 

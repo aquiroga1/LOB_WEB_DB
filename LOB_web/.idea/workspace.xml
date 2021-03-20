@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2849fe3-b699-4e4d-89c3-d5702325fd5e" name="Default Changelist" comment="" />
+    <list default="true" id="f5007c93-be6a-4191-938d-53804a741d9c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="subjects_app" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -156,14 +156,7 @@
       <option name="project" value="LOCAL" />
       <updated>1614813297120</updated>
     </task>
-    <task id="LOCAL-00007" summary="login not working">
-      <created>1615898273849</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1615898273849</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +173,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="subjects_app" />
+                        <option value="login_app" />
                       </list>
                     </value>
                   </entry>
@@ -200,8 +193,7 @@
     <MESSAGE value="redirection to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="link redirecting to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="pulling login_app" />
-    <MESSAGE value="login not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="login not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulling login_app" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
