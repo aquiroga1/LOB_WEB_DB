@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
+
 <style>
 input {
 	border: none;
@@ -40,7 +41,7 @@ a {
 	border: none;
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size: 14px;
-	line-height: 1.5em;
+	line-height: 4em;
 	padding: 0;
     -webkit-appearance: none;
   border-radius: 3px;
@@ -49,24 +50,24 @@ a {
   background-color: #F9C70C;
   color: black;
   font-weight: bold;
-  /* margin-bottom: 2em; */
+  /* margin-bottom: em; */
   text-transform: uppercase;
   padding: 5px 10px;
   height: 30px;
 }
-
 
 a:hover {
 	background-color: white;
 	color: black
 }
 </style>
+
 </head>
 <body>
 
 <div class="main">
     <span style="width:99%; text-align:right;  display: inline-block;">
-        <a style="width:100%" href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'logout' %}">Logout</a>
     </span>
     <div class="container">
         <center>
