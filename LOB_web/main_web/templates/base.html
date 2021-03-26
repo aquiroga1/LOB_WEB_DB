@@ -66,9 +66,20 @@ a:hover {
 <body>
 {% if request.user.is_authenticated %}
 <div class="main">
-    <span style="width:99%; text-align:right;  display: inline-block;">
-        <a href="{% url 'logout' %}">Logout</a>
-    </span>
+
+    <nav  style="background-color: transparent"  class="navbar navbar-transparent">
+       <span style="width:99%; display: inline-block;">
+
+                <img width="8%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
+
+                <a href="{% url 'logout' %}">Logout</a>
+       </span>
+   </nav>
+
+<!--        <span style="width:99%; text-align:right;  display: inline-block;">-->
+<!--            <a href="{% url 'logout' %}">Logout</a>-->
+<!--        </span>-->
+
     <div class="container">
         <center>
         <div class="middle">
