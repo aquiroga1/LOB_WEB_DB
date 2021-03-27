@@ -17,16 +17,32 @@
                                 <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">
                             </div>
 
-                             <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label class="input-group-text" for="id_condition">Condition:</label>
-                                    </div>
-                                    <select class="custom-select" name="condition" required="" id="id_condition">
-                                      <option value="" selected="">---------</option>
-                                      <option value="P">Patient</option>
-                                      <option value="H">Healthy</option>
-                                    </select>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#id_condition").change(function () {
+            if ($(this).val() == "P") {
+                $("#div_MedRec").show();
+            } else {
+                $("#div_MedRec").hide();
+            }
+        });
+    });
+</script>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_condition">Condition:</label>
                                 </div>
+                                <select class="custom-select" name="condition" required="" id="id_condition">
+                                  <option value="" selected="">---------</option>
+                                  <option value="P">Patient</option>
+                                  <option value="H">Healthy</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3" id="div_MedRec" style="display: none">
+                                <p>MedRec</p>
+                            </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
