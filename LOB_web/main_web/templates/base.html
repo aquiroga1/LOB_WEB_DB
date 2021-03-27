@@ -41,7 +41,7 @@ a {
 	border: none;
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size: 14px;
-	line-height: 4em;
+	line-height: 3em;
 	padding: 0;
     -webkit-appearance: none;
   border-radius: 3px;
@@ -60,6 +60,17 @@ a:hover {
 	background-color: white;
 	color: black
 }
+
+.navbase {
+    	left:50%;
+		top:50%;
+		margin-left:px;
+		margin-top:px;
+    background-color: transparent
+}
+.navbase:hover {
+    background-color: transparent
+}
 </style>
 
 </head>
@@ -67,14 +78,24 @@ a:hover {
 {% if request.user.is_authenticated %}
 <div class="main">
 
-    <nav  style="background-color: transparent"  class="navbar navbar-transparent">
-       <span style="width:99%; display: inline-block;">
+<!--    <br style="clear:both">-->
+<div class="d-flex bd-highlight mb-3">
+     <div class="mr-auto p-2 bd-highlight" >
+         <a class="navbase" href="">
+            <img width="4%" src="{% static 'img/LOGO_UNICAMP.png' %}" alt="...">
+          </a>
 
-                <img width="8%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
-
+          <a class="navbase" href="https://mesquitarc.wixsite.com/lobunicamp">
+            <img width="9%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
+          </a>
+     </div>
+<!-- <div class="p-2 bd-highlight">Flex item</div>-->
+     <div class="p-2 bd-highlight">
+         <span style="width:98%; text-align:right;  display: inline-block;">
                 <a href="{% url 'logout' %}">Logout</a>
-       </span>
-   </nav>
+         </span>
+     </div>
+</div>
 
 <!--        <span style="width:99%; text-align:right;  display: inline-block;">-->
 <!--            <a href="{% url 'logout' %}">Logout</a>-->
