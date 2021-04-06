@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5007c93-be6a-4191-938d-53804a741d9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_web/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectsapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +26,18 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="login_app" />
+    <option name="BRANCH" value="subjects_app" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="subjects_app" />
+        <entry key="$PROJECT_DIR$/.." value="update_subjects" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -97,7 +103,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f5007c93-be6a-4191-938d-53804a741d9c" name="Default Changelist" comment="" />
+      <changelist id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="" />
       <created>1613532509410</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -119,6 +125,7 @@
       <workItem from="1614620870283" duration="879000" />
       <workItem from="1614812603187" duration="392000" />
       <workItem from="1615224776326" duration="28000" />
+      <workItem from="1616206492913" duration="1494000" />
     </task>
     <task id="LOCAL-00001" summary="login form">
       <created>1613586231634</created>
@@ -162,7 +169,56 @@
       <option name="project" value="LOCAL" />
       <updated>1614813297120</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="login not working">
+      <created>1615898273849</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615898273849</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit null">
+      <created>1616206722479</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616206722479</updated>
+    </task>
+    <task id="LOCAL-00009" summary="subjects page to login if not logged in">
+      <created>1616207492897</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616207492897</updated>
+    </task>
+    <task id="LOCAL-00010" summary="if youre logged in the login page link redirects to appcenter">
+      <created>1616209119642</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616209119642</updated>
+    </task>
+    <task id="LOCAL-00011" summary="subjects_app desconfig">
+      <created>1616527371390</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616527371390</updated>
+    </task>
+    <task id="LOCAL-00012" summary="main working">
+      <created>1616774654666</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616774654666</updated>
+    </task>
+    <task id="LOCAL-00013" summary="logo lob and unicamp base.html">
+      <created>1616814471921</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1616814471952</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +255,14 @@
     <MESSAGE value="redirection to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="link redirecting to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="pulling login_app" />
-    <option name="LAST_COMMIT_MESSAGE" value="pulling login_app" />
+    <MESSAGE value="login not working" />
+    <MESSAGE value="commit null" />
+    <MESSAGE value="subjects page to login if not logged in" />
+    <MESSAGE value="if youre logged in the login page link redirects to appcenter" />
+    <MESSAGE value="subjects_app desconfig" />
+    <MESSAGE value="main working" />
+    <MESSAGE value="logo lob and unicamp base.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="logo lob and unicamp base.html" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
