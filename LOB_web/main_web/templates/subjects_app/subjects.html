@@ -106,11 +106,15 @@
                                     <label for="id_scholar_level" class="input-group-text">Scholar level:</label>
                                 </div>
                                 <select class="custom-select" name="scholar_level" id="id_scholar_level">
+                                      <option value="NI">No info</option>
                                       <option value="N">No education</option>
                                       <option value="PS">Pre school</option>
-                                      <option value="E">Elementary</option>
-                                      <option value="HS">Higher school</option>
+                                      <option value="ES">Elementary school</option>
+                                      <option value="MS">Middle school</option>
+                                      <option value="HS">High school</option>
                                       <option value="T">Technical</option>
+                                      <option value="G">Graduate</option>
+                                      <option value="PG">Post-Graduate</option>
                                 </select>
                             </div>
 
@@ -145,6 +149,6 @@
         </div>
     </div>
 </div>
-
+{{ form_comorbidities }}
 {% endblock %}
 

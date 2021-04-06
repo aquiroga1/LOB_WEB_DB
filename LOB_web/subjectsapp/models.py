@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -11,37 +12,66 @@ class Subjects(models.Model):
         ("H", "Healthy"),
     ]
     skin_color_choices = [
-        ("N", "No info"),
         ("B", "Black"),
         ("W", "White"),
         ("Y", "Yellow"),
         ("BR", "Brown"),
+        ("N", "No info"),
     ]
     handedness_choices = [
-        ("N", "No info"),
         ("L", "Left"),
         ("R", "Right"),
+        ("N", "No info")
     ]
     scholar_level_choices = [
+        ("NI", "No info"),
         ("N", "No education"),
         ("PS", "Pre school"),
-        ("E", "Elementary"),
-        ("HS", "Higher school"),
+        ("ES", "Elementary school"),
+        ("MS", "Middle school"),
+        ("HS", "High school"),
         ("T", "Technical"),
+        ("G", "Graduate"),
+        ("PG", "Post-Graduate"),
     ]
 
     name = models.CharField(max_length=100, null=False)
-    email = models.EmailField(null=True)
-    telephone = models.CharField(max_length=100, null=True)
-    condition = models.CharField(max_length=20, null=False, choices=condition_choices)
-    gender = models.CharField(max_length=20, null=False, choices=gender_choices)
     birth_date = models.DateField(auto_now=False, null=False, blank=True)
+    gender = models.CharField(max_length=20, null=False, choices=gender_choices)
+    condition = models.CharField(max_length=20, null=False, choices=condition_choices)
     height = models.DecimalField(max_digits=3, decimal_places=2, null=True)
     weight = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     skin_color = models.CharField(max_length=20, null=True, default='No info', choices=skin_color_choices)
     handedness = models.CharField(max_length=20, null=False, default='No info', choices=handedness_choices)
     scholar_level = models.CharField(max_length=20, null=False, default='No info', choices=scholar_level_choices)
-    additional_info = models.TextField(max_length=200, null=True)
+    telephone = models.CharField(max_length=100, null=True)
+    email = models.EmailField(null=True)
+    additional_info = models.TextField(null=True)
+    auth_user_id = models.ForeignKey(User, db_column="user", on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
 
+class Diseases(models.Model):
+    name = models.CharField(max_length=100, null=False)
+    description = models.TextField(null=False)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
+
+class Comorbidities(models.Model):
+    name = models.CharField(max_length=100, null=False)
+    abbreviation = models.CharField(max_length=50, null=False)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+
+class Medical_Record(models.Model):
+    subjects_id = models.ForeignKey(Subjects, on_delete=models.CASCADE)
+    HC_number = models.IntegerField(null=False)
+    diseases_id = models.ForeignKey(Diseases, on_delete=models.CASCADE)
+    comorbidities_ids = models.ManyToManyField(Comorbidities)
+    surgery = models.TextField(null=True)
+    clinical_outcomes = models.TextField(null=False)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)

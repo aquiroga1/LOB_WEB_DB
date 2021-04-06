@@ -12,12 +12,24 @@ class SubjectsForm(forms.ModelForm):
         widgets = {
             'birth_date': DateInput(attrs={'type': 'date'})
         }
-        #
-        # widgets = {
-        #     'name': TextInput(attrs={'placeholder': 'Name'})
-        # }
 
 
-        # name = forms.CharField(label='Name', widget=forms.TextInput(attrs={'placeholder': 'Name'}))
-        # email = forms.EmailField(label='Email', widget=forms.TextInput(attrs={'placeholder': 'Email'}))
+class DiseasesForm(forms.ModelForm):
+    class Meta:
+        model = Diseases
+        fields = ["name", "description",
+                  ]
 
+
+class ComorbiditiesForm(forms.ModelForm):
+    class Meta:
+        model = Comorbidities
+        fields = ["name", "abbreviation",
+                  ]
+
+
+class Medical_RecordForm(forms.ModelForm):
+    class Meta:
+        model = Medical_Record
+        fields = ["subjects_id", "HC_number", "diseases_id", "comorbidities_ids", "surgery",
+                  "clinical_outcomes"]
