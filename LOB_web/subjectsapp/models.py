@@ -36,7 +36,7 @@ class Subjects(models.Model):
     ]
 
     name = models.CharField(max_length=100, null=False)
-    birth_date = models.DateField(auto_now=False, null=False, blank=True)
+    birth_date = models.DateField(auto_now=False, null=True, blank=True)
     gender = models.CharField(max_length=20, null=False, choices=gender_choices)
     condition = models.CharField(max_length=20, null=False, choices=condition_choices)
     height = models.DecimalField(max_digits=3, decimal_places=2, null=True)
@@ -47,7 +47,7 @@ class Subjects(models.Model):
     telephone = models.CharField(max_length=100, null=True)
     email = models.EmailField(null=True)
     additional_info = models.TextField(null=True)
-    auth_user_id = models.ForeignKey(User, db_column="user", on_delete=models.CASCADE)
+    auth_user_id = models.ForeignKey(User, db_column="user", on_delete=models.CASCADE, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
