@@ -22,7 +22,7 @@ def subjects_page(request):
                 obj.additional_info = form_subjects.cleaned_data['additional_info']
                 # finally save the object in db
                 obj.save()
-                return HttpResponseRedirect('/')
+                return HttpResponseRedirect('/subjects')
         else:
             form_subjects = SubjectsForm()
             form_diseases = DiseasesForm()
