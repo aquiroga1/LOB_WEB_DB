@@ -40,8 +40,46 @@
                                   <option value="H">Healthy</option>
                                 </select>
                             </div>
-                            <div class="input-group mb-3" id="div_MedRec" style="display: none">
-                                <p>MedRec</p>
+
+                            <div id="div_MedRec" style="display: none">
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_HC_number">HC number:</label>
+                                    </div>
+                                    <input class="form-control" type="number" name="HC_number" id="id_HC_number">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_diseases_id">Diseases:</label>
+                                    </div>
+                                    <select name="diseases_id" required="" id="id_diseases_id">
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
+                                    </div>
+                                    <select name="comorbidities_ids" required="" id="id_comorbidities_ids" multiple="">
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="id_surgery">Surgery:</label>
+                                    </div>
+                                    <textarea class="form-control" name="surgery" cols="40" rows="10" maxlength="200" required="" id="id_surgery" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="id_clinical_outcomes">Clinical outcomes:</label>
+                                    </div>
+                                    <textarea class="form-control" name="clinical_outcomes" cols="40" rows="10" maxlength="200" required="" id="id_clinical_outcomes" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
+                                </div>
+
                             </div>
 
                             <div class="input-group mb-3">
@@ -62,19 +100,18 @@
                                 </select>
                             </div>
 
-
                             <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_height">Height:</label>
                                     </div>
-                                    <input class="form-control" type="number" name="height" step="0.01" required="" id="id_height">
+                                    <input class="form-control" type="number" name="height" step="0.01" min="0" required="" id="id_height">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="id_weight">Weight:</label>
                                 </div>
-                                <input class="form-control" type="number" name="weight" step="0.01" required="" id="id_weight">
+                                <input class="form-control" type="number" name="weight" step="0.01" required="" min="0" id="id_weight">
                             </div>
 
                             <div class="input-group mb-3">
@@ -133,14 +170,13 @@
                                 <input type="email" class="form-control" name="email" maxlength="254" required="" id="id_email">
                             </div>
 
-                            <div class="input-group input-group-lg">
+<!--                class="input-group input-group-lg"-->
+                            <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="id_additional_info">Additional info:</label>
                                 </div>
-                                <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" required="" id="id_additional_info"></textarea>
+                                <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" required="" id="id_additional_info" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                             </div>
-
-                <br style="clear:both">
 
                 <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
 
@@ -151,4 +187,3 @@
 </div>
 
 {% endblock %}
-
