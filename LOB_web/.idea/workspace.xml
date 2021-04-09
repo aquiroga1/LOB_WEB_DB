@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +221,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617741677620</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="obj">
+      <created>1618007374395</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1618007374395</updated>
+    </task>
+    <task id="LOCAL-00016" summary="obj">
+      <created>1618007452698</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1618007452698</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +252,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="subjects_app" />
+                        <option value="migrations" />
                       </list>
                     </value>
                   </entry>
@@ -267,7 +280,8 @@
     <MESSAGE value="main working" />
     <MESSAGE value="logo lob and unicamp base.html" />
     <MESSAGE value="checkout" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkout" />
+    <MESSAGE value="obj" />
+    <option name="LAST_COMMIT_MESSAGE" value="obj" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
