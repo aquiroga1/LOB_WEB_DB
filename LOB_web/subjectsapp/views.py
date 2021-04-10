@@ -23,6 +23,38 @@ def subjects_page(request):
                 # finally save the object in db
                 obj.save()
                 return HttpResponseRedirect('/subjects')
+
+            form_diseases = DiseasesForm(request.POST)
+            if form_diseases.is_valid():
+                obj = Diseases()
+                obj.name = form_diseases.cleaned_data['name']
+                obj.description = form_diseases.cleaned_data['description']
+                # finally save the object in db
+                obj.save()
+                return HttpResponseRedirect('/subjects')
+
+            form_comorbidities = ComorbiditiesForm(request.POST)
+            if form_comorbidities.is_valid():
+                obj = Comorbidities()
+                obj.name = form_comorbidities.cleaned_data['name']
+                obj.abbreviation = form_comorbidities.cleaned_data['abbreviation']
+                # finally save the object in db
+                obj.save()
+                return HttpResponseRedirect('/subjects')
+
+            form_medical_records = Medical_RecordForm(request.POST)
+            if form_medical_records.is_valid():
+                obj = Medical_Record()
+                obj.subjects_id = form_medical_records.cleaned_data['subjects_id']
+                obj.HC_number = form_medical_records.cleaned_data['HC_number']
+                obj.diseases_id = form_medical_records.cleaned_data['diseases_id']
+                obj.comorbidities_ids = form_medical_records.cleaned_data['comorbidities_ids']
+                obj.surgery = form_medical_records.cleaned_data['surgery']
+                obj.clinical_outcomes = form_medical_records.cleaned_data['clinical_outcomes']
+                # finally save the object in db
+                obj.save()
+                return HttpResponseRedirect('/subjects')
+
         else:
             form_subjects = SubjectsForm()
             form_diseases = DiseasesForm()

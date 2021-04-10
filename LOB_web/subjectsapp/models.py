@@ -51,20 +51,24 @@ class Subjects(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.name
 
 class Diseases(models.Model):
     name = models.CharField(max_length=100, null=False)
     description = models.TextField(null=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-
+    def __str__(self):
+        return self.name
 
 class Comorbidities(models.Model):
     name = models.CharField(max_length=100, null=False)
     abbreviation = models.CharField(max_length=50, null=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-
+    def __str__(self):
+        return self.name
 
 class Medical_Record(models.Model):
     subjects_id = models.ForeignKey(Subjects, on_delete=models.CASCADE)
