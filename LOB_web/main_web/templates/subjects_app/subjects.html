@@ -54,7 +54,8 @@
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_diseases_id">Diseases:</label>
                                     </div>
-                                    <select name="diseases_id" required="" id="id_diseases_id">
+                                    <select class="custom-select" name="diseases_id" required="" id="id_diseases_id">
+                                        <option value="{{ form_medical_records.diseases_id }}"></option>
                                     </select>
                                 </div>
 
@@ -62,7 +63,8 @@
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
                                     </div>
-                                    <select name="comorbidities_ids" required="" id="id_comorbidities_ids" multiple="">
+                                    <select class="custom-select" name="comorbidities_ids" required="" id="id_comorbidities_ids" multiple="">
+                                        <option value="{{ form_medical_records.comorbidities_ids }}"></option>
                                     </select>
                                 </div>
 
@@ -185,6 +187,7 @@
         </div>
     </div>
 </div>
+
 
 {% endblock %}
 
