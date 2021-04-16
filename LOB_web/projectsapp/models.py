@@ -12,6 +12,7 @@ class NIRS_Systems(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
+
 class Aux_Systems(models.Model):
     name = models.CharField(max_length=100, null=False)
     description = models.TextField(null=False)
@@ -31,3 +32,6 @@ class Projects(models.Model):
     auth_user_id = models.ForeignKey(User, db_column="user", on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name='project'

@@ -51,6 +51,9 @@ class Subjects(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        verbose_name='subject'
+
 
 class Diseases(models.Model):
     name = models.CharField(max_length=100, null=False)

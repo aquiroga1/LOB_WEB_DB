@@ -28,3 +28,6 @@ class Measurements(models.Model):
     auth_user_id = models.ForeignKey(User, db_column="user", on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name='measurement'
