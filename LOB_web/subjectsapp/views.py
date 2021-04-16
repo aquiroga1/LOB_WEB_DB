@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
-from .forms import *
+from .forms import *]
+from .models import *
 
 
 def subjects_page(request):
@@ -22,6 +23,7 @@ def subjects_page(request):
                 obj.telephone = form_subjects.cleaned_data['additional_info']
                 # finally save the object in db
                 obj.save()
+
                 return HttpResponseRedirect('/')
         else:
             form_subjects = SubjectsForm()
