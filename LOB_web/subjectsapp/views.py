@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.http import HttpResponse
 from .forms import *
-
+from .models import Subjects
 
 def subjects_page(request):
     if request.user.is_authenticated:
@@ -20,6 +21,7 @@ def subjects_page(request):
                 obj.handedness = form_subjects.cleaned_data['handedness']
                 obj.scholar_level = form_subjects.cleaned_data['scholar_level']
                 obj.additional_info = form_subjects.cleaned_data['additional_info']
+                obj.auth_user_id = request.user
                 # finally save the object in db
                 obj.save()
                 return HttpResponseRedirect('/subjects')
@@ -65,3 +67,13 @@ def subjects_page(request):
                                                                   'form_medical_records': form_medical_records})
     else:
         return redirect("/login")
+
+
+def index(request):
+    queryset = Subjects.objects.all()
+    context = {
+        'data': queryset
+    }
+    return render(request, "index.html", context)
+    #print(queryset)
+
