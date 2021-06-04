@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+<link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+
+{% block content %}
+<div class="container">
+    <div class="col-md-5">
+        <div id="formularios">
+            <form role="form" action="." method="POST">
+                {% csrf_token %}
+                        <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">MEDICAL RECORD FORM</h3>
+
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_HC_number">HC number:</label>
+                                    </div>
+                                    <input class="form-control" type="number" name="HC_number" id="id_HC_number">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="id_surgery">Surgery:</label>
+                                    </div>
+                                    <textarea class="form-control" name="surgery" cols="40" rows="10" maxlength="200" required="" id="id_surgery" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="id_clinical_outcomes">Clinical outcomes:</label>
+                                    </div>
+                                    <textarea class="form-control" name="clinical_outcomes" cols="40" rows="10" maxlength="200" required="" id="id_clinical_outcomes" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
+                                </div>
+
+
+                <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+
+            </form>
+            <br style="clear:both">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
