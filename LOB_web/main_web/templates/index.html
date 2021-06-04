@@ -21,11 +21,12 @@
   </head>
 
   <body class="text-center">
-
+{{ subjects }}
   {% for subjects in data %}
-    {{ subjects.name}}
-    {{ subejcts.gender }}
-{% endfor %}
+    {{ subjects.birth_date }}
+    {{ subjects.name }}
+
+  {% endfor %}
     <script src="{% static 'jquery/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
   </body>

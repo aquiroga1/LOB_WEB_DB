@@ -4,9 +4,9 @@
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectsapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subjectsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
     </list>
@@ -56,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/subjectsapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -68,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\subjectsapp" />
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\main_web\static\css\login_app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

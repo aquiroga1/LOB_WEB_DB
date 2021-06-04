@@ -52,10 +52,11 @@ class Subjects(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
+        managed = False
         db_table = 'subjects'
 
     def __str__(self):
-        return self.name
+        return str(self.id)
 
 
 class Diseases(models.Model):
@@ -83,3 +84,6 @@ class Medical_Record(models.Model):
     clinical_outcomes = models.TextField(null=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.subjects_id
+

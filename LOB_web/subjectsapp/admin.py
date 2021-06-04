@@ -5,6 +5,8 @@ from .models import *
 
 class SubjectAdmin(admin.ModelAdmin):
     readonly_fields=('created','updated')
+    list_display = ("name", "email", "telephone", "condition", "gender", "birth_date", "height",
+                    "weight", "skin_color", "handedness", "scholar_level", "additional_info")
 
 admin.site.register(Subjects, SubjectAdmin)
 

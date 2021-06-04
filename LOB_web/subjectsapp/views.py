@@ -70,10 +70,9 @@ def subjects_page(request):
 
 
 def index(request):
-    queryset = Subjects.objects.all()
+    queryset1 = Subjects.objects.all()
     context = {
-        'data': queryset
+        'data': queryset1
     }
     return render(request, "index.html", context)
-    #print(queryset)
 
