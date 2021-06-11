@@ -79,7 +79,7 @@ class Medical_Record(models.Model):
     subjects_id = models.ForeignKey(Subjects, on_delete=models.CASCADE)
     HC_number = models.IntegerField(null=False)
     diseases_id = models.ForeignKey(Diseases, on_delete=models.CASCADE)
-    comorbidities_ids = models.ManyToManyField(Comorbidities)
+    comorbidities_ids = models.ManyToManyField(Comorbidities, null=True)
     surgery = models.TextField(null=True)
     clinical_outcomes = models.TextField(null=False)
     created = models.DateTimeField(auto_now_add=True)
