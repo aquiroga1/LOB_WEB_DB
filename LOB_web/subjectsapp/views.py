@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.http import HttpResponse
 from .forms import *
 from .models import Subjects
+from django.views.generic import FormView
+
 
 
 def subjects_page(request):
@@ -92,19 +94,29 @@ def medical_records_page(request):
         return redirect("/login")
 
 class Medical_Records_Page(FormView):
-    template_name= "subjects_app/medical_record.html"
+    template_name = "subjects_app/medical_record.html"
     form_class = SubjectsForm
     success_url = '/thanks/'
 
-    def form_valid(self, form):
-        org = form.cleaned_data.get('organization')
-        emails = form.cleaned_data.get("share_email_with")
+    def form_valid(self, request):
+        if request.user.is_authenticated:
+            if request.method == 'POST':
+                form_medical_records = Medical_RecordForm(request.POST)
+                if form_medical_records.is_valid():
+                    obj = Medical_Record()
+                    obj.subjects_id = form_medical_records.cleaned_data.get('subjects_id')
+                    obj.HC_number = form_medical_records.cleaned_data.get('HC_number')
+                    obj.diseases_id = form_medical_records.cleaned_data.get('diseases_id')
+                    obj.comorbidities_ids = form_medical_records.cleaned_data.get('comorbidities_ids')
+                    obj.surgery = form_medical_records.cleaned_data.get('surgery')
+                    obj.clinical_outcomes = form_medical_records.cleaned_data.get('clinical_outcomes')
+                    # org = form.cleaned_data.get('organization')
+                    # emails = form.cleaned_data.get("share_email_with")
 
-        users = User.objects.filter(email__in=emails)
-        instance = Setupuser.objects.create(organization=org)
+        comorbidities = Comorbidities.objects.filter(name=name)
+        instance = Medical_Record.objects.create(subjects_id=subjects_id)
 
-        for user in users:
-            instance.emails_for_help.add(user)
+        instance.comorbidities_ids.set(comorbidities)
 
         return redirect("/")
 
