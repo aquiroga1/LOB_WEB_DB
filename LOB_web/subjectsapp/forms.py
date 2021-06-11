@@ -29,6 +29,11 @@ class ComorbiditiesForm(forms.ModelForm):
 
 
 class Medical_RecordForm(forms.ModelForm):
+    comorbidities_ids = forms.ModelMultipleChoiceField(
+        queryset=User.objects.all(),
+        widget=forms.CheckboxSelectMultiple
+    )
+
     class Meta:
         model = Medical_Record
         fields = ["subjects_id", "HC_number", "diseases_id", "comorbidities_ids", "surgery",

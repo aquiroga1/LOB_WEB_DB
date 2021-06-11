@@ -9,13 +9,38 @@
             <form role="form" action="." method="POST">
                 {% csrf_token %}
                         <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">MEDICAL RECORD FORM</h3>
-
+                                 <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_subjects_id">Subject:</label>
+                                    </div>
+                                    <select class="custom-select"  name="subjects_id" required="" id="id_subjects_id">
+                                      <option value="{{ form_medical_records.subjects_id }}"></option>
+                                    </select>
+                                </div>
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_HC_number">HC number:</label>
                                     </div>
                                     <input class="form-control" type="number" name="HC_number" id="id_HC_number">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_diseases_id">Diseases:</label>
+                                    </div>
+                                    <select class="custom-select" name="diseases_id" required="" id="id_diseases_id">
+                                        <option value="{{ form_medical_records.diseases_id }}"></option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
+                                    </div>
+                                    <select class="custom-select" name="comorbidities_ids" required="" id="id_comorbidities_ids" multiple="">
+                                        <option value="{{ form_medical_records.comorbidities_ids }}"></option>
+                                    </select>
                                 </div>
 
                                 <div class="input-group mb-3">

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from loginapp.views import login_page, home_page, logout_page
-from subjectsapp.views import subjects_page, index
+from subjectsapp.views import index, subjects_page, medical_records_page
 
 
 
@@ -27,5 +27,6 @@ urlpatterns = [
     path('login/', login_page),
     path('logout/', logout_page, name='logout'),
     path('subjects/', subjects_page, name='subjects'),
+    path('medical_records/', medical_records_page, name='medical_records'),
     path('index/', index, name='index'),
 ]
