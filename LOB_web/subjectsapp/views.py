@@ -5,7 +5,6 @@ from .models import Subjects
 from django.views.generic import FormView
 
 
-
 def subjects_page(request):
     if request.user.is_authenticated:
         if request.method == 'POST':
@@ -27,6 +26,8 @@ def subjects_page(request):
                 obj.auth_user_id = request.user
                 # finally save the object in db
                 obj.save()
+                    #if se é paciente
+                        #return HttpResponseRedirect('/medical_record')
                 return HttpResponseRedirect('/subjects')
         else:
             form_subjects = SubjectsForm()
@@ -80,13 +81,47 @@ def medical_records_page(request):
                 obj.subjects_id = form_medical_records.cleaned_data['subjects_id']
                 obj.HC_number = form_medical_records.cleaned_data['HC_number']
                 obj.diseases_id = form_medical_records.cleaned_data['diseases_id']
-                obj.comorbidities_ids = form_medical_records.cleaned_data['comorbidities_ids']
                 obj.surgery = form_medical_records.cleaned_data['surgery']
                 obj.clinical_outcomes = form_medical_records.cleaned_data['clinical_outcomes']
-                # finally save the object in db
+                # # finally save the object in db
+                # obj.save()
+                # cmd = ['1', '2']
+                # print(cmd)
+                # c1 = Comorbidities.objects.create(name=cmd[0])
+                # c2 = Comorbidities.objects.create(name=cmd[1])
+                # obj.comorbidities_ids.add(c1, c2)
+                # return HttpResponseRedirect('/subjects')
+
+                # obj.save()
+                # cmds = form_medical_records.cleaned_data.get('comorbidities_ids') #[<Comorbidities: comorbidade2>, <Comorbidities: comorbidade1>]>
+                # print(cmds)
+                # sub = Medical_Record.objects.create(form_medical_records.cleaned_data['subjects_id'])
+                # obj.comorbidities_ids.set(sub)
+                # return HttpResponseRedirect('/subjects')
+
                 obj.save()
+                cmds = form_medical_records.cleaned_data.get('comorbidities_ids') #[<Comorbidities: comorbidade2>, <Comorbidities: comorbidade1>]>
+                print(cmds)
+                cmd = Comorbidities.objects.filter(name__in=str(cmds))
+                print(cmd)
+                obj.comorbidities_ids.set(cmd)
                 return HttpResponseRedirect('/subjects')
 
+                # obj.save()
+                # obj.comorbidities_ids = form_medical_records.cleaned_data.get('comorbidities_ids')
+                # cmd = Comorbidities.objects.create(name=obj.comorbidities_ids)
+                # cmd.obj.comorbidities_ids.add(obj.subjects_id)
+                # return HttpResponseRedirect('/subjects')
+
+                # obj.save()
+                # sub = obj.subjects_id
+                # cmds = form_medical_records.cleaned_data.get('comorbidities_ids')
+                #
+                # cmd = Comorbidities.objects.filter(name__in=cmds)
+                # instance = Medical_Record.objects.create(subjects_id=sub)
+                #
+                # instance.comorbidities_ids.set(cmd)
+                # return HttpResponseRedirect('/subjects')
         else:
             form_medical_records = Medical_RecordForm()
         return render(request, "subjects_app/medical_record.html", {'form_medical_records': form_medical_records})

@@ -56,7 +56,7 @@ class Subjects(models.Model):
         db_table = 'subjects'
 
     def __str__(self):
-        return str(self.id)
+        return str(self.name)
 
 
 class Diseases(models.Model):
@@ -64,26 +64,31 @@ class Diseases(models.Model):
     description = models.TextField(null=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
     def __str__(self):
         return self.name
+
 
 class Comorbidities(models.Model):
     name = models.CharField(max_length=100, null=False)
     abbreviation = models.CharField(max_length=50, null=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
     def __str__(self):
         return self.name
 
+
 class Medical_Record(models.Model):
     subjects_id = models.ForeignKey(Subjects, on_delete=models.CASCADE)
-    HC_number = models.IntegerField(null=False)
-    diseases_id = models.ForeignKey(Diseases, on_delete=models.CASCADE)
+    HC_number = models.CharField(max_length=20, null=False)
+    diseases_id = models.ForeignKey(Diseases, on_delete=models.CASCADE, null=True)
     comorbidities_ids = models.ManyToManyField(Comorbidities, null=True)
     surgery = models.TextField(null=True)
     clinical_outcomes = models.TextField(null=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
     def __str__(self):
-        return self.subjects_id
+        return str(self.subjects_id)
 
