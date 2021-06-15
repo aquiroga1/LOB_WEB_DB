@@ -9,7 +9,8 @@
             <form role="form" action="." method="POST">
                 {% csrf_token %}
                         <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">MEDICAL RECORD FORM</h3>
-                                 <div class="input-group mb-3">
+
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_subjects_id">Subject:</label>
                                     </div>
@@ -22,7 +23,7 @@
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_HC_number">HC number:</label>
                                     </div>
-                                    <input class="form-control" type="number" name="HC_number" id="id_HC_number">
+                                    <input class="form-control" type="text" name="HC_number" id="id_HC_number">
                                 </div>
 
                                 <div class="input-group mb-3">
