@@ -4,14 +4,16 @@ from django.forms.widgets import DateInput, TextInput
 
 
 class SubjectsForm(forms.ModelForm):
-    class Meta:
-        model = Subjects
-        fields = ["name", "email", "telephone", "condition", "gender", "birth_date", "height", "weight",
-                  "skin_color", "handedness", "scholar_level", "additional_info"
-                  ]
-        widgets = {
-            'birth_date': DateInput(attrs={'type': 'date'})
-        }
+
+   class Meta:
+      model = Subjects
+      fields = ["name", "email", "telephone", "condition", "gender", "birth_date", "height", "weight",
+                "skin_color", "handedness", "scholar_level", "additional_info"
+                ]
+
+      widgets = {
+                'birth_date': DateInput(attrs={'type': 'date'})
+            }
 
 
 class DiseasesForm(forms.ModelForm):

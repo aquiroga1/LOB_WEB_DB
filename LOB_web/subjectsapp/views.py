@@ -49,7 +49,7 @@ def diseases_page(request):
                 return HttpResponseRedirect('/subjects')
         else:
             form_diseases = DiseasesForm()
-        return render(request, "subjects_app/subjects.html", {'form_diseases': form_diseases})
+        return render(request, "subjects_app/projectsapp.html", {'form_diseases': form_diseases})
     else:
         return redirect("/login")
 
@@ -67,7 +67,7 @@ def comorbidities_page(request):
                 return HttpResponseRedirect('/subjects')
         else:
             form_comorbidities = ComorbiditiesForm()
-        return render(request, "subjects_app/subjects.html", {'form_comorbidities': form_comorbidities})
+        return render(request, "subjects_app/projectsapp.html", {'form_comorbidities': form_comorbidities})
     else:
         return redirect("/login")
 

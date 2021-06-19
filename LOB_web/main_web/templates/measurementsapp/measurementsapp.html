@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+<link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+
+{% block content %}
+<div class="container">
+    <div class="col-md-5">
+        <div id="formularios">
+            <form role="form" action="." method="POST">
+                {% csrf_token %}
+                        <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">MEASUREMENT</h3>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_project_id">Project id:</label>
+                                </div>
+                                    <select class="custom-select"  name="project_id" required="" id="id_project_id">
+                                      <option value="{{ form_measurements.id_project_id }}"></option>
+                                    </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_subjects_id">Subjects id:</label>
+                                </div>
+                                    <select class="custom-select"  name="subjects_id" required="" id="id_subjects_id">
+                                      <option value="{{ form_measurements.subjects_id }}"></option>
+                                    </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_date">Date:</label>
+                                </div>
+                                <input class="form-control" type="text" name="date" id="id_date">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_local">Local:</label>
+                                </div>
+                                <input class="form-control" type="text" name="local" maxlength="100" required="" id="id_local">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label  class="input-group-text" for="id_file_name">Data File:</label>
+                                </div>
+                                <input class="form-control" type="file" name="file_name" required="" id="id_file_name">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_FPIC_assignement">FPIC assignement:</label>
+                                </div>
+                                    <select class="custom-select" name="FPIC_assignement" required="" id="id_FPIC_assignement">
+                                      <option value="" selected="">---------</option>
+
+                                      <option value="Y">Yes</option>
+
+                                      <option value="N">No</option>
+
+                                    </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_incidents">Incidents:</label>
+                                </div>
+                                <select class="custom-select" name="incidents" required="" id="id_incidents">
+
+                                  <option value="" selected="">---------</option>
+
+                                  <option value="Y">Yes</option>
+
+                                  <option value="N">No</option>
+                                </select>
+                            </div>
+
+<!--                class="input-group input-group-lg"-->
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_observations">Observations:</label>
+                                </div>
+                                <textarea  class="form-control" name="observations" cols="40" rows="10" required="" id="id_observations"></textarea>
+                            </div>
+
+                <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+
+            </form>
+            <br style="clear:both">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

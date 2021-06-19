@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+<link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+
+{% block content %}
+<div class="container">
+    <div class="col-md-5">
+        <div id="formularios">
+            <form role="form" action="." method="POST">
+                {% csrf_token %}
+                        <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">PROJECT</h3>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                     <label class="input-group-text" for="id_title" class="input-group-text">Title:</label>
+                                </div>
+                                <input type="text" class="form-control" name="title" maxlength="100" required="" id="id_title">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_nirs_systems_id">Nirs systems id:</label>
+                                </div>
+                                <select class="custom-select" name="nirs_systems_id" required="" id="id_nirs_systems_id">
+                                      <option value="{{ form_projects.id_nirs_systems_id }}"></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                       <label class="input-group-text" for="id_aux_systems_id">Aux systems id:</label>
+                                </div>
+                                <select class="custom-select" name="aux_systems_id" required="" id="id_aux_systems_id">
+                                      <option value="{{ form_projects.id_aux_systems_id }}"></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_prin_investigator">Investigator:</label>
+                                </div>
+                                <input class="form-control" type="text" name="prin_investigator" maxlength="100" required="" id="id_prin_investigator">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"  for="id_co_investigator">Co-investigators:</label>
+                                </div>
+                                <input class="form-control" type="text" name="co_investigator" maxlength="100" required="" id="id_co_investigator">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_FPIC_file">FPIC file:</label>
+                                </div>
+                                <input class="form-control" type="file" name="FPIC_file" required="" id="id_FPIC_file">
+                            </div>
+
+<!--                class="input-group input-group-lg"-->
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"  for="id_description">Description:</label>
+                                </div>
+                                <textarea class="form-control"  name="description" cols="40" rows="10" required="" id="id_description"></textarea>
+                            </div>
+
+                <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+
+            </form>
+            <br style="clear:both">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
