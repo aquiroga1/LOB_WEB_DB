@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from loginapp.views import login_page, home_page, logout_page
 from subjectsapp.views import subjects_page
-
+from measurementsapp.views import measurements_page
+from projectsapp.views import projects_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,6 @@ urlpatterns = [
     path('login/', login_page),
     path('logout/', logout_page, name='logout'),
     path('subjects/', subjects_page, name='subjects'),
+    path('measurements/', measurements_page, name='measurements'),
+    path('projects/', projects_page, name='projects'),
 ]

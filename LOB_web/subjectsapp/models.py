@@ -53,6 +53,9 @@ class Subjects(models.Model):
 
     class Meta:
         verbose_name='subject'
+    
+    def __str__(self):
+        return str(self.name)
 
 
 class Diseases(models.Model):

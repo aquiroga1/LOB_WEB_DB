@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+<link href="{% static 'css/projects_app/projects.css' %}" rel="stylesheet">
+
+{% block content %}
+<div class="container">
+    <div class="col-md-5">
+        <div id="formularios">
+            <form role="form" action="." method="POST">
+                {% csrf_token %}
+                        <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">PROJECTS FORM</h3>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label for="id_title" class="input-group-text">Title:</label>
+                                </div>
+                                <input type="text" class="form-control" name="title" maxlength="100" required="" id="id_title">
+                            </div>
+
+                            <div class="input-group input-group-lg">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_description">Description:</label>
+                                </div>
+                                <textarea class="form-control" name="description" cols="40" rows="10" maxlength="200" required="" id="id_description"></textarea>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label for="id_CAAE" class="input-group-text">CAAE:</label>
+                                </div>
+                                <input type="text" class="form-control" name="CAAE" maxlength="100" required="" id="id_CAAE">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                     <label class="input-group-text" for="id_FPIC_file">FPIC file:</label>
+                                </div>
+                                <input class="form-control" type="file" name="FPIC_file" id="id_FPIC_file">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label for="id_prin_investigator" class="input-group-text">Principal Investigator:</label>
+                                </div>
+                                <input type="text" class="form-control" name="prin_investigator" maxlength="100" required="" id="id_prin_investigator">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label for="id_co_investigator" class="input-group-text">Co-investigator:</label>
+                                </div>
+                                <input type="text" class="form-control" name="co_investigator" maxlength="100" required="" id="id_co_investigator">
+                            </div>
+
+                            <div class="input-group input-group-lg">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_optical_probe_details">Optical problems details:</label>
+                                </div>
+                                <textarea class="form-control" name="optical_probe_details" cols="40" rows="10" maxlength="200" required="" id="id_optical_probe_details"></textarea>
+                            </div>
+
+                            
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_nirs_systems_id">NIRS Systems:</label>
+                                </div>
+                                <select class="custom-select"  name="nirs_systems_id" required="" id="id_nirs_systems_id">
+                                    <option value={{form_projects.nirs_systems_id}}></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_aux_systems_id">Auxiliar Systems:</label>
+                                </div>
+                                <select class="custom-select"  name="aux_systems_id" required="" id="id_aux_systems_id">
+                                    <option value={{form_projects.aux_systems_id}}></option>
+                                </select>
+                            </div>
+
+            <br style="clear:both">
+
+                <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+
+            </form>
+            <br style="clear:both">
+        </div>
+    </div>
+</div>
+{% endblock %}

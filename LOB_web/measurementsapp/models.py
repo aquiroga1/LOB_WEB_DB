@@ -31,3 +31,6 @@ class Measurements(models.Model):
 
     class Meta:
         verbose_name='measurement'
+
+def __str__(self):
+    return str(self.subjects_id)

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
-from .forms import *]
-from .models import *
+from .forms import *
+
 
 
 def subjects_page(request):
@@ -21,6 +21,7 @@ def subjects_page(request):
                 obj.name = form_subjects.cleaned_data['handedness']
                 obj.email = form_subjects.cleaned_data['scholar_level']
                 obj.telephone = form_subjects.cleaned_data['additional_info']
+                obj.auth_user_id = request.user
                 # finally save the object in db
                 obj.save()
 
