@@ -8,3 +8,7 @@ class MeasurementsForm(forms.ModelForm):
         fields = ["subjects_id", "local", "date", "project_id", "file_name", "incidents", "observations",
                   "FPIC_assignement"
                   ]
+
+        widgets = {
+                  'date': DateInput(attrs={'type': 'date'})
+              }

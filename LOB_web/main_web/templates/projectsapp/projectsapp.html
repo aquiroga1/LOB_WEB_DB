@@ -6,7 +6,7 @@
 <div class="container">
     <div class="col-md-5">
         <div id="formularios">
-            <form role="form" action="." method="POST">
+            <form role="form" action="." method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                         <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">PROJECT</h3>
 
@@ -19,41 +19,30 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_nirs_systems_id">Nirs systems id:</label>
+                                     <label class="input-group-text" for="id_CAAE" class="input-group-text">CAAE:</label>
                                 </div>
-                                <select class="custom-select" name="nirs_systems_id" required="" id="id_nirs_systems_id">
-                                      <option value="{{ form_projects.id_nirs_systems_id }}"></option>
-                                </select>
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                       <label class="input-group-text" for="id_aux_systems_id">Aux systems id:</label>
-                                </div>
-                                <select class="custom-select" name="aux_systems_id" required="" id="id_aux_systems_id">
-                                      <option value="{{ form_projects.id_aux_systems_id }}"></option>
-                                </select>
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_prin_investigator">Investigator:</label>
-                                </div>
-                                <input class="form-control" type="text" name="prin_investigator" maxlength="100" required="" id="id_prin_investigator">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text"  for="id_co_investigator">Co-investigators:</label>
-                                </div>
-                                <input class="form-control" type="text" name="co_investigator" maxlength="100" required="" id="id_co_investigator">
+                                <input type="text" class="form-control" name="CAAE" maxlength="100" id="id_CAAE">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="id_FPIC_file">FPIC file:</label>
                                 </div>
-                                <input class="form-control" type="file" name="FPIC_file" required="" id="id_FPIC_file">
+                                <input class="form-control" type="file" name="FPIC_file" id="id_FPIC_file">
+                            </div>
+                    
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_prin_investigator">Principal Researcher:</label>
+                                </div>
+                                <input class="form-control" type="text" name="prin_investigator" maxlength="100" required="" id="id_prin_investigator">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"  for="id_co_investigator">Co-researchers:</label>
+                                </div>
+                                <input class="form-control" type="text" name="co_investigator" maxlength="100" id="id_co_investigator">
                             </div>
 
 <!--                class="input-group input-group-lg"-->
@@ -62,6 +51,38 @@
                                     <label class="input-group-text"  for="id_description">Description:</label>
                                 </div>
                                 <textarea class="form-control"  name="description" cols="40" rows="10" required="" id="id_description"></textarea>
+                            </div>
+        
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                         <label class="input-group-text" for="id_nirs_systems_id">NIRS system:</label>
+                                </div>
+                                <select class="custom-select" name="nirs_systems_id" required="" id="id_nirs_systems_id">
+                                      <option value="{{ form_projects.nirs_systems_id }}"></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"  for="id_probe_details">Probe Details:</label>
+                                </div>
+                                <textarea class="form-control"  name="probe_details" cols="40" rows="4" required="" id="id_probe_details"></textarea>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                       <label class="input-group-text" for="id_aux_systems_id">AUX system:</label>
+                                </div>
+                                <select class="custom-select" name="aux_systems_id" required="" id="id_aux_systems_id">
+                                      <option value="{{ form_projects.aux_systems_id }}"></option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="id_project_file">Project File:</label>
+                                </div>
+                                <input class="form-control" type="file" name="project_file" id="id_project_file">
                             </div>
 
                 <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>

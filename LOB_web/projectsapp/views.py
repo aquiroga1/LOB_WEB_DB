@@ -8,7 +8,9 @@ from django.views.generic import FormView
 def projects_page(request):
     if request.user.is_authenticated:
         if request.method == 'POST':
-            form_projects = ProjectsForm(request.POST)
+            form_projects = ProjectsForm(request.POST, request.FILES)
+            print(request.POST)
+            print(form_projects.is_valid())
             if form_projects.is_valid():
                 obj = Projects()
                 obj.title = form_projects.cleaned_data['title']
@@ -20,6 +22,7 @@ def projects_page(request):
                 obj.probe_details = form_projects.cleaned_data['probe_details']
                 obj.nirs_systems_id = form_projects.cleaned_data['nirs_systems_id']
                 obj.aux_systems_id = form_projects.cleaned_data['aux_systems_id']
+                obj.project_file = form_projects.cleaned_data['project_file']
                 obj.auth_user_id = request.user
                 # finally save the object in db
                 obj.save()

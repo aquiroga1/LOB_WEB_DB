@@ -18,5 +18,5 @@ class ProjectsForm(forms.ModelForm):
     class Meta:
         model = Projects
         fields = ["title", "description", "CAAE", "FPIC_file", "prin_investigator", "co_investigator", "probe_details",
-                 "nirs_systems_id", "aux_systems_id"
+                 "nirs_systems_id", "aux_systems_id", "project_file",
                   ]

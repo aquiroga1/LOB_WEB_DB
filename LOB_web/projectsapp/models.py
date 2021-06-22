@@ -11,6 +11,8 @@ class NIRS_Systems(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return str(self.name)
 
 class Aux_Systems(models.Model):
     name = models.CharField(max_length=100, null=False)
@@ -18,17 +20,23 @@ class Aux_Systems(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return str(self.name)
 
 class Projects(models.Model):
     title = models.CharField(max_length=100, null=False)
     description = models.TextField(null=False)
-    CAAE = models.CharField(max_length=30, null=True)
-    FPIC_file = models.FileField(upload_to='main_web/documents/FPIC/', null=True)
+    CAAE = models.CharField(max_length=30, blank=True, null=True)
+    FPIC_file = models.FileField(upload_to='main_web/documents/FPIC/', null=True, blank=True)
     prin_investigator = models.CharField(max_length=100, null=False)
-    co_investigator = models.CharField(max_length=100, null=True)
-    probe_details = models.TextField(null=True)
+    co_investigator = models.CharField(max_length=100, null=True, blank=True)
+    probe_details = models.TextField(null=False)
     nirs_systems_id = models.ForeignKey(NIRS_Systems, on_delete=models.CASCADE)
     aux_systems_id = models.ForeignKey(Aux_Systems, on_delete=models.CASCADE)
+    project_file = models.FileField(upload_to='main_web/documents/Projects/', null=True, blank=True)
     auth_user_id = models.ForeignKey(User, db_column="user", on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return str(self.title)

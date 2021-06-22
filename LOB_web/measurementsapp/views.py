@@ -8,9 +8,11 @@ from django.views.generic import FormView
 def measurements_page(request):
     if request.user.is_authenticated:
         if request.method == 'POST':
-            form_measurements = MeasurementsForm(request.POST)
+            form_measurements = MeasurementsForm(request.POST, request.FILES)
+            print(request.POST)
+            print(form_measurements.is_valid())
             if form_measurements.is_valid():
-                obj = Projects()
+                obj = Measurements()
                 obj.subjects_id = form_measurements.cleaned_data['subjects_id']
                 obj.local = form_measurements.cleaned_data['local']
                 obj.date = form_measurements.cleaned_data['date']
