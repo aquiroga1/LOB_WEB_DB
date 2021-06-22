@@ -35,12 +35,12 @@ class Subjects(models.Model):
         ("PG", "Post-Graduate"),
     ]
 
-    name = models.CharField(max_length=100, null=False)
+    name = models.CharField(max_length=100, null=False, blank=True)
     birth_date = models.DateField(auto_now=False, null=True, blank=True)
     gender = models.CharField(max_length=20, null=False, choices=gender_choices)
     condition = models.CharField(max_length=20, null=False, choices=condition_choices)
-    height = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=False)
-    weight = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=False)
+    height = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
+    weight = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     skin_color = models.CharField(max_length=20, null=True, default='No info', choices=skin_color_choices)
     handedness = models.CharField(max_length=20, null=False, default='No info', choices=handedness_choices)
     scholar_level = models.CharField(max_length=20, null=False, default='No info', choices=scholar_level_choices)
