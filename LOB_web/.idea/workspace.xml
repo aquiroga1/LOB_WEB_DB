@@ -278,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623792891743</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="-required (html) and +null/blank (models)">
+      <created>1624375518023</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1624375518023</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +335,8 @@
     <MESSAGE value="checkout commit" />
     <MESSAGE value="ok" />
     <MESSAGE value="comorbidities working" />
-    <option name="LAST_COMMIT_MESSAGE" value="comorbidities working" />
+    <MESSAGE value="-required (html) and +null/blank (models)" />
+    <option name="LAST_COMMIT_MESSAGE" value="-required (html) and +null/blank (models)" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
