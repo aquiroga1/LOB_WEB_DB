@@ -10,6 +10,16 @@
     <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
+     <!-- DataTable Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap-utilities.rtl.min.css"
+          integrity="sha512-ZKR6g1WWqoGFhMMF343YwTN1njjL/WGYG8TU4mbX49rJPoRsYXbZewdQQsgulvofhkDs7ghEuf/9Mv/oV7Ktsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- fontawesome Google -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
 <style>
 input {
 	border: none;
@@ -118,6 +128,11 @@ a:hover {
         <p class="m-0 mbt1" style="color: black">&copy; LOB Unicamp 2021</p>
 	</footer>
 {% endif %}
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+{% block js %} {% endblock js %}
+
 </body>
 </html>
 

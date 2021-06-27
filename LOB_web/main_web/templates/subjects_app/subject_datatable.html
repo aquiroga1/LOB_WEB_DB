@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+<link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+{% block content %}
+<div class="container">
+    <div class="col-xl-16">
+    <table id="subject_table" class="table">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>birth date</th>
+        <th>gender</th>
+        <th>condition</th>
+        <th>height</th>
+        <th>weight</th>
+        <th>skin color</th>
+        <th>handedness</th>
+        <th>scholar level</th>
+        <th>telephone</th>
+        <th>email</th>
+        <th>additional info</th>
+    </tr>
+    </thead>
+        <tbody>
+            {% for subject in subject_data %}
+                <tr>
+                    <td>{{subject.name}}</td>
+                    <td>{{subject.birth_date}}</td>
+                    <td>{{subject.gender}}</td>
+                    <td>{{subject.condition}}</td>
+                    <td>{{subject.height}}</td>
+                    <td>{{subject.weight}}</td>
+                    <td>{{subject.skin_color}}</td>
+                    <td>{{subject.handedness}}</td>
+                    <td>{{subject.scholar_level}}</td>
+                    <td>{{subject.telephone}}</td>
+                    <td>{{subject.email}}</td>
+                    <td>{{subject.additional_info}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready( function () {
+            $('#subject_table').DataTable();
+         } );
+    </script>
+{% endblock js %}
+

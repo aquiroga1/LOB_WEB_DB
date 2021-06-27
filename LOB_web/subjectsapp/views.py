@@ -124,9 +124,8 @@ def medical_records_page(request):
     #     return redirect("/")
 
 def index(request):
-    queryset1 = Subjects.objects.all()
-    context = {
-        'data': queryset1
-    }
-    return render(request, "index.html", context)
+    context = {}
+    subject_data = Subjects.objects.all()
+    context['subject_data'] = subject_data
+    return render(request, "subjects_app/subject_datatable.html", context)
 
