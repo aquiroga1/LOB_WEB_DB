@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 <link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+{% block title %} Subjects {% endblock %}
 {% block content %}
-<div class="container">
-    <div class="col-xl-16">
-    <table id="subject_table" class="table">
+<a class="btn btn-warning float-left" href="{% url 'subjects' %}" role="button">Add New Record</a>
+<div class="table-responsive">
+    <table id="subject_table" class="table" >
     <thead>
     <tr>
+        <th>id</th>
         <th>name</th>
         <th>birth date</th>
         <th>gender</th>
@@ -19,11 +21,14 @@
         <th>telephone</th>
         <th>email</th>
         <th>additional info</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
     </thead>
         <tbody>
             {% for subject in subject_data %}
                 <tr>
+                    <td>{{subject.id}}</td>
                     <td>{{subject.name}}</td>
                     <td>{{subject.birth_date}}</td>
                     <td>{{subject.gender}}</td>
@@ -36,11 +41,13 @@
                     <td>{{subject.telephone}}</td>
                     <td>{{subject.email}}</td>
                     <td>{{subject.additional_info}}</td>
+                    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><a href="/edit/{{ employee.id }}" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span></a></p></td>
+                    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><a href="/delete/{{ employee.id }}" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></a></p></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-    </div>
+
 
 </div>
 
