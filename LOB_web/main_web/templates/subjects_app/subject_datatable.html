@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 <link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+<link href="{% static 'DataTables/DataTables-1.10.25/css/jquery.dataTables.min.css' %}">
+<link href="{% static 'DataTables/Buttons-1.7.1/css/buttons.dataTables.min.css' %}">
 {% block title %} Subjects {% endblock %}
 {% block content %}
-<a class="btn btn-warning float-left" href="{% url 'subjects' %}" role="button">Add New Record</a>
-<div class="table-responsive">
-    <table id="subject_table" class="table" >
+
+<a class="font-weight-bold mb-sm-2 ml-sm-3 btn btn-warning btn-sm float-left"
+   href="{% url 'subjects' %}" role="button"><span style="font-size:smaller;"> Add New Record</span></a>
+<div class="container-fluid">
+    <table id="subject_table" class="table-dark table-bordered table-hover dt-responsive nowrap" width="100%"  >
     <thead>
     <tr>
         <th>id</th>
@@ -21,8 +25,8 @@
         <th>telephone</th>
         <th>email</th>
         <th>additional info</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>Actions</th>
+
     </tr>
     </thead>
         <tbody>
@@ -41,8 +45,9 @@
                     <td>{{subject.telephone}}</td>
                     <td>{{subject.email}}</td>
                     <td>{{subject.additional_info}}</td>
-                    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><a href="/edit/{{ employee.id }}" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span></a></p></td>
-                    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><a href="/delete/{{ employee.id }}" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></a></p></td>
+                    <td> <p><a href="" class="btn btn-primary btn-xs" data-title="Edit" data-target="#edit" ></a>
+                        <a href="" class="btn btn-danger btn-xs" data-title="Delete" data-target="#delete" ><span ></span></a></p></td>
+
                 </tr>
             {% endfor %}
         </tbody>
@@ -53,11 +58,33 @@
 
 {% endblock %}
 
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/Responsive-2.2.9/js/dataTables.responsive.js' %}" ></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/Responsive-2.2.9/js/responsive.bootstrap4.js' %}" ></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/Buttons-1.7.1/js/buttons.bootstrap.min.js' %}" ></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/jQuery-3.3.1/jquery-3.3.1.js' %}"></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/DataTables-1.10.25/js/jquery.dataTables.min.js' %}"></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/Buttons-1.7.1/js/dataTables.buttons.min.js' %}"></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/JSZip-2.5.0/jszip.min.js' %}"></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/pdfmake-0.1.36/pdfmake.min.js' %}"></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/Buttons-1.7.1/js/buttons.html5.min.js' %}"></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/Buttons-1.7.1/js/buttons.print.min.js' %}"></script>
+
 {% block js %}
-    <script>
-        $(document).ready( function () {
-            $('#subject_table').DataTable();
-         } );
-    </script>
+<script>
+$(document).ready(function() {
+    $('#subject_table').DataTable( {
+        dom: 'Blfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+        "pagingType": "simple_numbers",
+        "lengthMenu": [ [5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, "All"] ],
+        language: { search: '', searchPlaceholder: "Search..." },
+
+    } );
+} );
+
+</script>
+
 {% endblock js %}
 

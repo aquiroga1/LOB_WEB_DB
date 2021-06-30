@@ -10,13 +10,13 @@
     <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
-     <!-- DataTable Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap-utilities.rtl.min.css"
-          integrity="sha512-ZKR6g1WWqoGFhMMF343YwTN1njjL/WGYG8TU4mbX49rJPoRsYXbZewdQQsgulvofhkDs7ghEuf/9Mv/oV7Ktsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- fontawesome Google -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+     <!-- DataTable Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static 'DataTables/datatables.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'DataTables/DataTables-1.10.25/css/jquery.dataTables.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main_web/static/DataTables/Responsive-2.2.9/css/responsive.bootstrap4.min.css' %}"/>
+
+
 
 
 <style>
@@ -32,7 +32,7 @@ input[type="submit"] {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  background-color: #F9C70C;
+  background-color: #ffbb33;
   color: #00000;
   font-weight: bold;
   /* margin-bottom: 2em; */
@@ -56,7 +56,7 @@ a {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  background-color: #F9C70C;
+  background-color: #ffbb33;
   color: black;
   font-weight: bold;
   /* margin-bottom: em; */
@@ -80,6 +80,87 @@ a:hover {
 .navbase:hover {
     background-color: transparent
 }
+
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .ui-button {
+  color: white;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: bold;
+  padding: 1;
+  font-size: 17px;
+  text-align: left;
+
+
+}
+
+
+.dataTables_wrapper .ui-toolbar {
+  padding: 0px;
+}
+
+  div.dataTables_length {
+    margin-left: 410px
+}
+
+.dataTables_length select {
+   background-color: white !important;
+   font-size: .9em;
+}
+.dataTables_filter input {
+   background-color: white !important;
+}
+
+a.dt-button,
+button.dt-button,
+div.dt-button {
+  background-image: none;
+  background-color: #ffbb33;
+  color: black;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align:center;
+  vertical-align:middle
+
+}
+
+a.dt-button:hover,
+button.dt-button:hover,
+div.dt-button:hover {
+  background-image: none !important;
+  background-color: #ff8400 !important;
+  color: white;
+}
+
+
+
+.table-dark td {
+  color: black;
+}
+
+tr:hover td {
+    background-color: #ffbb33 !important;
+}
+
+.pagination>li>a, .pagination>li>span{
+  border:0px solid black !important;
+  background-color: #ffbb33 !important;
+  color: black
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding : 5px;
+    margin-left: 0px;
+    display: inline;
+    border: 0px;
+}
+.dataTables_wrapper .paginate_button:hover {
+    border: 1px;
+}
+
+
 </style>
 
 </head>
@@ -127,10 +208,12 @@ a:hover {
         <p class="m-0 mbt1" style="color: black">&copy; LOB Unicamp 2021</p>
 	</footer>
 {% endif %}
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/datatables.min.js' %}"></script>
+<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/DataTables-1.10.25/js/dataTables.bootstrap5.min.js' %}"></script>
 {% block js %} {% endblock js %}
+
 
 </body>
 </html>
@@ -139,4 +222,4 @@ a:hover {
 
 <!--Paletas de cores do site:-->
 <!--Fundo de azul : Codigo #203354-->
-<!--Elementos do site de amarelo: Codigo #F9C70C-->
+<!--Elementos do site de amarelo: Codigo #ffbb33-->
