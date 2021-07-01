@@ -14,8 +14,10 @@
      <!-- DataTable Bootstrap -->
     <link rel="stylesheet" type="text/css" href="{% static 'DataTables/datatables.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'DataTables/DataTables-1.10.25/css/jquery.dataTables.min.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'main_web/static/DataTables/Responsive-2.2.9/css/responsive.bootstrap4.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'DataTables/Responsive-2.2.9/css/responsive.bootstrap4.min.css' %}"/>
 
+    <!-- DataTable custom CSS Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Custom CSS/DataTable_Style.css' %}"/>
 
 
 
@@ -91,76 +93,7 @@ a:hover {
   padding: 1;
   font-size: 17px;
   text-align: left;
-
-
-}
-
-
-.dataTables_wrapper .ui-toolbar {
-  padding: 0px;
-}
-
-  div.dataTables_length {
-    margin-left: 410px
-}
-
-.dataTables_length select {
-   background-color: white !important;
-   font-size: .9em;
-}
-.dataTables_filter input {
-   background-color: white !important;
-}
-
-a.dt-button,
-button.dt-button,
-div.dt-button {
-  background-image: none;
-  background-color: #ffbb33;
-  color: black;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  text-align:center;
-  vertical-align:middle
-
-}
-
-a.dt-button:hover,
-button.dt-button:hover,
-div.dt-button:hover {
-  background-image: none !important;
-  background-color: #ff8400 !important;
-  color: white;
-}
-
-
-
-.table-dark td {
-  color: black;
-}
-
-tr:hover td {
-    background-color: #ffbb33 !important;
-}
-
-.pagination>li>a, .pagination>li>span{
-  border:0px solid black !important;
-  background-color: #ffbb33 !important;
-  color: black
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    padding : 5px;
-    margin-left: 0px;
-    display: inline;
-    border: 0px;
-}
-.dataTables_wrapper .paginate_button:hover {
-    border: 1px;
-}
-
-
+  }
 </style>
 
 </head>
