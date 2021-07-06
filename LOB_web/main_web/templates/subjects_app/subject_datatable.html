@@ -3,9 +3,11 @@
 <link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
 <link href="{% static 'DataTables/DataTables-1.10.25/css/jquery.dataTables.min.css' %}">
 <link href="{% static 'DataTables/Buttons-1.7.1/css/buttons.dataTables.min.css' %}">
-{% block title %} Subjects {% endblock %}
+{% block title %} Subjects Data {% endblock %}
 {% block content %}
-
+<h1 style="color: white;">
+    Subjects DataTable LOB
+</h1>
 <a class="font-weight-bold mb-sm-2 ml-sm-3 btn btn-warning btn-sm float-left"
    href="{% url 'subjects' %}" role="button"><span style="font-size:smaller;"> Add New Record</span></a>
 <div class="container-fluid">

@@ -1,0 +1,75 @@
+/* CSS file store the customize DATATABLE style */
+@charset = "utf8"
+
+/*-------------------------------
+    Style DataTables Properties
+---------------------------------*/
+
+/* Filter - Length - Info - Paginate: general properties*/
+
+.dataTables_wrapper .ui-toolbar {
+  padding: 0px;
+  }
+
+.dataTables_length select {
+   background-color: white !important;
+   font-size: .9em;
+   }
+
+.dataTables_filter input {
+   background-color: white !important;
+   }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding : 0px;
+    margin-left: 5px;
+    display: inline;
+    border: 0px;
+    }
+
+.dataTables_wrapper .paginate_button:hover {
+    border: 1px;
+    }
+
+/* Filter - Length - Info - Paginate: Html class*/
+.pagination>li>a, .pagination>li>span{
+    border:0px solid black !important;
+    background-color: #ffbb33 !important;
+    color: black
+    }
+
+div.dataTables_length {
+    margin-left: 410px
+    }
+
+a.dt-button,
+button.dt-button,
+div.dt-button {
+    background-image: none;
+    background-color: #ffbb33;
+    color: black;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align:center;
+    vertical-align:middle
+    }
+
+a.dt-button:hover,
+button.dt-button:hover,
+div.dt-button:hover {
+    background-image: none !important;
+    background-color: #ff8400 !important;
+    color: white;
+    }
+
+/* Tables class properties*/
+
+.table-dark td {
+    color: black;
+    }
+
+tr:hover td {
+    background-color: #ffbb33 !important;
+    }
+
