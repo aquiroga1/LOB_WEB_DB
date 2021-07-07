@@ -1,158 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{% block title %}{% endblock %}</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {% load static %}
 
-    {% load static %}
+        <!-- Bootstrap -->
+        <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" media="all">
 
-    <!-- Bootstrap -->
-    <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+         <!-- DataTable Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="{% static 'DataTables/datatables.min.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'DataTables/DataTables-1.10.25/css/jquery.dataTables.min.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'DataTables/Responsive-2.2.9/css/responsive.bootstrap4.min.css' %}"/>
 
-
-     <!-- DataTable Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="{% static 'DataTables/datatables.min.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'DataTables/DataTables-1.10.25/css/jquery.dataTables.min.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'DataTables/Responsive-2.2.9/css/responsive.bootstrap4.min.css' %}"/>
-
-    <!-- DataTable custom CSS Style -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/Custom CSS/DataTable_Style.css' %}"/>
-
-
-
-<style>
-input {
-	border: none;
-	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5em;
-	padding: 0;
-	-webkit-appearance: none;
-}
-input[type="submit"] {
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  background-color: #ffbb33;
-  color: #00000;
-  font-weight: bold;
-  /* margin-bottom: 2em; */
-  text-transform: uppercase;
-  padding: 5px 10px;
-  height: 30px;
-}
-
-input[type="submit"]:hover {
-	background-color: white;
-	color: black
-}
-
-a {
-	border: none;
-	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 14px;
-	line-height: 3em;
-	padding: 0;
-    -webkit-appearance: none;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  background-color: #ffbb33;
-  color: black;
-  font-weight: bold;
-  /* margin-bottom: em; */
-  text-transform: uppercase;
-  padding: 5px 10px;
-  height: 30px;
-}
-
-a:hover {
-	background-color: white;
-	color: black
-}
-
-.navbase {
-    	left:50%;
-		top:50%;
-		margin-left:px;
-		margin-top:px;
-    background-color: transparent
-}
-.navbase:hover {
-    background-color: transparent
-}
-
-.dataTables_wrapper .dataTables_filter,
-.dataTables_wrapper .dataTables_length,
-.dataTables_wrapper .dataTables_info,
-.dataTables_wrapper .ui-button {
-  color: white;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-weight: bold;
-  padding: 1;
-  font-size: 17px;
-  text-align: left;
-  }
-</style>
+        <!-- DataTable custom CSS Style -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/Custom CSS/DataTable_Style.css' %}"/>
 
 </head>
-<body>
-{% if request.user.is_authenticated %}
-<div class="main">
-<!--<p>LOGGED IN AS {{ user.id }}</p>-->
-<!--    <br style="clear:both">-->
-<div class="d-flex bd-highlight mb-3">
-     <div class="mr-auto p-2 bd-highlight" >
-         <a class="navbase" href="">
-            <img width="4%" src="{% static 'img/LOGO_UNICAMP.png' %}" alt="...">
-          </a>
+    <body>
+        {% if request.user.is_authenticated %}
+            <div class="main">
+                <!--<p>LOGGED IN AS {{ user.id }}</p>-->
+                <!--    <br style="clear:both">-->
+                <div class="d-flex bd-highlight mb-3">
+                     <div class="mr-auto p-2 bd-highlight" >
+                         <a class="navbase" href="">
+                             <img width="4%" src="{% static 'img/LOGO_UNICAMP.png' %}" alt="...">
+                         </a>
 
-          <a class="navbase" href="https://mesquitarc.wixsite.com/lobunicamp">
-            <img width="9%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
-          </a>
-     </div>
-<!-- <div class="p-2 bd-highlight">Flex item</div>-->
-     <div class="p-2 bd-highlight">
-         <span style="width:98%; text-align:right;  display: inline-block;">
-                <a href="{% url 'logout' %}">Logout</a>
-         </span>
-     </div>
-</div>
-
-<!--        <span style="width:99%; text-align:right;  display: inline-block;">-->
-<!--            <a href="{% url 'logout' %}">Logout</a>-->
-<!--        </span>-->
-
-    <div class="container">
-        <center>
-        <div class="middle">
-            {% block content %}
+                          <a class="navbase" href="https://mesquitarc.wixsite.com/lobunicamp">
+                              <img width="9%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
+                          </a>
+                     </div>
+                    <!-- <div class="p-2 bd-highlight">Flex item</div>-->
+                     <div class="p-2 bd-highlight">
+                         <span style="width:98%; text-align:right;  display: inline-block;">
+                                <a href="{% url 'logout' %}">Logout</a>
+                         </span>
+                     </div>
+                </div>
 
 
-            {% endblock %}
-        </div>
-        </center>
-    </div>
+                <div class="container">
+                    <center>
+                    <div class="middle">
+                        {% block content %} {% endblock %}
+                    </div>
+                    </center>
+                </div>
+            </div>
 
-</div>
-<!-- Footer -->
-    <footer class="footer text-faded text-center py-5";>
-        <p class="m-0 mbt1" style="color: black">&copy; LOB Unicamp 2021</p>
-	</footer>
-{% endif %}
-
-
-<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/datatables.min.js' %}"></script>
-<script type="text/javascript" charset="utf8"  src="{% static 'DataTables/DataTables-1.10.25/js/dataTables.bootstrap5.min.js' %}"></script>
-{% block js %} {% endblock js %}
+            <!-- Footer -->
+            <footer class="footer text-faded text-center py-5">
+                <p class="m-0 mbt1" style="color: black">&copy; LOB Unicamp 2021</p>
+            </footer>
+        {% endif %}
 
 
-</body>
+        <script type="text/javascript" charset="utf8"  src="{% static 'DataTables/datatables.min.js' %}"></script>
+        <script type="text/javascript" charset="utf8"  src="{% static 'DataTables/DataTables-1.10.25/js/dataTables.bootstrap5.min.js' %}"></script>
+        {% block js %} {% endblock js %}
+    </body>
 </html>
-
-
-
 <!--Paletas de cores do site:-->
 <!--Fundo de azul : Codigo #203354-->
 <!--Elementos do site de amarelo: Codigo #ffbb33-->

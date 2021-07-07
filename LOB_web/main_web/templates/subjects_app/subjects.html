@@ -1,138 +1,243 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}Subject Form{% endblock %}
 <link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
-
 {% block content %}
-<div class="container">
-    <div class="col-md-5">
-        <div id="formularios">
-            <form role="form" action="." method="POST">
-                {% csrf_token %}
-                        <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">SUBJECT</h3>
+    <div class="container">
+        <div class="col-md-5">
+            <div id="formularios">
+                <form role="form" action="." method="POST">
+                    {% csrf_token %}
+                            <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">SUBJECT</h3>
 
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                     <label for="id_name" class="input-group-text">Name:</label>
-                                </div>
-                                <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_condition">Condition:</label>
-                                </div>
-                                <select class="custom-select" name="condition" required="" id="id_condition">
-                                  <option value="" selected="">---------</option>
-                                  <option value="P">Patient</option>
-                                  <option value="H">Healthy</option>
-                                </select>
-                            </div>
-
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                     <label class="input-group-text" for="id_birth_date">Birth date:</label>
-                                </div>
-                                <input class="form-control" type="date" name="birth_date" id="id_birth_date">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_gender">Gender:</label>
-                                </div>
-                                <select class="custom-select" name="gender" required="" id="id_gender">
-                                  <option value="" selected="">---------</option>
-                                  <option value="F">Female</option>
-                                  <option value="M">Male</option>
-                                </select>
-                            </div>
-
-                            <div class="input-group mb-3">
+                                <div class="input-group mb-3" data-tip="Type the subject name">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_height">Height:</label>
+                                         <label id="name_lbl" for="id_name" class="input-group-text">Name:</label>
                                     </div>
-                                    <input class="form-control" type="number" name="height" step="0.01" min="0" required='' id="id_height">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_weight">Weight:</label>
+                                    <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">
                                 </div>
-                                <input class="form-control" type="number" name="weight" step="0.01" required="" min="0" id="id_weight">
-                            </div>
 
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_skin_color">Skin color:</label>
+                                <div class="input-group mb-3" data-tip="Choose a subject condition: Patient or Healthy">
+                                    <div class="input-group-prepend">
+                                        <label id="condition_lbl" class="input-group-text" for="id_condition"> Condition:</label>
+                                    </div>
+                                    <select class="custom-select" name="condition" required="" id="id_condition">
+                                      <option value="" selected="">---------</option>
+                                      <option value="P">Patient</option>
+                                      <option value="H">Healthy</option>
+                                    </select>
                                 </div>
-                                <select class="custom-select" name="skin_color" id="id_skin_color">
-                                  <option value="N">No info</option>
-                                  <option value="B">Black</option>
-                                  <option value="W">White</option>
-                                  <option value="Y">Yellow</option>
-                                  <option value="BR">Brown</option>
-                                </select>
-                            </div>
 
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_handedness">Handedness:</label>
+                                <div class="input-group mb-3" data-tip="Choose the subject Birth Date">
+                                    <div class="input-group-prepend">
+                                         <label id="birth_date_lbl"  class="input-group-text" for="id_birth_date">Birth date:</label>
+                                    </div>
+                                    <input class="form-control" type="date" name="birth_date" id="id_birth_date">
                                 </div>
-                                <select class="custom-select" name="handedness" id="id_handedness">
-                                  <option value="N">No info</option>
-                                  <option value="L">Left</option>
-                                  <option value="R">Right</option>
-                                </select>
-                            </div>
 
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label for="id_scholar_level" class="input-group-text">Scholar level:</label>
+                                <div class="input-group mb-3" data-tip="Declare the subject Gender">
+                                    <div class="input-group-prepend">
+                                        <label id="gender_lbl" class="input-group-text" for="id_gender">Gender:</label>
+                                    </div>
+                                    <select class="custom-select" name="gender" required="" id="id_gender">
+                                      <option value="" selected="">---------</option>
+                                      <option value="F">Female</option>
+                                      <option value="M">Male</option>
+                                    </select>
                                 </div>
-                                <select class="custom-select" name="scholar_level" id="id_scholar_level">
-                                      <option value="NI">No info</option>
-                                      <option value="N">No education</option>
-                                      <option value="PS">Pre school</option>
-                                      <option value="ES">Elementary school</option>
-                                      <option value="MS">Middle school</option>
-                                      <option value="HS">High school</option>
-                                      <option value="T">Technical</option>
-                                      <option value="G">Graduate</option>
-                                      <option value="PG">Post-Graduate</option>
-                                </select>
-                            </div>
 
-
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                     <label for="id_telephone" class="input-group-text">Telephone:</label>
+                                <div class="input-group mb-3" data-tip="Report the subject Height (m)">
+                                        <div class="input-group-prepend">
+                                             <label id="height_lbl" class="input-group-text" for="id_height">Height:</label>
+                                        </div>
+                                        <input class="form-control" type="number" name="height" step="0.01" min="0" required='' id="id_height">
                                 </div>
-                                <input type="text" class="form-control" name="telephone" maxlength="100" required="" id="id_telephone">
-                            </div>
 
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                     <label for="id_email" class="input-group-text">Email:</label>
+                                <div class="input-group mb-3" data-tip="Report the subject Weight (kg)">
+                                    <div class="input-group-prepend">
+                                        <label id="weight_lbl"  class="input-group-text" for="id_weight">Weight:</label>
+                                    </div>
+                                    <input class="form-control" type="number" name="weight" step="0.01" required="" min="0" id="id_weight">
                                 </div>
-                                <input type="email" class="form-control" name="email" maxlength="254" required="" id="id_email">
-                            </div>
 
-<!--                class="input-group input-group-lg"-->
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_additional_info">Additional info:</label>
+                                <div class="input-group mb-3" data-tip="Declare a subject Skin">
+                                    <div class="input-group-prepend">
+                                        <label id="skin_color_lbl"  class="input-group-text" for="id_skin_color">Skin color:</label>
+                                    </div>
+                                    <select class="custom-select" name="skin_color" id="id_skin_color">
+                                      <option value="N">No info</option>
+                                      <option value="B">Black</option>
+                                      <option value="W">White</option>
+                                      <option value="Y">Yellow</option>
+                                      <option value="BR">Brown</option>
+                                    </select>
                                 </div>
-                                <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" required="" id="id_additional_info" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
-                            </div>
 
-                <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+                                <div class="input-group mb-3" data-tip="Choose the Dominant Hand subject">
+                                    <div class="input-group-prepend">
+                                        <label id="handedness_lbl"  class="input-group-text" for="id_handedness">Handedness:</label>
+                                    </div>
+                                    <select class="custom-select" name="handedness" id="id_handedness">
+                                      <option value="N">No info</option>
+                                      <option value="L">Left</option>
+                                      <option value="R">Right</option>
+                                    </select>
+                                </div>
 
-            </form>
-            <br style="clear:both">
+                                <div class="input-group mb-3" data-tip="Report the last subject Scholar level (currently or finished)">
+                                    <div class="input-group-prepend">
+                                        <label id="scholar_level_lbl"  for="id_scholar_level" class="input-group-text">Scholar level:</label>
+                                    </div>
+                                    <select class="custom-select" name="scholar_level" id="id_scholar_level">
+                                          <option value="NI">No info</option>
+                                          <option value="N">No education</option>
+                                          <option value="PS">Pre school</option>
+                                          <option value="ES">Elementary school</option>
+                                          <option value="MS">Middle school</option>
+                                          <option value="HS">High school</option>
+                                          <option value="T">Technical</option>
+                                          <option value="G">Graduate</option>
+                                          <option value="PG">Post-Graduate</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3" data-tip="Type the subject telephones number (If more than one is possible)">
+                                    <div class="input-group-prepend">
+                                         <label id="telephone_lbl"  for="id_telephone" class="input-group-text">Telephone:</label>
+                                    </div>
+                                    <input type="text" class="form-control" name="telephone" maxlength="100" required="" id="id_telephone">
+                                </div>
+
+                                <div class="input-group mb-3" data-tip="Type the subject e-mail">
+                                    <div class="input-group-prepend">
+                                         <label id="email_lbl" for="id_email" class="input-group-text">Email:</label>
+                                    </div>
+                                    <input type="email" class="form-control" name="email" maxlength="254" required="" id="id_email">
+                                </div>
+
+                                <div class="input-group mb-3" data-tip="If necessary, report subject additional information ">
+                                    <div class="input-group-prepend">
+                                        <label id="additional_info_lbl"  class="input-group-text" for="id_additional_info">Additional info:</label>
+                                    </div>
+                                    <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" required="" id="id_additional_info" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
+                                </div>
+
+                    <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+
+                </form>
+                <br style="clear:both">
+            </div>
         </div>
     </div>
-</div>
+
+    <script>
+
+        let name_lbl = document.getElementById("name_lbl")
+        let name_ipt = document.getElementById("id_name")
+        let condition_lbl = document.getElementById("condition_lbl")
+        let condition_ipt = document.getElementById("id_condition")
+        let birth_date_lbl = document.getElementById("birth_date_lbl")
+        let birth_date_ipt = document.getElementById("id_birth_date")
+        let gender_lbl = document.getElementById("gender_lbl")
+        let gender_ipt = document.getElementById("id_gender")
+        let height_lbl = document.getElementById("height_lbl")
+        let height_ipt = document.getElementById("id_height")
+        let weight_lbl = document.getElementById("weight_lbl")
+        let weight_ipt = document.getElementById("id_weight")
+        let skin_color_lbl = document.getElementById("skin_color_lbl")
+        let skin_color_ipt = document.getElementById("id_skin_color")
+        let handedness_lbl = document.getElementById("handedness_lbl")
+        let handedness_ipt = document.getElementById("id_handedness")
+        let scholar_level_lbl = document.getElementById("scholar_level_lbl")
+        let scholar_level_ipt = document.getElementById("id_scholar_level")
+        let telephone_lbl = document.getElementById("telephone_lbl")
+        let telephone_ipt = document.getElementById("id_telephone")
+        let email_lbl = document.getElementById("email_lbl")
+        let email_ipt = document.getElementById("id_email")
+        let additional_info_lbl = document.getElementById("additional_info_lbl")
+        let additional_info_ipt = document.getElementById("id_additional_info")
 
 
+
+        name_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        name_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        name_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        name_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        condition_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        condition_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        condition_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        condition_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        birth_date_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        birth_date_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        birth_date_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        birth_date_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        gender_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        gender_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        gender_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        gender_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        height_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        height_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        height_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        height_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        weight_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        weight_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        weight_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        weight_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        skin_color_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        skin_color_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        skin_color_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        skin_color_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        handedness_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        handedness_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        handedness_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        handedness_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        scholar_level_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        scholar_level_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        scholar_level_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        scholar_level_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        telephone_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        telephone_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        telephone_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        telephone_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        email_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        email_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        email_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        email_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        additional_info_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        additional_info_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        additional_info_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        additional_info_ipt.addEventListener("mouseleave", ipt_mouseleave)
+
+
+        function lbl_mouseenter(event) {
+            var lbl = document.getElementById(event.target.id)
+            lbl.style.background = '#ffbb33'
+            lbl.style.borderColor = '#ffbb33'
+            lbl.style.borderWidth = "thin"
+            lbl.style.color= 'white'
+            lbl.style.fontWeight= 'bold'
+        }
+
+        function lbl_mouseleave(event) {
+            var lbl = document.getElementById(event.target.id)
+            lbl.style.background = '#E9EcEF'
+            lbl.style.borderColor = '#E9EcEF'
+            lbl.style.color='#495057'
+            lbl.style.fontWeight= 'normal'
+        }
+
+        function ipt_mouseenter(event) {
+            var ipt = document.getElementById(event.target.id)
+            ipt.style.borderColor = '#ffbb33'
+            ipt.style.borderWidth = "medium"
+        }
+
+        function ipt_mouseleave(event) {
+            var ipt = document.getElementById(event.target.id)
+            ipt.style.borderColor  = '#E9EcEF'
+            ipt.style.borderWidth = "initial"
+        }
+
+    </script>
 {% endblock %}
 
