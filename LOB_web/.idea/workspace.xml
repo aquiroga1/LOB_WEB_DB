@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/static/css/Custom CSS/DataTable_Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/Custom CSS/DataTable_Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/measurementsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/measurementsapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623792891743</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="datas tables working">
+      <created>1626206365804</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1626206365804</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +337,8 @@
     <MESSAGE value="checkout commit" />
     <MESSAGE value="ok" />
     <MESSAGE value="comorbidities working" />
-    <option name="LAST_COMMIT_MESSAGE" value="comorbidities working" />
+    <MESSAGE value="datas tables working" />
+    <option name="LAST_COMMIT_MESSAGE" value="datas tables working" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
