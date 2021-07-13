@@ -45,7 +45,7 @@ class Subjects(models.Model):
     handedness = models.CharField(max_length=20, null=False, default='No info', choices=handedness_choices)
     scholar_level = models.CharField(max_length=20, null=False, default='No info', choices=scholar_level_choices)
     telephone = models.CharField(max_length=100, null=True,blank=True)
-    email = models.EmailField(null=True,blank=True)
+    email = models.EmailField(null=True, blank=True)
     additional_info = models.TextField(null=True, blank=True)
     auth_user_id = models.ForeignKey(User, db_column="user", on_delete=models.CASCADE, null=True)
     created = models.DateTimeField(auto_now_add=True)
@@ -82,10 +82,10 @@ class Comorbidities(models.Model):
 class Medical_Record(models.Model):
     subjects_id = models.ForeignKey(Subjects, on_delete=models.CASCADE)
     HC_number = models.CharField(max_length=20, null=False)
-    diseases_id = models.ForeignKey(Diseases, on_delete=models.CASCADE, null=True)
-    comorbidities_ids = models.ManyToManyField(Comorbidities, null=True)
-    surgery = models.TextField(null=True)
-    clinical_outcomes = models.TextField(null=False)
+    diseases_id = models.ForeignKey(Diseases, on_delete=models.CASCADE, null=True, blank=True)
+    comorbidities_ids = models.ManyToManyField(Comorbidities, null=True, blank=True)
+    surgery = models.TextField(null=True, blank=True)
+    clinical_outcomes = models.TextField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

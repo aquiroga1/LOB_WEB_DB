@@ -89,7 +89,7 @@ def medical_records_page(request):
                 print(cmds)
                 # cmd = Comorbidities.objects.filter(name__in=str(cmds))
                 obj.comorbidities_ids.set(cmds)
-                return HttpResponseRedirect('/subjects')
+                return HttpResponseRedirect('/medical_records')
         else:
             form_medical_records = Medical_RecordForm()
         return render(request, "subjects_app/medical_record.html", {'form_medical_records': form_medical_records})
