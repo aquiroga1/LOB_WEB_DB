@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/static/css/Custom CSS/DataTable_Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/Custom CSS/DataTable_Style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measurementsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/measurementsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/subjects_app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/projectsapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -71,9 +72,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
-      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\measurementsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\projectsapp" />
+      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\measurementsapp" />
+      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\projectsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\appcenter" />
     </key>

@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from loginapp.views import login_page, home_page, logout_page
 from subjectsapp.views import subjects_page, medical_records_page, index, index2
-from projectsapp.views import projects_page
-from measurementsapp.views import measurements_page
+from projectsapp.views import projects_page, index_p
+from measurementsapp.views import measurements_page, index_m
 from appcenter.views import appcenter
 
 
@@ -35,5 +35,7 @@ urlpatterns = [
     path('measurements/', measurements_page, name='measurements'),
     path('index/', index, name='index'),
     path('index2/', index2, name='index2'),
+    path('index_m/', index_m, name='index_m'),
+    path('index_p/', index_p, name='index_p'),
 
 ]

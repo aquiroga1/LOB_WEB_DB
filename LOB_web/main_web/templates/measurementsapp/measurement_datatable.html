@@ -4,43 +4,49 @@
 <link href="{% static 'DataTables/DataTables-1.10.25/css/jquery.dataTables.min.css' %}">
 <link href="{% static 'DataTables/Buttons-1.7.1/css/buttons.dataTables.min.css' %}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-{% block title %} Medical Record Data {% endblock %}
+{% block title %} Subjects Data {% endblock %}
 {% block content %}
     <h1 style="color: white;">
-        Medical Record DataTable LOB
+        Measurements DataTable LOB
     </h1>
 
-    <a class="font-weight-bold mb-sm-2 ml-sm-3 btn btn-warning btn-sm float-left" href="{% url 'medical_records' %}" role="button">
+    <a class="font-weight-bold mb-sm-2 ml-sm-3 btn btn-warning btn-sm float-left" href="{% url 'measurements' %}" role="button">
         <span style="font-size:smaller;">
             Add New Record
         </span>
     </a>
 
     <div class="container-fluid">
-        <table id="medicalrecord_table" class="table-dark table-bordered table-hover dt-responsive nowrap" width="100%"  >
+        <table id="measurements_table" class="table-dark table-bordered table-hover dt-responsive nowrap" width="100%"  >
             <thead>
                 <tr>
                     <th>id</th>
                     <th>subjects_id</th>
-                    <th>HC_number</th>
-                    <th>diseases_id</th>
-                    <th>comorbidities_ids</th>
-                    <th>surgery</th>
-                    <th>clinical_outcomes</th>
+                    <th>local</th>
+                    <th>date</th>
+                    <th>project_id</th>
+                    <th>file_name</th>
+                    <th>incidents</th>
+                    <th>observations</th>
+                    <th>FPIC_assignement</th>
+                    <th>auth_user_id</th>
                     <th>Actions</th>
                 </tr>
             </thead>
 
             <tbody>
-                {% for med in medical_records_data %}
+                {% for measurements in measurement_data %}
                     <tr>
-                        <td>{{med.id}}</td>
-                        <td>{{med.subjects_id}}</td>
-                        <td>{{med.HC_number}}</td>
-                        <td>{{med.diseases_id}}</td>
-                        <td>{{med.comorbidities_ids}}</td>
-                        <td>{{med.surgery}}</td>
-                        <td>{{med.clinical_outcomes}}</td>
+                        <td>{{measurements.id}}</td>
+                        <td>{{measurements.subjects_id}}</td>
+                        <td>{{measurements.local}}</td>
+                        <td>{{measurements.date}}</td>
+                        <td>{{measurements.project_id}}</td>
+                        <td>{{measurements.file_name}}</td>
+                        <td>{{measurements.incidents}}</td>
+                        <td>{{measurements.observations}}</td>
+                        <td>{{measurements.FPIC_assignement}}</td>
+                        <td>{{measurements.auth_user_id}}</td>
                         <td>
 
                                 <a href="" class="btn btn-primary btn-sm" data-title="Edit" data-target="#edit" >
@@ -79,7 +85,7 @@
 {% block js %}
 <script>
 $(document).ready(function() {
-    $('#medicalrecord_table').DataTable( {
+    $('#measurements_table').DataTable( {
         dom: 'Blfrtip',
         buttons: [
             'copy', 'csv', 'excel',

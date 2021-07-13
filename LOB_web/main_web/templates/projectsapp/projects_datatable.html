@@ -4,43 +4,53 @@
 <link href="{% static 'DataTables/DataTables-1.10.25/css/jquery.dataTables.min.css' %}">
 <link href="{% static 'DataTables/Buttons-1.7.1/css/buttons.dataTables.min.css' %}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-{% block title %} Medical Record Data {% endblock %}
+{% block title %} Subjects Data {% endblock %}
 {% block content %}
     <h1 style="color: white;">
-        Medical Record DataTable LOB
+        Projects DataTable LOB
     </h1>
 
-    <a class="font-weight-bold mb-sm-2 ml-sm-3 btn btn-warning btn-sm float-left" href="{% url 'medical_records' %}" role="button">
+    <a class="font-weight-bold mb-sm-2 ml-sm-3 btn btn-warning btn-sm float-left" href="{% url 'projects' %}" role="button">
         <span style="font-size:smaller;">
             Add New Record
         </span>
     </a>
 
     <div class="container-fluid">
-        <table id="medicalrecord_table" class="table-dark table-bordered table-hover dt-responsive nowrap" width="100%"  >
+        <table id="projects_table" class="table-dark table-bordered table-hover dt-responsive nowrap" width="100%"  >
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>subjects_id</th>
-                    <th>HC_number</th>
-                    <th>diseases_id</th>
-                    <th>comorbidities_ids</th>
-                    <th>surgery</th>
-                    <th>clinical_outcomes</th>
+                    <th>title</th>
+                    <th>description</th>
+                    <th>CAAE</th>
+                    <th>FPIC_file</th>
+                    <th>prin_investigator</th>
+                    <th>co_investigator</th>
+                    <th>probe_details</th>
+                    <th>nirs_systems_id</th>
+                    <th>aux_systems_id</th>
+                    <th>project_file</th>
+                    <th>auth_user_id</th>
                     <th>Actions</th>
                 </tr>
             </thead>
 
             <tbody>
-                {% for med in medical_records_data %}
+                {% for projects in projects_data %}
                     <tr>
-                        <td>{{med.id}}</td>
-                        <td>{{med.subjects_id}}</td>
-                        <td>{{med.HC_number}}</td>
-                        <td>{{med.diseases_id}}</td>
-                        <td>{{med.comorbidities_ids}}</td>
-                        <td>{{med.surgery}}</td>
-                        <td>{{med.clinical_outcomes}}</td>
+                        <td>{{projects.id}}</td>
+                        <td>{{projects.title}}</td>
+                        <td>{{projects.description}}</td>
+                        <td>{{projects.CAAE}}</td>
+                        <td>{{projects.FPIC_file}}</td>
+                        <td>{{projects.prin_investigator}}</td>
+                        <td>{{projects.co_investigator}}</td>
+                        <td>{{projects.probe_details}}</td>
+                        <td>{{projects.nirs_systems_id}}</td>
+                        <td>{{projects.aux_systems_id}}</td>
+                        <td>{{projects.project_file}}</td>
+                        <td>{{projects.auth_user_id}}</td>
                         <td>
 
                                 <a href="" class="btn btn-primary btn-sm" data-title="Edit" data-target="#edit" >
@@ -79,7 +89,7 @@
 {% block js %}
 <script>
 $(document).ready(function() {
-    $('#medicalrecord_table').DataTable( {
+    $('#projects_table').DataTable( {
         dom: 'Blfrtip',
         buttons: [
             'copy', 'csv', 'excel',
