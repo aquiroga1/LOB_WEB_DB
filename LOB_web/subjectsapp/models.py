@@ -4,8 +4,8 @@ from django.db import models
 
 class Subjects(models.Model):
     gender_choices = [
-        ("F", "Female"),
-        ("M", "Male"),
+        ("Female", "Female"),
+        ("Male", "Male"),
     ]
     condition_choices = [
         ("P", "Patient"),
