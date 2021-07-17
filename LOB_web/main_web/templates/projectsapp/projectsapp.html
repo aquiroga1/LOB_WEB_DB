@@ -10,7 +10,7 @@
                 {% csrf_token %}
                         <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">PROJECT</h3>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Type the project title">
                                 <div class="input-group-prepend">
                                      <label class="input-group-text" for="id_title" class="input-group-text">Title:</label>
                                 </div>
@@ -93,5 +93,100 @@
     </div>
 </div>
 
+<script>
+
+    let title_lbl = document.getElementById("title_lbl")
+    let title_ipt = document.getElementById("id_title")
+    let CAAE_lbl = document.getElementById("CAAE_lbl")
+    let CAAE_ipt = document.getElementById("id_CAAE")
+    let FPIC_file_lbl = document.getElementById("birth_date_lbl")
+    let FPIC_file_ipt = document.getElementById("id_birth_date")
+    let prin_investigator_lbl = document.getElementById("prin_investigator_lbl")
+    let prin_investigator_ipt = document.getElementById("id_prin_investigator")
+    let co_investigator_lbl = document.getElementById("co_investigator_lbl")
+    let co_investigator_ipt = document.getElementById("id_co_investigator")
+    let description_lbl = document.getElementById("description_lbl")
+    let description_ipt = document.getElementById("id_description")
+    let nirs_systems_id_lbl = document.getElementById("nirs_systems_id_lbl")
+    let nirs_systems_id_ipt = document.getElementById("id_nirs_systems_id")
+    let probe_details_lbl = document.getElementById("probe_details_lbl")
+    let probe_details_ipt = document.getElementById("id_probe_details")
+    let aux_systems_id_lbl = document.getElementById("aux_systems_id_lbl")
+    let aux_systems_id_ipt = document.getElementById("id_aux_systems_id")
+    let project_file_lbl = document.getElementById("project_file_lbl")
+    let project_file_ipt = document.getElementById("id_project_file")
+
+    title_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    title_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    title_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    title_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    CAAE_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    CAAE_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    CAAE_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    CAAE_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    FPIC_file_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    FPIC_file_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    FPIC_file_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    FPIC_file_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    prin_investigator_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    prin_investigator_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    prin_investigator_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    prin_investigator_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    co_investigator_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    co_investigator_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    co_investigator_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    co_investigator_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    description_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    description_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    description_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    description_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    nirs_systems_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    nirs_systems_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    nirs_systems_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    nirs_systems_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    probe_details_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    probe_details_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    probe_details_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    probe_details_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    aux_systems_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    aux_systems_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    aux_systems_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    aux_systems_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    project_file_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    project_file_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    project_file_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    project_file_ipt.addEventListener("mouseleave", ipt_mouseleave)
+
+    function lbl_mouseenter(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#ffbb33'
+        lbl.style.borderColor = '#ffbb33'
+        lbl.style.borderWidth = "thin"
+        lbl.style.color= 'black'
+        lbl.style.fontWeight= 'bold'
+    }
+
+    function lbl_mouseleave(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#E9EcEF'
+        lbl.style.borderColor = '#E9EcEF'
+        lbl.style.color='#495057'
+        lbl.style.fontWeight= 'normal'
+    }
+
+    function ipt_mouseenter(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor = '#ffbb33'
+        ipt.style.borderWidth = "medium"
+    }
+
+    function ipt_mouseleave(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor  = '#E9EcEF'
+        ipt.style.borderWidth = "initial"
+    }
+
+</script>
 {% endblock %}
+
 
