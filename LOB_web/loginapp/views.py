@@ -65,5 +65,3 @@ def logout_page(request):
 User = get_user_model()
 
 
-def index(request):
-    return HttpResponse('ADMIN PAGE')

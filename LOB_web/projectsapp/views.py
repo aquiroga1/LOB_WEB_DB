@@ -28,7 +28,7 @@ def projects_page(request):
                 obj.save()
                     #if se é paciente
                         #return HttpResponseRedirect('/medical_record')
-                return HttpResponseRedirect('/subjects')
+                return HttpResponseRedirect('/projects')
         else:
             form_projects = ProjectsForm
         return render(request, "projectsapp/projectsapp.html", {'form_projects': form_projects})

@@ -29,7 +29,7 @@
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_diseases_id">Diseases:</label>
                                     </div>
-                                    <select class="custom-select" name="diseases_id" required="" id="id_diseases_id">
+                                    <select class="custom-select" name="diseases_id" id="id_diseases_id">
                                         <option value="{{ form_medical_records.diseases_id }}"></option>
                                     </select>
                                 </div>
@@ -38,8 +38,11 @@
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
                                     </div>
-                                    <select class="custom-select" name="comorbidities_ids" required="" id="id_comorbidities_ids" multiple="">
-                                        <option value="{{ form_medical_records.comorbidities_ids }}"></option>
+                                    <select class="custom-select" name="comorbidities_ids" id="id_comorbidities_ids" multiple="">
+                                        {% for cat in cmd %}
+                                            <option value="{{cat.id}}">{{ form_medical_records.cat }}</option>
+                                        {% endfor %}
+<!--                                        <option value="{{ form_medical_records.comorbidities_ids }}"></option>-->
                                     </select>
                                 </div>
 
@@ -47,14 +50,14 @@
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="id_surgery">Surgery:</label>
                                     </div>
-                                    <textarea class="form-control" name="surgery" cols="40" rows="10" maxlength="200" required="" id="id_surgery" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
+                                    <textarea class="form-control" name="surgery" cols="40" rows="10" maxlength="200" id="id_surgery" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="id_clinical_outcomes">Clinical outcomes:</label>
                                     </div>
-                                    <textarea class="form-control" name="clinical_outcomes" cols="40" rows="10" maxlength="200" required="" id="id_clinical_outcomes" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
+                                    <textarea class="form-control" name="clinical_outcomes" cols="40" rows="10" maxlength="200" id="id_clinical_outcomes" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                                 </div>
 
 

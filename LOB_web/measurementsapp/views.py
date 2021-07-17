@@ -26,7 +26,7 @@ def measurements_page(request):
                 obj.save()
                     #if se é paciente
                         #return HttpResponseRedirect('/medical_record')
-                return HttpResponseRedirect('/subjects')
+                return HttpResponseRedirect('/measurements')
         else:
             form_measurements = MeasurementsForm
         return render(request, "measurementsapp/measurementsapp.html", {'form_measurements': form_measurements})
