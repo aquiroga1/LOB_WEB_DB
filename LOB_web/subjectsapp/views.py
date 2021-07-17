@@ -97,6 +97,12 @@ def medical_records_page(request):
         return redirect("/login")
 
 
+def index3(request):
+    context = {}
+    cmd = Comorbidities.objects.all()
+    context['cmd'] = cmd
+    return render(request, "subjects_app/subject_datatable.html", context)
+
 def index(request):
     context = {}
     subject_data = Subjects.objects.all()

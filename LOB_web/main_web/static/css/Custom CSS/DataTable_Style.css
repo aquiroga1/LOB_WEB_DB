@@ -84,3 +84,20 @@ tr:hover td {
     font-size: 17px;
     text-align: left;
 }
+
+th:nth-child(n){
+text-align: center;
+}
+
+td:nth-child(n){
+text-align: center;
+}
+
+table.dataTable td:nth-child(n) {
+  word-break: break-all;
+  white-space: normal;
+}
+
+
+
+
