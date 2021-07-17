@@ -34,3 +34,9 @@ def projects_page(request):
         return render(request, "projectsapp/projectsapp.html", {'form_projects': form_projects})
     else:
         return redirect("/login")
+
+def index_p(request):
+    context = {}
+    projects_data = Projects.objects.all()
+    context['projects_data'] = projects_data
+    return render(request, "projectsapp/projects_datatable.html", context)

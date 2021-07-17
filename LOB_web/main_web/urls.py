@@ -16,15 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from loginapp.views import login_page, home_page, logout_page
-from subjectsapp.views import index, subjects_page, medical_records_page
-from projectsapp.views import projects_page
-from measurementsapp.views import measurements_page
+from subjectsapp.views import subjects_page, medical_records_page, index, index2
+from projectsapp.views import projects_page, index_p
+from measurementsapp.views import measurements_page, index_m
+from appcenter.views import appcenter
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('appcenter/', include('appcenter.urls')),
+    path('appcenter/', appcenter, name='appcenter'),
     path('home', home_page, name='home'),
     path('login/', login_page),
     path('logout/', logout_page, name='logout'),
@@ -33,4 +34,8 @@ urlpatterns = [
     path('projects/', projects_page, name='projects'),
     path('measurements/', measurements_page, name='measurements'),
     path('index/', index, name='index'),
+    path('index2/', index2, name='index2'),
+    path('index_m/', index_m, name='index_m'),
+    path('index_p/', index_p, name='index_p'),
+
 ]

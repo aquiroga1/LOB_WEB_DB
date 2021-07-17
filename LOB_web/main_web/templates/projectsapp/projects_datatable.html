@@ -7,52 +7,50 @@
 {% block title %} Subjects Data {% endblock %}
 {% block content %}
     <h1 style="color: white;">
-        Subjects DataTable LOB
+        Projects DataTable LOB
     </h1>
 
-    <a class="font-weight-bold mb-sm-2 ml-sm-3 btn btn-warning btn-sm float-left" href="{% url 'subjects' %}" role="button">
+    <a class="font-weight-bold mb-sm-2 ml-sm-3 btn btn-warning btn-sm float-left" href="{% url 'projects' %}" role="button">
         <span style="font-size:smaller;">
             Add New Record
         </span>
     </a>
 
     <div class="container-fluid">
-        <table id="subject_table" class="table-dark table-bordered table-hover dt-responsive nowrap" width="100%"  >
+        <table id="projects_table" class="table-dark table-bordered table-hover dt-responsive nowrap" width="100%"  >
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>name</th>
-                    <th>birth date</th>
-                    <th>gender</th>
-                    <th>condition</th>
-                    <th>height</th>
-                    <th>weight</th>
-                    <th>skin color</th>
-                    <th>handedness</th>
-                    <th>scholar level</th>
-                    <th>telephone</th>
-                    <th>email</th>
-                    <th>additional info</th>
+                    <th>title</th>
+                    <th>description</th>
+                    <th>CAAE</th>
+                    <th>FPIC_file</th>
+                    <th>prin_investigator</th>
+                    <th>co_investigator</th>
+                    <th>probe_details</th>
+                    <th>nirs_systems_id</th>
+                    <th>aux_systems_id</th>
+                    <th>project_file</th>
+                    <th>auth_user_id</th>
                     <th>Actions</th>
                 </tr>
             </thead>
 
             <tbody>
-                {% for subject in subject_data %}
+                {% for projects in projects_data %}
                     <tr>
-                        <td>{{subject.id}}</td>
-                        <td>{{subject.name}}</td>
-                        <td>{{subject.birth_date}}</td>
-                        <td>{{subject.gender}}</td>
-                        <td>{{subject.condition}}</td>
-                        <td>{{subject.height}}</td>
-                        <td>{{subject.weight}}</td>
-                        <td>{{subject.skin_color}}</td>
-                        <td>{{subject.handedness}}</td>
-                        <td>{{subject.scholar_level}}</td>
-                        <td>{{subject.telephone}}</td>
-                        <td>{{subject.email}}</td>
-                        <td>{{subject.additional_info}}</td>
+                        <td>{{projects.id}}</td>
+                        <td>{{projects.title}}</td>
+                        <td>{{projects.description}}</td>
+                        <td>{{projects.CAAE}}</td>
+                        <td>{{projects.FPIC_file}}</td>
+                        <td>{{projects.prin_investigator}}</td>
+                        <td>{{projects.co_investigator}}</td>
+                        <td>{{projects.probe_details}}</td>
+                        <td>{{projects.nirs_systems_id}}</td>
+                        <td>{{projects.aux_systems_id}}</td>
+                        <td>{{projects.project_file}}</td>
+                        <td>{{projects.auth_user_id}}</td>
                         <td>
 
                                 <a href="" class="btn btn-primary btn-sm" data-title="Edit" data-target="#edit" >
@@ -91,8 +89,8 @@
 {% block js %}
 <script>
 $(document).ready(function() {
-    $('#subject_table').DataTable( {
-        dom: 'Bflrtip',
+    $('#projects_table').DataTable( {
+        dom: 'Blfrtip',
         buttons: [
             'copy', 'csv', 'excel',
         ],
