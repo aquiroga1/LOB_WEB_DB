@@ -38,11 +38,10 @@
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
                                     </div>
-                                    <select class="custom-select" name="comorbidities_ids" id="id_comorbidities_ids" multiple="">
-                                        {% for cat in cmd %}
-                                            <option value="{{cat.id}}">{{ form_medical_records.cat }}</option>
+                                    <select class="custom-select" name="comorbidities_ids" id="id_comorbidities_ids" multiple="multiple">
+                                        {% for cmd in cmds %}
+                                            <option value="{{ cmds.id }}">{{ form_medical_records.cmd }}</option>
                                         {% endfor %}
-<!--                                        <option value="{{ form_medical_records.comorbidities_ids }}"></option>-->
                                     </select>
                                 </div>
 
