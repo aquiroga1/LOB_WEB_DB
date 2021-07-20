@@ -72,18 +72,6 @@ a:hover {
     color: black
 }
 
-.navbase {
-    left:50%;
-    top:50%;
-    margin-left:px;
-    margin-top:px;
-    background-color: transparent
-}
-.navbase:hover {
-    background-color: transparent
-}
-
-
 div.main{
 background: #0264d6; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #0264d6 1%, #203354 100%); /* FF3.6+ */
@@ -207,3 +195,4 @@ flex-grow: 1;
     opacity: 1;
 
 }
+
