@@ -26,9 +26,10 @@ def subjects_page(request):
                 obj.auth_user_id = request.user
                 # finally save the object in db
                 obj.save()
-                    #if se é paciente
-                        #return HttpResponseRedirect('/medical_record')
-                return HttpResponseRedirect('/subjects')
+                if obj.condition == "P":
+                    return HttpResponseRedirect('/medical_records')
+                else:
+                    return HttpResponseRedirect('/subjects')
         else:
             form_subjects = SubjectsForm()
         return render(request, "subjects_app/subjects.html", {'form_subjects': form_subjects})

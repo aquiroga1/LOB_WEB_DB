@@ -7,13 +7,13 @@ from django.db import models
 
 class Measurements(models.Model):
     incidents_choices = [
-        ("Y", "Yes"),
-        ("N", "No"),
+        ("Yes", "Yes"),
+        ("No", "No"),
     ]
 
     FPIC_assignement_choices = [
-        ("Y", "Yes"),
-        ("N", "No"),
+        ("Yes", "Yes"),
+        ("No", "No"),
     ]
     
 

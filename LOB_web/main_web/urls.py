@@ -39,3 +39,4 @@ urlpatterns = [
     path('index_p/', index_p, name='index_p'),
 
 ]
+
