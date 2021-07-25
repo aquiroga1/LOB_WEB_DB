@@ -1,5 +1,5 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-#team {
+div.team{
     background: #0264d6; /* Old browsers */
 background: -moz-radial-gradient(center, ellipse cover,  #0264d6 1%, #1c2b5a 100%); /* FF3.6+ */
 background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#0264d6), color-stop(100%,#1c2b5a)); /* Chrome,Safari4+ */
@@ -37,10 +37,7 @@ section .section-title {
     text-transform: uppercase;
 }
 
-#team .card {
-    border: none;
-    background: #ffffff;
-}
+
 
 .image-flip:hover .backside,
 .image-flip.hover .backside {
@@ -137,3 +134,59 @@ section .section-title {
 .footer {
      background-color: #ffbb33;
   }
+
+
+[data-tip2] {
+	position:relative;
+
+}
+
+
+[data-tip2]:before {
+	content:'';
+	/* hides the tooltip when not hovered */
+	display:none;
+	content:'';
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #1a1a1a;
+	position:absolute;
+	top:30px;
+	left:35px;
+	z-index:8;
+	font-size:0;
+	line-height:0;
+	width:0;
+	height:0;
+}
+[data-tip2]:after {
+	display:block;
+	opacity: 0;
+	content:attr(data-tip2);
+	position:absolute;
+	top:40px;
+	right:0px;
+	padding:5px 8px;
+	background:#ffffff;
+	color:"black" !important;
+	font-weight: bold;
+	font-family: 'Open Sans', Arial, sans-serif;
+	z-index:9;
+	font-size: 0.75em;
+	height:30px;
+	line-height:18px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	white-space:nowrap;
+	word-wrap:normal;
+	transition: all 0s;
+
+}
+
+[data-tip2]:hover:before,
+[data-tip2]:hover:after {
+    opacity: 1;
+
+}
+
