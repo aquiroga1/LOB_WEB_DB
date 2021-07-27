@@ -8,25 +8,36 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="{% static 'css/appcenter/appcenter.css' %}" rel="stylesheet">
-      <link href="{% static 'css/login_app/logout.css' %}" rel="stylesheet">
-      <link href="{% static 'css/appcenter/appcenter.css' %}" rel="stylesheet">
-
+    <link href="{% static 'css/login_app/logout.css' %}" rel="stylesheet">
+    <link href="{% static 'css/appcenter/appcenter.css' %}" rel="stylesheet">
   </head>
 
   <body class="text-center">
-  {% if request.user.is_authenticated %}
+      {% if request.user.is_authenticated %}
 
-  <div id="logout">
-    <span style="width:90%; text-align:right;  display: inline-block;">
-        <a href="{% url 'logout' %}">Logout</a>
-    </span>
-  </div>
-<!--        <div class='text-center'>-->
-<!--            <a class="nav-link" href="{% url 'logout' %}">Logout</a>-->
-<!--        </div>-->
+    <!--        <div class='text-center'>-->
+    <!--            <a class="nav-link" href="{% url 'logout' %}">Logout</a>-->
+    <!--        </div>-->
 
-    <section id="team" class="pb-5">
-      <div class="container">
+    <div class="team">
+        <header>
+            <div style="height: 60px;">
+                <img  style="float: left; padding-left: 8px; padding-top: 8px; padding-bottom: 8px;" width="5%" src="{% static 'img/LOGO_UNICAMP.png' %}" alt="...">
+                <img style="float: left; padding-left: 8px; padding-top: 8px; padding-bottom: 8px;" width="11%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
+                <a style="float: right; background-color:transparent; padding-left: 8px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px;" href="{% url 'logout' %}" data-tip2="Logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" style="color:white">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                </svg>
+                </a>
+                <a href="" style="float: right; text-align:right; display: inline-block; font-weight: 150; color:white; background-color:transparent; text-decoration: none; padding-left: 8px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px;">
+                    Welcome, <strong>{{ request.user.username }}</strong>
+                </a>
+
+            </div>
+        </header>
+
+        <div class="container">
           <h3 style="margin-bottom: 25px; text-align: center; color: white; font-size: 40px;">LOB CENTER</h3>
           <div class="row">
               <!-- Team member -->
@@ -50,7 +61,7 @@
                                     <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                     <a href="{% url 'subjects' %}"><button type="button" class="btn btn-primary">
                                     Enter</button></a>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -79,14 +90,14 @@
                                     <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                     <a href="{% url 'measurements' %}"><button type="button" class="btn btn-primary">
                                     Enter</button></a>
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ./Team member --> 
+            <!-- ./Team member -->
               <!-- Team member -->
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="image-flip" >
@@ -108,7 +119,7 @@
                                     <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                     <a href="{% url 'projects' %}"><button type="button" class="btn btn-primary">
                                     Enter</button></a>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -137,14 +148,14 @@
                                     <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                     <a href="https://www.google.com"><button type="button" class="btn btn-primary">
                                     Enter</button></a>
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ./Team member -->    
+            <!-- ./Team member -->
               <!-- Team member -->
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="image-flip" >
@@ -166,27 +177,27 @@
                                     <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                     <a href="https://www.google.com"><button type="button" class="btn btn-primary">
                                     Enter</button></a>
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ./Team member -->          
+            <!-- ./Team member -->
           </div>
-      </div>
-  </section>
+        </div>
+    </div>
 
 
-<!-- Footer -->
-    <footer class="footer text-faded text-center py-5", style="background-color: #ffbb33;">
-      <div class="container">
-        <p class="m-0 mbt1">&copy; LOB Unicamp 2021</p>
-      </div>
-	</footer>
+    <!-- Footer -->
+        <footer class="footer text-faded text-center py-5", style="background-color: #ffbb33;">
+          <div class="container">
+            <p class="m-0 mbt1">&copy; LOB Unicamp 2021</p>
+          </div>
+        </footer>
 
 
-    {% endif %}
+        {% endif %}
   </body>
 </html>

@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/static/css/Custom CSS/DataTable_Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/Custom CSS/DataTable_Style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626212261386</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="style and configuration data table">
+      <created>1626481452230</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1626481452230</updated>
+    </task>
+    <task id="LOCAL-00026" summary="comorbidities html">
+      <created>1626796667833</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1626796667833</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +365,9 @@
     <MESSAGE value="datas tables working" />
     <MESSAGE value="blank" />
     <MESSAGE value="update apps details" />
-    <option name="LAST_COMMIT_MESSAGE" value="update apps details" />
+    <MESSAGE value="style and configuration data table" />
+    <MESSAGE value="comorbidities html" />
+    <option name="LAST_COMMIT_MESSAGE" value="comorbidities html" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
