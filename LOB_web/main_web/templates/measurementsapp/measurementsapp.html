@@ -10,41 +10,41 @@
                 {% csrf_token %}
                         <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">MEASUREMENT</h3>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Choose the Subject ID">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_subjects_id">Subject:</label>
+                                    <label id="subjects_id_lbl" class="input-group-text" for="id_subjects_id">Subject:</label>
                                 </div>
                                     <select class="custom-select"  name="subjects_id" required="" id="id_subjects_id">
                                       <option value="{{ form_measurements.subjects_id }}"></option>
                                     </select>
                             </div>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Type the local of measurements">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_local">Local:</label>
+                                    <label id="local_lbl" class="input-group-text" for="id_local">Local:</label>
                                 </div>
                                 <input class="form-control" type="text" name="local" maxlength="100" required="" id="id_local">
                             </div>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Insert the date of measurements">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_date">Date:</label>
+                                    <label id="date_lbl" class="input-group-text" for="id_date">Date:</label>
                                 </div>
                                 <input class="form-control" type="date" name="date" id="id_date">
                             </div>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Choose the Project ID">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_project_id">Project:</label>
+                                    <label id="project_id_lbl" class="input-group-text" for="id_project_id">Project:</label>
                                 </div>
                                     <select class="custom-select"  name="project_id" required="" id="id_project_id">
                                       <option value="{{ form_measurements.project_id }}"></option>
                                     </select>
                             </div>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Choose the Signed FPIC status: Yes or No">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_FPIC_assignement">Signed FPIC:</label>
+                                    <label id="FPIC_assignement_lbl" class="input-group-text" for="id_FPIC_assignement">Signed FPIC:</label>
                                 </div>
                                     <select class="custom-select" name="FPIC_assignement" id="id_FPIC_assignement">
                                       <option value="" selected="">---------</option>
@@ -56,16 +56,16 @@
                                     </select>
                             </div>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Upload the Data File">
                                 <div class="input-group-prepend">
-                                    <label  class="input-group-text" for="id_file_name">Data File:</label>
+                                    <label id="file_name_lbl" class="input-group-text" for="id_file_name">Data File:</label>
                                 </div>
                                 <input class="form-control" type="file" name="file_name" id="id_file_name">
                             </div>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Choose the incidents status">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_incidents">Incidents:</label>
+                                    <label id="incidents_lbl" class="input-group-text" for="id_incidents">Incidents:</label>
                                 </div>
                                 <select class="custom-select" name="incidents" required="" id="id_incidents">
 
@@ -78,9 +78,9 @@
                             </div>
 
 <!--                class="input-group input-group-lg"-->
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" data-tip="Type the observations of measurements">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_observations">Observations:</label>
+                                    <label id="observations_lbl" class="input-group-text" for="id_observations">Observations:</label>
                                 </div>
                                 <textarea  class="form-control" name="observations" cols="40" rows="10" id="id_observations"></textarea>
                             </div>
@@ -93,5 +93,87 @@
     </div>
 </div>
 
+<script>
+
+    let subjects_id_lbl = document.getElementById("subjects_id_lbl")
+    let subjects_id_ipt = document.getElementById("id_subjects_id")
+    let local_lbl = document.getElementById("local_lbl")
+    let local_ipt = document.getElementById("id_local")
+    let date_lbl = document.getElementById("date_lbl")
+    let date_ipt = document.getElementById("id_date")
+    let project_id_lbl = document.getElementById("project_id_lbl")
+    let project_id_ipt = document.getElementById("id_project_id")
+    let FPIC_assignement_lbl = document.getElementById("FPIC_assignement_lbl")
+    let FPIC_assignement_ipt = document.getElementById("id_FPIC_assignement")
+    let file_name_lbl = document.getElementById("file_name_lbl")
+    let file_name_ipt = document.getElementById("id_file_name")
+    let incidents_lbl = document.getElementById("incidents_lbl")
+    let incidents_ipt = document.getElementById("id_incidents")
+    let observations_lbl = document.getElementById("observations_lbl")
+    let observations_ipt = document.getElementById("id_observations")
+
+    subjects_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    subjects_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    subjects_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    subjects_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    local_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    local_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    local_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    local_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    date_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    date_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    date_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    date_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    project_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    project_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    project_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    project_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    FPIC_assignement_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    FPIC_assignement_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    FPIC_assignement_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    FPIC_assignement_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    file_name_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    file_name_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    file_name_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    file_name_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    incidents_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    incidents_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    incidents_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    incidents_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    observations_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    observations_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    observations_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    observations_ipt.addEventListener("mouseleave", ipt_mouseleave)
+
+    function lbl_mouseenter(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#ffbb33'
+        lbl.style.borderColor = '#ffbb33'
+        lbl.style.borderWidth = "thin"
+        lbl.style.color= 'black'
+        lbl.style.fontWeight= 'bold'
+    }
+
+    function lbl_mouseleave(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#E9EcEF'
+        lbl.style.borderColor = '#E9EcEF'
+        lbl.style.color='#495057'
+        lbl.style.fontWeight= 'normal'
+    }
+
+    function ipt_mouseenter(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor = '#ffbb33'
+        ipt.style.borderWidth = "medium"
+    }
+
+    function ipt_mouseleave(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor  = '#E9EcEF'
+        ipt.style.borderWidth = "initial"
+    }
+
+</script>
 {% endblock %}
 
