@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" afterDir="false" />
@@ -321,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626812237943</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="table name">
+      <created>1627432071373</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1627432071373</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +357,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login form" />
     <MESSAGE value="login redirect" />
     <MESSAGE value="merge with login_app commit redirect" />
     <MESSAGE value="redirection to admin page and LOB image to lobunicamp website" />
@@ -377,7 +381,8 @@
     <MESSAGE value="style and configuration data table" />
     <MESSAGE value="comorbidities html" />
     <MESSAGE value="user base.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="user base.html" />
+    <MESSAGE value="table name" />
+    <option name="LAST_COMMIT_MESSAGE" value="table name" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
