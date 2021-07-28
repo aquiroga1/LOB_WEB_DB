@@ -21,113 +21,41 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!--                     <div class="p-2 bd-highlight">-->
-<!--                                <a href="{% url 'appcenter' %}">-->
-<!--                                    <i class="fa fa-home"></i>-->
-<!--                                </a>-->
-<!--                     </div>-->
-
-<!--                     <div class="p-2 bd-highlight">-->
-<!--                         <span style="width:98%; text-align:right;  display: inline-block;">-->
-<!--                                <a href="{% url 'logout' %}">Logout</a>-->
-<!--                         </span>-->
-
-<!--                     </div>-->
-
-
-
 </head>
     <body>
         {% if request.user.is_authenticated %}
             <div class="main">
-                <!--<p>LOGGED IN AS {{ user.id }}</p>-->
-                <!--    <br style="clear:both">-->
-<!--                <div class="d-flex bd-highlight mb-3">-->
-<!--                     <div class="mr-auto p-2 bd-highlight" >-->
-<!--                         <a class="navbase" href="">-->
-<!--                             <img width="4%" src="{% static 'img/LOGO_UNICAMP.png' %}" alt="...">-->
-<!--                         </a>-->
-
-<!--                          <a class="navbase" href="https://mesquitarc.wixsite.com/lobunicamp">-->
-<!--                              <img width="9%" src="{% static 'img/LOB_branco2.png' %}" alt="...">-->
-<!--                          </a>-->
-<!--                    </div>-->
-<!--                    <div class="ml-auto p-2 bd-highlight" style="text-align:right; display: inline-block; width:105%; font-weight: 100; color:white;">-->
-<!--                                <a href="" style="text-align:right; display: inline-block; width:105%; font-weight: 100; color:white; background-color:transparent; text-decoration: none">-->
-<!--                                    Welcome Welcome {{ request.user.username }}-->
-<!--                                </a>-->
-<!--                    </div>-->
-
-<!--                    <div class="ml-auto p-2 bd-highlight" >-->
-<!--                                <a href="{% url 'appcenter' %}" data-tip2="Home" style="background-color:transparent">-->
-<!--                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16" style="color:white">-->
-<!--                                      <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>-->
-<!--                                      <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>-->
-<!--                                    </svg>-->
-<!--                                </a>-->
-<!--                    </div>-->
-
-<!--                    <div class="ml-auto p-2 bd-highlight">-->
-<!--                                <a href="{% url 'logout' %}" data-tip2="Logout" style="background-color:transparent">-->
-<!--                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" style="color:white">-->
-<!--                                      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>-->
-<!--                                      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>-->
-<!--                                    </svg>-->
-<!--                                </a>-->
-<!--                    </div>-->
-
-<!--                    <div class="ml-auto p-2 bd-highlight">-->
-<!--                      <p>      </p>-->
-<!--                    </div>-->
-
-<!--                </div>-->
-
-                <div class="d-flex bd-highlight mb-3">
-
-                  <div style="padding-left: 0.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem">
-                      <img width="5%" src="{% static 'img/LOGO_UNICAMP.png' %}" alt="...">
-
-                      <img width="11%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
-
-<!--                      <span style="color:white;">User: {{ request.user.username }}</span>-->
-                  </div>
-
-<!--                  <div style=" padding-top: 0.9rem; text-align: right; display: inline-block; font-weight: 100; color:white;">-->
-<!--                      Welcome Welcome Welcome {{ request.user.username }}-->
-<!--                  </div>-->
-
-                  <div class="ml-auto p-2 bd-highlight" style="text-align:right; display: inline-block; width:105%; font-weight: 100; color:white;">
-                        <a href="" style="text-align:right; display: inline-block; width:105%; font-weight: 100; color:white; background-color:transparent; text-decoration: none">
-                            User: {{ request.user.username }}
+                <!-- Header -->
+                <header>
+                    <div style="height: 60px;">
+                        <img  style="float: left; padding-left: 8px; padding-top: 8px; padding-bottom: 8px;" width="5%" src="{% static 'img/LOGO_UNICAMP.png' %}" alt="...">
+                        <img style="float: left; padding-left: 8px; padding-top: 8px; padding-bottom: 8px;" width="11%" src="{% static 'img/LOB_branco2.png' %}" alt="...">
+                        <a style="float: right; background-color:transparent; padding-left: 8px; padding-right: 12px; padding-top: 8px; padding-bottom: 8px;" href="{% url 'logout' %}" data-tip2="Logout">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" style="color:white">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                            </svg>
+                        </a>
+                        <a href="{% url 'appcenter' %}" data-tip2="Home" style="float: right; background-color:transparent; padding-left: 8px; padding-right: 5px; padding-top: 8px; padding-bottom: 8px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16" style="color:white">
+                            <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                            </svg>
+                        </a>
+                        <a href="" style="float: right; text-align:right; display: inline-block; font-weight: 150; color:white; background-color:transparent; text-decoration: none; padding-left: 8px; padding-right: 12px; padding-top: 10px; padding-bottom: 8px;">
+                            User: <strong>{{ request.user.username }}</strong>
                         </a>
                     </div>
-                  <div class="p-2 bd-highlight">
-                      <a href="{% url 'appcenter' %}" data-tip2="Home" style="background-color:transparent">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16" style="color:white">
-                          <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                          <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                        </svg>
-                      </a>
-                  </div>
-                  <div class="p-2 bd-highlight">
-                      <a href="{% url 'logout' %}" data-tip2="Logout" style="background-color:transparent">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" style="color:white">
-                          <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                          <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                        </svg>
-                      </a>
-                  </div>
-                  <div class="p-2 bd-highlight">
-                      <p>  </p>
-                  </div>
-                </div>
+                </header>
+
+
 
 <!--                <div class="container">-->
-                    <center>
+                <center>
                     <div class="middle">
                         {% block content %} {% endblock %}
                     </div>
-                    </center>
+                </center>
 <!--                </div>-->
             </div>
 
