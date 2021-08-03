@@ -19,7 +19,7 @@ from loginapp.views import login_page, home_page, logout_page
 from subjectsapp.views import subjects_page, medical_records_page, index, index2
 from projectsapp.views import projects_page, index_p
 from measurementsapp.views import measurements_page, index_m
-from appcenter.views import appcenter
+from appcenter.views import appcenter, recordcenter, datacenter
 
 
 
@@ -37,5 +37,6 @@ urlpatterns = [
     path('index2/', index2, name='index2'),
     path('index_m/', index_m, name='index_m'),
     path('index_p/', index_p, name='index_p'),
-
+    path('recordcenter/', recordcenter, name='recordcenter'),
+    path('datacenter/', datacenter, name='datacenter'),
 ]
