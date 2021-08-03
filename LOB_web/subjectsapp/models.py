@@ -8,31 +8,31 @@ class Subjects(models.Model):
         ("Male", "Male"),
     ]
     condition_choices = [
-        ("P", "Patient"),
-        ("H", "Healthy"),
+        ("Patient", "Patient"),
+        ("Healthy", "Healthy"),
     ]
     skin_color_choices = [
-        ("B", "Black"),
-        ("W", "White"),
-        ("Y", "Yellow"),
-        ("BR", "Brown"),
-        ("N", "No info"),
+        ("Black", "Black"),
+        ("Black", "White"),
+        ("Yellow", "Yellow"),
+        ("Brown", "Brown"),
+        ("No-info", "No info"),
     ]
     handedness_choices = [
-        ("L", "Left"),
-        ("R", "Right"),
-        ("N", "No info")
+        ("Left", "Left"),
+        ("Right", "Right"),
+        ("No-info", "No info")
     ]
     scholar_level_choices = [
-        ("NI", "No info"),
-        ("N", "No education"),
-        ("PS", "Pre school"),
-        ("ES", "Elementary school"),
-        ("MS", "Middle school"),
-        ("HS", "High school"),
-        ("T", "Technical"),
-        ("G", "Graduate"),
-        ("PG", "Post-Graduate"),
+        ("No-info", "No info"),
+        ("No-education", "No education"),
+        ("Pre-school", "Pre school"),
+        ("Elementary-school", "Elementary school"),
+        ("Middle-school", "Middle school"),
+        ("High-school", "High school"),
+        ("Technical", "Technical"),
+        ("Graduate", "Graduate"),
+        ("Post-Graduate", "Post-Graduate"),
     ]
 
     name = models.CharField(max_length=100, null=False)

@@ -40,3 +40,4 @@ urlpatterns = [
     path('recordcenter/', recordcenter, name='recordcenter'),
     path('datacenter/', datacenter, name='datacenter'),
 ]
+
