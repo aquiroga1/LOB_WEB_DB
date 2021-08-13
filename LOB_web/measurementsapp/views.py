@@ -33,7 +33,7 @@ def measurements_page(request):
     else:
         return redirect("/login")
 
-def index_m(request):
+def measurement_datatable(request):
     context = {}
     measurement_data = Measurements.objects.all()
     context['measurement_data'] = measurement_data

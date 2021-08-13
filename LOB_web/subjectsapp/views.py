@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.http import HttpResponse
 from .forms import *
-from .models import Subjects
+from .models import *
 from django.views.generic import FormView
+from itertools import count, repeat, chain
 
 
 def subjects_page(request):
@@ -26,7 +27,7 @@ def subjects_page(request):
                 obj.auth_user_id = request.user
                 # finally save the object in db
                 obj.save()
-                if obj.condition == "P":
+                if obj.condition == "Patient":
                     return HttpResponseRedirect('/medical_records')
                 else:
                     return HttpResponseRedirect('/subjects')
@@ -50,7 +51,7 @@ def diseases_page(request):
                 return HttpResponseRedirect('/subjects')
         else:
             form_diseases = DiseasesForm()
-        return render(request, "subjects_app/projectsapp.html", {'form_diseases': form_diseases})
+        return render(request, "subjects_app/medical_record.html", {'form_diseases': form_diseases})
     else:
         return redirect("/login")
 
@@ -65,10 +66,10 @@ def comorbidities_page(request):
                 obj.abbreviation = form_comorbidities.cleaned_data['abbreviation']
                 # finally save the object in db
                 obj.save()
-                return HttpResponseRedirect('/subjects')
+                return HttpResponseRedirect('/medical_records')
         else:
             form_comorbidities = ComorbiditiesForm()
-        return render(request, "subjects_app/projectsapp.html", {'form_comorbidities': form_comorbidities})
+        return render(request, "subjects_app/medical_record.html", {'form_comorbidities': form_comorbidities})
     else:
         return redirect("/login")
 
@@ -103,14 +104,14 @@ def medical_records_page(request):
 #     cm = {'cm':cm}
 #     return render(request, "subjects_app/medical_record.html", cm)
 
-def index(request):
+def subject_datatable(request):
     context = {}
     subject_data = Subjects.objects.all()
     context['subject_data'] = subject_data
     return render(request, "subjects_app/subject_datatable.html", context)
 
 
-def index2(request):
+def medical_record_datatable(request):
     context = {}
     medical_records_data = Medical_Record.objects.all()
     context['medical_records_data'] = medical_records_data

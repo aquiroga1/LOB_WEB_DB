@@ -35,7 +35,7 @@ def projects_page(request):
     else:
         return redirect("/login")
 
-def index_p(request):
+def projects_datatable(request):
     context = {}
     projects_data = Projects.objects.all()
     context['projects_data'] = projects_data
