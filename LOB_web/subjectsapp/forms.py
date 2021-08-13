@@ -26,12 +26,20 @@ class DiseasesForm(forms.ModelForm):
 class ComorbiditiesForm(forms.ModelForm):
     class Meta:
         model = Comorbidities
-        fields = ["name", "abbreviation",
-                  ]
+        fields = ["name", "abbreviation"]
 
 
 class Medical_RecordForm(forms.ModelForm):
     class Meta:
         model = Medical_Record
+
+        widgets = {
+            'diseases_id': forms.Select(attrs={'style': 'width:315px'}),
+            'comorbidities_ids': forms.SelectMultiple(attrs={'style': 'width:275px;border-color:white; color white; height:100px'}),
+            'subjects_id': forms.Select(attrs={'style': 'width:324px'})
+
+        }
+
+
         fields = ["subjects_id", "HC_number", "diseases_id", "comorbidities_ids", "surgery",
                   "clinical_outcomes"]

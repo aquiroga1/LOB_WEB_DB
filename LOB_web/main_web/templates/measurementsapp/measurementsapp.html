@@ -14,9 +14,9 @@
                                 <div class="input-group-prepend">
                                     <label id="subjects_id_lbl" class="input-group-text" for="id_subjects_id">Subject:</label>
                                 </div>
-                                    <select class="custom-select"  name="subjects_id" required="" id="id_subjects_id">
-                                      <option value="{{ form_measurements.subjects_id }}"></option>
-                                    </select>
+                                <div class="custom-select" name="subjects_id" id="id_subjects_id">
+                                        {{ form_measurements.subjects_id }}
+                                </div>
                             </div>
 
                             <div class="input-group mb-3" data-tip="Type the local of measurements">
@@ -37,9 +37,9 @@
                                 <div class="input-group-prepend">
                                     <label id="project_id_lbl" class="input-group-text" for="id_project_id">Project:</label>
                                 </div>
-                                    <select class="custom-select"  name="project_id" required="" id="id_project_id">
-                                      <option value="{{ form_measurements.project_id }}"></option>
-                                    </select>
+                                <div class="custom-select" name="project_id" id="id_project_id">
+                                        {{ form_measurements.project_id }}
+                                </div>
                             </div>
 
                             <div class="input-group mb-3" data-tip="Choose the Signed FPIC status: Yes or No">

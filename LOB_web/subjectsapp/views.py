@@ -99,12 +99,16 @@ def medical_records_page(request):
         return redirect("/login")
 
 
+<<<<<<< HEAD
 # def cmbds(request):
 #     cm = Comorbidities.objects.all()
 #     cm = {'cm':cm}
 #     return render(request, "subjects_app/medical_record.html", cm)
 
 def subject_datatable(request):
+=======
+def index(request):
+>>>>>>> 757787719379621c3fe372f6f05508a7a6bd7268
     context = {}
     subject_data = Subjects.objects.all()
     context['subject_data'] = subject_data
@@ -114,6 +118,8 @@ def subject_datatable(request):
 def medical_record_datatable(request):
     context = {}
     medical_records_data = Medical_Record.objects.all()
-    context['medical_records_data'] = medical_records_data
+    comorbidities_data = Medical_Record.objects.prefetch_related('comorbidities_ids')
+    context = {'comorbidities_data': comorbidities_data, 'medical_records_data': medical_records_data}
     return render(request, "subjects_app/medical_record_datatable.html", context)
+
 
