@@ -98,17 +98,12 @@ def medical_records_page(request):
     else:
         return redirect("/login")
 
-
-<<<<<<< HEAD
 # def cmbds(request):
 #     cm = Comorbidities.objects.all()
 #     cm = {'cm':cm}
 #     return render(request, "subjects_app/medical_record.html", cm)
 
 def subject_datatable(request):
-=======
-def index(request):
->>>>>>> 757787719379621c3fe372f6f05508a7a6bd7268
     context = {}
     subject_data = Subjects.objects.all()
     context['subject_data'] = subject_data
