@@ -13,9 +13,9 @@
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_subjects_id">Subject:</label>
                                     </div>
-                                    <select class="custom-select"  name="subjects_id" required="" id="id_subjects_id">
-                                      <option value="{{ form_medical_records.subjects_id }}"></option>
-                                    </select>
+                                    <div class="custom-select" name="diseases_id" id="id_diseases_id">
+                                        {{ form_medical_records.subjects_id }}
+                                    </div>
                                 </div>
 
                                 <div class="input-group mb-3">
@@ -29,21 +29,50 @@
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_diseases_id">Diseases:</label>
                                     </div>
-                                    <select class="custom-select" name="diseases_id" id="id_diseases_id">
-                                        <option value="{{ form_medical_records.diseases_id }}"></option>
-                                    </select>
+                                    <div class="custom-select" name="diseases_id" id="id_diseases_id" required="">
+                                        {{ form_medical_records.diseases_id }}
+                                    </div>
                                 </div>
+
+<!--                                {% for p in diseases %}-->
+<!--                                {{ p.name }}-->
+<!--                                            {% for pub in p.Medical_Record_set.all %}-->
+<!--                                            {{ pub.name }}-->
+<!--                                            {% endfor %}-->
+<!--                                {% endfor %}-->
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
                                     </div>
-                                    <select class="custom-select" name="comorbidities_ids" id="id_comorbidities_ids" multiple="multiple">
-                                        {% for cmd in cmds %}
-                                            <option value="{{ cmds.id }}">{{ form_medical_records.cmd }}</option>
-                                        {% endfor %}
-                                    </select>
+                                    <div class="custom-select" name="comorbidities_ids" id="id_comorbidities_ids" multiple="multiple">
+                                        {{ form_medical_records.comorbidities_ids }}
+                                    </div>
                                 </div>
+                                {% for p in comorbidities %}
+                                    {{ p.name }}
+                                        {% for pub in p.medical_record_set.all %}
+                                        {{ pub.comorbidities_ids }}
+                                        {% endfor %}
+                                {% endfor %}
+<!--                                <div class="input-group mb-3">-->
+<!--                                    <div class="input-group-prepend">-->
+<!--                                         <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>-->
+<!--                                    </div>-->
+<!--                                         {{form_medical_records.comorbidities_ids}}-->
+<!--                                </div>-->
+
+<!--                                <div class="input-group mb-3">-->
+<!--                                    <div class="input-group-prepend">-->
+<!--                                         <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>-->
+<!--                                    </div>-->
+<!--                                    <div class="custom-select" name="comorbidities_ids" required="" id="id_comorbidities_ids" multiple="multiple">-->
+<!--                                        {{ form_medical_records.comorbidities_ids }}-->
+<!--                                    </div>-->
+
+<!--                                </div>-->
+
+<!--                                <p>{{ form_medical_records.comorbidities_ids }}</p>-->
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -70,4 +99,3 @@
 
 
 {% endblock %}
-

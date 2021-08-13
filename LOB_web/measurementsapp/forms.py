@@ -10,5 +10,7 @@ class MeasurementsForm(forms.ModelForm):
                   ]
 
         widgets = {
-                  'date': DateInput(attrs={'type': 'date'})
-              }
+            'date': DateInput(attrs={'type': 'date'}),
+            'subjects_id': forms.Select(attrs={'style': 'width:324px'}),
+            'project_id': forms.Select(attrs={'style': 'width:329px'})
+        }
