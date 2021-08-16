@@ -6,26 +6,13 @@ from .forms import LoginForm
 from django.contrib import messages
 
 
-def home_page(request):
-    # Conteúdo da home_page para usuários válidos.
-    if request.user.is_authenticated:
-        context = {
-            "log_in": "User logged in",
-        }
-        return render(request, "home.html", context)
-    else:
-        return redirect("/login")
-
-
 def login_page(request):
     if request.user.is_authenticated:
-        return render(request, "appcenter/appcenter.html")
+        return redirect("/appcenter")
     else:
         # Puxando form.
         form = LoginForm(request.POST or None)
-        context = {
-                        "form": form
-                  }
+        context = {"form": form}
 
         #print("User logged in")
         #print(request.user.is_authenticated)
