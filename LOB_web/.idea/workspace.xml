@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="table name">
+    <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appcenter/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appcenter/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1oalJGByptQ52Ddgpiw9JOj3LA3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/projectsapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/subjects_app" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -66,9 +66,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\projectsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\measurementsapp" />
-      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\projectsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\appcenter" />
     </key>
@@ -328,7 +328,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627432071373</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="DataTablesAQ update">
+      <created>1628865297759</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1628865297759</updated>
+    </task>
+    <task id="LOCAL-00030" summary="working on update function">
+      <created>1628872907053</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1628872907053</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,8 +373,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login redirect" />
-    <MESSAGE value="merge with login_app commit redirect" />
     <MESSAGE value="redirection to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="link redirecting to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="pulling login_app" />
@@ -384,7 +396,9 @@
     <MESSAGE value="comorbidities html" />
     <MESSAGE value="user base.html" />
     <MESSAGE value="table name" />
-    <option name="LAST_COMMIT_MESSAGE" value="table name" />
+    <MESSAGE value="DataTablesAQ update" />
+    <MESSAGE value="working on update function" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on update function" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
