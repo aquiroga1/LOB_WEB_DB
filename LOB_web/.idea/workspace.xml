@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appcenter/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appcenter/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="DataTablesAQ" />
+        <entry key="$PROJECT_DIR$/.." value="migrations" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -342,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628872907053</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="addp template subjects_update">
+      <created>1629156625595</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1629156625595</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +377,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="redirection to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="link redirecting to admin page and LOB image to lobunicamp website" />
     <MESSAGE value="pulling login_app" />
     <MESSAGE value="login not working" />
@@ -398,7 +401,8 @@
     <MESSAGE value="table name" />
     <MESSAGE value="DataTablesAQ update" />
     <MESSAGE value="working on update function" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on update function" />
+    <MESSAGE value="addp template subjects_update" />
+    <option name="LAST_COMMIT_MESSAGE" value="addp template subjects_update" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

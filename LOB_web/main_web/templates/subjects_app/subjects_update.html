@@ -14,7 +14,7 @@
                                     <div class="input-group-prepend">
                                          <label id="name_lbl" for="id_name" class="input-group-text">Name:</label>
                                     </div>
-                                    <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">
+                                    <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name" value="{{form.name.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Choose a subject condition: Patient or Healthy">
@@ -129,6 +129,8 @@
             </div>
         </div>
     </div>
+
+ {{form}}
 
     <script>
 
