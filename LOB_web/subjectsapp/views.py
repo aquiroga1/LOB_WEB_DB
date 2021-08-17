@@ -28,7 +28,7 @@ def subjects_page(request):
                 # finally save the object in db
                 obj.save()
                 if obj.condition == "Patient":
-                    return HttpResponseRedirect('/medical_records')
+                    return HttpResponseRedirect('medical_records/')
                 else:
                     return HttpResponseRedirect('/subjects')
         else:
