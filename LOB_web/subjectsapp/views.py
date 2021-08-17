@@ -30,7 +30,7 @@ def subjects_page(request):
                 if obj.condition == "Patient":
                     return HttpResponseRedirect('/appcenter/recordcenter/subjects/medical_records/')
                 else:
-                    return HttpResponseRedirect('/subjects')
+                    return HttpResponseRedirect('/appcenter/recordcenter/subjects')
         else:
             form_subjects = SubjectsForm()
         return render(request, "subjects_app/subjects.html", {'form_subjects': form_subjects})
