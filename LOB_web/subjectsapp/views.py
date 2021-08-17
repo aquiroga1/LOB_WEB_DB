@@ -28,9 +28,13 @@ def subjects_page(request):
                 # finally save the object in db
                 obj.save()
                 if obj.condition == "Patient":
+<<<<<<< HEAD
                     return HttpResponseRedirect('medical_records/')
+=======
+                    return HttpResponseRedirect('/appcenter/recordcenter/subjects/medical_records/')
+>>>>>>> 8b67b043839af95232204feceeb5f88e6698afbe
                 else:
-                    return HttpResponseRedirect('/subjects')
+                    return HttpResponseRedirect('/appcenter/recordcenter/subjects')
         else:
             form_subjects = SubjectsForm()
         return render(request, "subjects_app/subjects.html", {'form_subjects': form_subjects})
@@ -113,4 +117,49 @@ def medical_record_datatable(request):
     context = {'comorbidities_data': comorbidities_data, 'medical_records_data': medical_records_data}
     return render(request, "subjects_app/medical_record_datatable.html", context)
 
+# update view for details
+# def subjects_update(request, id):
+#     # dictionary for initial data with
+#     # field names as keys
+#     context = {}
+#
+#     # fetch the object related to passed id
+#     obj = get_object_or_404(Subjects, id=id)
+#     print(obj)
+#     # pass the object as instance in form
+#     form = SubjectsForm(request.POST or None, instance=obj)
+#
+#     # save the data from the form and
+#     # redirect to detail_view
+#     if form.is_valid():
+#         form.save()
+#         return HttpResponseRedirect("/index" + id)
+#
+#     # add form dictionary to context
+#     context["form"] = form
+#
+#     return render(request, "subjects_app/subjects_update.html", context)
+
+
+def subjects_update(request, id):
+  subject = Subjects.objects.get(id=id)
+  print(subject)
+
+  form = SubjectsForm(request.POST or None, instance=subject)
+  # print(form)
+
+  if form.is_valid():
+      form.save()
+      return redirect('index')
+  return render(request, "subjects_app/subjects_update.html", {'form': form, 'subject': subject})
+
+def subjects_delete(request, id):
+  subject = Subjects.objects.get(id=id)
+  # print(subject)
+
+  if request.method == 'POST':
+      subject.delete()
+      return redirect('index')
+
+  return render(request, "subjects_app/medical_record_datatable.html", {'form': form, 'subject': subject})
 

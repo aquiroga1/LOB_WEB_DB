@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="table name">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurementsapp.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurementsapp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/measurementsapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/measurementsapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +31,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="DataTablesAQ2" />
+        <entry key="$PROJECT_DIR$/.." value="migrations" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -61,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/projectsapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/subjects_app" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -73,9 +60,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\projectsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\measurementsapp" />
-      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\projectsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\appcenter" />
     </key>
@@ -335,7 +322,49 @@
       <option name="project" value="LOCAL" />
       <updated>1627432071373</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="DataTablesAQ update">
+      <created>1628865297759</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1628865297759</updated>
+    </task>
+    <task id="LOCAL-00030" summary="working on update function">
+      <created>1628872907053</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1628872907053</updated>
+    </task>
+    <task id="LOCAL-00031" summary="addp template subjects_update">
+      <created>1629156625595</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1629156625595</updated>
+    </task>
+    <task id="LOCAL-00032" summary="value=&quot;{{form.name.value}}&quot;">
+      <created>1629158553577</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1629158553577</updated>
+    </task>
+    <task id="LOCAL-00033" summary="value=&quot;{{form.name.value}}&quot;">
+      <created>1629158569434</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1629158569434</updated>
+    </task>
+    <task id="LOCAL-00034" summary="medical record path add">
+      <created>1629222699234</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1629222699234</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,11 +395,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login redirect" />
-    <MESSAGE value="merge with login_app commit redirect" />
-    <MESSAGE value="redirection to admin page and LOB image to lobunicamp website" />
-    <MESSAGE value="link redirecting to admin page and LOB image to lobunicamp website" />
-    <MESSAGE value="pulling login_app" />
     <MESSAGE value="login not working" />
     <MESSAGE value="commit null" />
     <MESSAGE value="subjects page to login if not logged in" />
@@ -391,7 +415,12 @@
     <MESSAGE value="comorbidities html" />
     <MESSAGE value="user base.html" />
     <MESSAGE value="table name" />
-    <option name="LAST_COMMIT_MESSAGE" value="table name" />
+    <MESSAGE value="DataTablesAQ update" />
+    <MESSAGE value="working on update function" />
+    <MESSAGE value="addp template subjects_update" />
+    <MESSAGE value="value=&quot;{{form.name.value}}&quot;" />
+    <MESSAGE value="medical record path add" />
+    <option name="LAST_COMMIT_MESSAGE" value="medical record path add" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
