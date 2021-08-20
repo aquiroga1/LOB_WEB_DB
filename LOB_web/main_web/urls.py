@@ -26,6 +26,7 @@ urlpatterns = [
     path('appcenter/', include('appcenter.urls')),
     path('login/', login_page),
     path('logout/', logout_page, name='logout'),
+    path('', login_page),
 
 ]
 
