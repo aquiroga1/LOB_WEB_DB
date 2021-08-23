@@ -146,7 +146,7 @@ def subjects_update(request, id):
 
   if form_subjects.is_valid():
       form_subjects.save()
-      return redirect('/datacenter/subjectsdt/')
+      return redirect('/appcenter/datacenter/subjectsdt/')
   return render(request, "subjects_app/subjects_update2.html", {'form_subjects': form_subjects, 'subject': subject})
 
 def subjects_delete(request, id):
