@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_web/static/css/subjects_app/subjects_delete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appcenter/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appcenter/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update2.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -392,7 +396,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629740580375</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="update +/- woking">
+      <created>1629743098841</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1629743098841</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update +/- woking">
+      <created>1629743183139</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1629743183139</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +441,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="subjects page to login if not logged in" />
     <MESSAGE value="if youre logged in the login page link redirects to appcenter" />
     <MESSAGE value="subjects_app desconfig" />
     <MESSAGE value="main working" />
@@ -448,7 +465,8 @@
     <MESSAGE value="medical record path add" />
     <MESSAGE value="testing" />
     <MESSAGE value="tentando usar update e delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="tentando usar update e delete" />
+    <MESSAGE value="update +/- woking" />
+    <option name="LAST_COMMIT_MESSAGE" value="update +/- woking" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

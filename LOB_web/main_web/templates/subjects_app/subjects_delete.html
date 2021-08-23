@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+<link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+
+{% block content %}
+<div class="container">
+    <div class="col-md-5">
+        <div id="formularios">
+            <form role="form" action="." method="POST">
+                {% csrf_token %}
+                        <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">Are you sure you want to delete {{subject}}?</h3>
+
+                <span style="width:10%; text-align:right;" ><input onclick="window.history.back();" type="button" value="Cancel"></span>
+                <span style="width:90%; text-align:right;" ><input type="submit" value="Confirm"></span>
+
+            </form>
+            <br style="clear:both">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

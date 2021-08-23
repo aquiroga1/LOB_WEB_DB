@@ -18,5 +18,6 @@ urlpatterns = [
     path('datacenter/measurementsdt/', measurement_datatable, name='measurement_datatable'),
     path('datacenter/projectsdt/', projects_datatable, name='projects_datatable'),
     path('datacenter/subjectsdt/subjects_update/<int:id>/', subjects_update, name='subjects_update'),
+    path('datacenter/subjectsdt/subjects_delete/<int:id>/', subjects_delete, name='subjects_delete'),
 ]
 

@@ -14,15 +14,18 @@
                                     <div class="input-group-prepend">
                                          <label id="name_lbl" for="id_name" class="input-group-text">Name:</label>
                                     </div>
-                                    <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">
+<!--                                    <div type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">-->
+<!--                                        {{form_subjects.name}}-->
+<!--                                    </div>-->
+                                    <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name" value="{{form_subjects.name.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Choose a subject condition: Patient or Healthy">
                                     <div class="input-group-prepend">
-                                        <label id="condition_lbl" class="input-group-text" for="id_condition"> Condition:</label>
+                                        <label id="condition_lbl" class="input-group-text" for="id_condition">Condition:</label>
                                     </div>
                                     <select class="custom-select" name="condition" required="" id="id_condition">
-                                      <option value="" selected="">---------</option>
+                                      <option value="{{form_subjects.condition.value}}" selected="">{{form_subjects.condition.value}}</option>
                                       <option value="Patient">Patient</option>
                                       <option value="Healthy">Healthy</option>
                                     </select>
@@ -32,7 +35,7 @@
                                     <div class="input-group-prepend">
                                          <label id="birth_date_lbl"  class="input-group-text" for="id_birth_date">Birth date:</label>
                                     </div>
-                                    <input class="form-control" type="date" name="birth_date" id="id_birth_date">
+                                    <input class="form-control" type="date" name="birth_date" id="id_birth_date" value="{{form_subjects.birth_date.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Declare the subject Gender">
