@@ -54,14 +54,14 @@
                                         <div class="input-group-prepend">
                                              <label id="height_lbl" class="input-group-text" for="id_height">Height:</label>
                                         </div>
-                                        <input class="form-control" type="number" name="height" step="0.01" min="0" id="id_height">
+                                        <input class="form-control" type="number" name="height" step="0.01" min="0" id="id_height" value="{{form_subjects.height.value}}" >
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Report the subject Weight (kg)">
                                     <div class="input-group-prepend">
                                         <label id="weight_lbl"  class="input-group-text" for="id_weight">Weight:</label>
                                     </div>
-                                    <input class="form-control" type="number" name="weight" step="0.01" min="0" id="id_weight">
+                                    <input class="form-control" type="number" name="weight" step="0.01" min="0" id="id_weight" value="{{form_subjects.weight.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Declare a subject Skin">
@@ -116,7 +116,7 @@
                                     <div class="input-group-prepend">
                                          <label id="email_lbl" for="id_email" class="input-group-text">Email:</label>
                                     </div>
-                                    <input type="email" class="form-control" name="email" maxlength="254" id="id_email">
+                                    <input type="email" class="form-control" name="email" maxlength="254" id="id_email" value="{{form_subjects.email.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="If necessary, report subject additional information ">
