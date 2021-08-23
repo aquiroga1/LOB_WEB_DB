@@ -139,15 +139,15 @@ def medical_record_datatable(request):
 
 def subjects_update(request, id):
   subject = Subjects.objects.get(id=id)
-  print(subject)
+  # print(subject)
 
-  form = SubjectsForm(request.POST or None, instance=subject)
+  form_subjects = SubjectsForm(request.POST or None, instance=subject)
   # print(form)
 
-  if form.is_valid():
-      form.save()
-      return redirect('index')
-  return render(request, "subjects_app/subjects_update.html", {'form': form, 'subject': subject})
+  if form_subjects.is_valid():
+      form_subjects.save()
+      return redirect('/datacenter/subjectsdt/')
+  return render(request, "subjects_app/subjects_update2.html", {'form_subjects': form_subjects, 'subject': subject})
 
 def subjects_delete(request, id):
   subject = Subjects.objects.get(id=id)
