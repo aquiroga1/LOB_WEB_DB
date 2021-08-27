@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/recordcenter/recordcenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/recordcenter/recordcenter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -455,7 +455,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="main working" />
     <MESSAGE value="logo lob and unicamp base.html" />
     <MESSAGE value="checkout" />
     <MESSAGE value="obj" />
@@ -480,7 +479,8 @@
     <MESSAGE value="update +/- woking" />
     <MESSAGE value="add button delete" />
     <MESSAGE value="subjects update working" />
-    <option name="LAST_COMMIT_MESSAGE" value="subjects update working" />
+    <MESSAGE value="commit to update" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit to update" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
