@@ -49,8 +49,6 @@ section .section-title {
     text-transform: uppercase;
 }
 
-
-
 .image-flip:hover .backside,
 .image-flip.hover .backside {
     -webkit-transform: rotateY(0deg);
@@ -131,6 +129,7 @@ section .section-title {
 .backside .card a {
     font-size: 18px;
     color: #ffbb33 !important;
+    
 }
 
 .frontside .card .card-title,
