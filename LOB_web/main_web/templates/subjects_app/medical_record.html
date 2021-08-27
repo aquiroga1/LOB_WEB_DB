@@ -9,7 +9,7 @@
             <form role="form" action="." method="POST">
                 {% csrf_token %}
                         <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">MEDICAL RECORD</h3>
-                                 <div class="input-group mb-3">
+                                 <div class="input-group mb-3" data-tip="Choose the subject">
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_subjects_id">Subject:</label>
                                     </div>
@@ -18,14 +18,14 @@
                                     </div>
                                 </div>
 
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-3" data-tip="Type the HC number">
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_HC_number">HC number:</label>
                                     </div>
                                     <input class="form-control" type="number" name="HC_number" id="id_HC_number">
                                 </div>
 
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-3" data-tip="Choose the diseases">
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_diseases_id">Diseases:</label>
                                     </div>
@@ -41,7 +41,7 @@
 <!--                                            {% endfor %}-->
 <!--                                {% endfor %}-->
 
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-3" data-tip="Choose the comorbidities">
                                     <div class="input-group-prepend">
                                          <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
                                     </div>
@@ -74,14 +74,14 @@
 
 <!--                                <p>{{ form_medical_records.comorbidities_ids }}</p>-->
 
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-3" data-tip="Report the surgery patient: name and date">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="id_surgery">Surgery:</label>
                                     </div>
                                     <textarea class="form-control" name="surgery" cols="40" rows="10" maxlength="200" id="id_surgery" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                                 </div>
 
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-3" data-tip="Report the clinical outcomes">
                                     <div class="input-group-prepend">
                                         <label class="input-group-text" for="id_clinical_outcomes">Clinical outcomes:</label>
                                     </div>

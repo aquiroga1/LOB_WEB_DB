@@ -28,11 +28,7 @@ def subjects_page(request):
                 # finally save the object in db
                 obj.save()
                 if obj.condition == "Patient":
-<<<<<<< HEAD
-                    return HttpResponseRedirect('medical_records/')
-=======
                     return HttpResponseRedirect('/appcenter/recordcenter/subjects/medical_records/')
->>>>>>> 8b67b043839af95232204feceeb5f88e6698afbe
                 else:
                     return HttpResponseRedirect('/appcenter/recordcenter/subjects')
         else:
@@ -83,7 +79,7 @@ def medical_records_page(request):
         if request.method == 'POST':
             form_medical_records = Medical_RecordForm(request.POST)
             if form_medical_records.is_valid():
-                obj = Medical_Record()
+                obj = Medical_Record().objects.all().order_by('-id')
                 obj.subjects_id = form_medical_records.cleaned_data['subjects_id']
                 obj.HC_number = form_medical_records.cleaned_data['HC_number']
                 obj.diseases_id = form_medical_records.cleaned_data['diseases_id']

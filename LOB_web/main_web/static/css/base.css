@@ -115,7 +115,7 @@ flex-grow: 1;
 	content:attr(data-tip);
 	position:absolute;
 	top:3px;
-	left:430px;
+	left:440px;
 	padding:5px 8px;
 	background:#ffbb33;
 	color:"black";
