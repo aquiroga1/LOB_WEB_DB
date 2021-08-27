@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Subject Form{% endblock %}
+<link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+{% block content %}
+    <div class="container">
+        <div class="col-md-5">
+            <div id="formularios">
+                <form role="form" action="." method="POST">
+                    {% csrf_token %}
+                            <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">SUBJECT</h3>
+
+                        <div class="input-group mb-3" data-tip="Type the subject name">
+                            <div class="input-group-prepend">
+                                 <label id="name_lbl" for="id_name" class="input-group-text">Name:</label>
+                            </div>
+                            <div type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">
+                                {{form_subjects.name}}
+                            </div>
+<!--                                    <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name" value="{{form_subjects.name.value}}">-->
+                        </div>
+
+                    <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Update"></span>
+
+                </form>
+                <br style="clear:both">
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let name_lbl = document.getElementById("name_lbl")
+        let name_ipt = document.getElementById("id_name")
+        let condition_lbl = document.getElementById("condition_lbl")
+        let condition_ipt = document.getElementById("id_condition")
+        let birth_date_lbl = document.getElementById("birth_date_lbl")
+        let birth_date_ipt = document.getElementById("id_birth_date")
+        let gender_lbl = document.getElementById("gender_lbl")
+        let gender_ipt = document.getElementById("id_gender")
+        let height_lbl = document.getElementById("height_lbl")
+        let height_ipt = document.getElementById("id_height")
+        let weight_lbl = document.getElementById("weight_lbl")
+        let weight_ipt = document.getElementById("id_weight")
+        let skin_color_lbl = document.getElementById("skin_color_lbl")
+        let skin_color_ipt = document.getElementById("id_skin_color")
+        let handedness_lbl = document.getElementById("handedness_lbl")
+        let handedness_ipt = document.getElementById("id_handedness")
+        let scholar_level_lbl = document.getElementById("scholar_level_lbl")
+        let scholar_level_ipt = document.getElementById("id_scholar_level")
+        let telephone_lbl = document.getElementById("telephone_lbl")
+        let telephone_ipt = document.getElementById("id_telephone")
+        let email_lbl = document.getElementById("email_lbl")
+        let email_ipt = document.getElementById("id_email")
+        let additional_info_lbl = document.getElementById("additional_info_lbl")
+        let additional_info_ipt = document.getElementById("id_additional_info")
+
+
+
+        name_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        name_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        name_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        name_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        condition_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        condition_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        condition_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        condition_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        birth_date_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        birth_date_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        birth_date_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        birth_date_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        gender_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        gender_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        gender_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        gender_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        height_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        height_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        height_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        height_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        weight_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        weight_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        weight_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        weight_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        skin_color_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        skin_color_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        skin_color_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        skin_color_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        handedness_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        handedness_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        handedness_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        handedness_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        scholar_level_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        scholar_level_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        scholar_level_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        scholar_level_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        telephone_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        telephone_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        telephone_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        telephone_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        email_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        email_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        email_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        email_ipt.addEventListener("mouseleave", ipt_mouseleave)
+        additional_info_lbl.addEventListener("mouseenter", lbl_mouseenter)
+        additional_info_lbl.addEventListener("mouseleave", lbl_mouseleave)
+        additional_info_ipt.addEventListener("mouseenter", ipt_mouseenter)
+        additional_info_ipt.addEventListener("mouseleave", ipt_mouseleave)
+
+
+        function lbl_mouseenter(event) {
+            var lbl = document.getElementById(event.target.id)
+            lbl.style.background = '#ffbb33'
+            lbl.style.borderColor = '#ffbb33'
+            lbl.style.borderWidth = "thin"
+            lbl.style.color= 'black'
+            lbl.style.fontWeight= 'bold'
+        }
+
+        function lbl_mouseleave(event) {
+            var lbl = document.getElementById(event.target.id)
+            lbl.style.background = '#E9EcEF'
+            lbl.style.borderColor = '#E9EcEF'
+            lbl.style.color='#495057'
+            lbl.style.fontWeight= 'normal'
+        }
+
+        function ipt_mouseenter(event) {
+            var ipt = document.getElementById(event.target.id)
+            ipt.style.borderColor = '#ffbb33'
+            ipt.style.borderWidth = "medium"
+        }
+
+        function ipt_mouseleave(event) {
+            var ipt = document.getElementById(event.target.id)
+            ipt.style.borderColor  = '#E9EcEF'
+            ipt.style.borderWidth = "initial"
+        }
+
+    </script>
+{% endblock %}
+
+

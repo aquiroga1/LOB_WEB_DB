@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from .forms import *
 from .models import *
+import os
+from django.conf import settings
+
 from django.views.generic import FormView
 
 
@@ -24,8 +27,8 @@ def measurements_page(request):
                 obj.auth_user_id = request.user
                 # finally save the object in db
                 obj.save()
-                    #if se é paciente
-                        #return HttpResponseRedirect('/medical_record')
+                # if se é paciente
+                # return HttpResponseRedirect('/medical_record')
                 return HttpResponseRedirect('/measurements')
         else:
             form_measurements = MeasurementsForm
@@ -33,8 +36,20 @@ def measurements_page(request):
     else:
         return redirect("/login")
 
+
 def measurement_datatable(request):
     context = {}
     measurement_data = Measurements.objects.all()
     context['measurement_data'] = measurement_data
     return render(request, "measurementsapp/measurement_datatable.html", context)
+
+
+def download(request, path):
+    file_path = os.path.join(settings.MEDIA_ROOT, path)
+    print(file_path)
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type='application/file_name')
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            return response
+    raise Http404

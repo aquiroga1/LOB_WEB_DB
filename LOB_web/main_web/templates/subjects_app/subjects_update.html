@@ -2,6 +2,7 @@
 {% load static %}
 {% block title %}Subject Form{% endblock %}
 <link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+
 {% block content %}
     <div class="container">
         <div class="col-md-5">
@@ -14,15 +15,18 @@
                                     <div class="input-group-prepend">
                                          <label id="name_lbl" for="id_name" class="input-group-text">Name:</label>
                                     </div>
-                                    <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">
+<!--                                    <div type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">-->
+<!--                                        {{form_subjects.name}}-->
+<!--                                    </div>-->
+                                    <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name" value="{{form_subjects.name.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Choose a subject condition: Patient or Healthy">
                                     <div class="input-group-prepend">
-                                        <label id="condition_lbl" class="input-group-text" for="id_condition"> Condition:</label>
+                                        <label id="condition_lbl" class="input-group-text" for="id_condition">Condition:</label>
                                     </div>
-                                    <select class="custom-select" name="condition" required="" id="id_condition">
-                                      <option value="" selected="">---------</option>
+                                    <select  class="custom-select" name="condition" required="" id="id_condition">
+                                      <option hidden="true" disabled selected>{{form_subjects.condition.value}}</option>
                                       <option value="Patient">Patient</option>
                                       <option value="Healthy">Healthy</option>
                                     </select>
@@ -32,7 +36,7 @@
                                     <div class="input-group-prepend">
                                          <label id="birth_date_lbl"  class="input-group-text" for="id_birth_date">Birth date:</label>
                                     </div>
-                                    <input class="form-control" type="date" name="birth_date" id="id_birth_date">
+                                    <input class="form-control" type="date" name="birth_date" id="id_birth_date" value="{{form_subjects.birth_date.value | date:'c'}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Declare the subject Gender">
@@ -40,7 +44,7 @@
                                         <label id="gender_lbl" class="input-group-text" for="id_gender">Gender:</label>
                                     </div>
                                     <select class="custom-select" name="gender" required="" id="id_gender">
-                                      <option value="" selected="">---------</option>
+                                      <option hidden="true" disabled selected>{{form_subjects.gender.value}}</option>
                                       <option value="Female">Female</option>
                                       <option value="Male">Male</option>
                                     </select>
@@ -50,14 +54,14 @@
                                         <div class="input-group-prepend">
                                              <label id="height_lbl" class="input-group-text" for="id_height">Height:</label>
                                         </div>
-                                        <input class="form-control" type="number" name="height" step="0.01" min="0" id="id_height">
+                                        <input class="form-control" type="number" name="height" step="0.01" min="0" id="id_height" value="{{form_subjects.height.value}}" >
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Report the subject Weight (kg)">
                                     <div class="input-group-prepend">
                                         <label id="weight_lbl"  class="input-group-text" for="id_weight">Weight:</label>
                                     </div>
-                                    <input class="form-control" type="number" name="weight" step="0.01" min="0" id="id_weight">
+                                    <input class="form-control" type="number" name="weight" step="0.01" min="0" id="id_weight" value="{{form_subjects.weight.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Declare a subject Skin">
@@ -105,21 +109,21 @@
                                     <div class="input-group-prepend">
                                          <label id="telephone_lbl"  for="id_telephone" class="input-group-text">Telephone:</label>
                                     </div>
-                                    <input type="text" class="form-control" name="telephone" maxlength="100" required="" id="id_telephone">
+                                    <input type="text" class="form-control" name="telephone" maxlength="100" required="" id="id_telephone" value="{{form_subjects.telephone.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Type the subject e-mail">
                                     <div class="input-group-prepend">
                                          <label id="email_lbl" for="id_email" class="input-group-text">Email:</label>
                                     </div>
-                                    <input type="email" class="form-control" name="email" maxlength="254" id="id_email">
+                                    <input type="email" class="form-control" name="email" maxlength="254" id="id_email" value="{{form_subjects.email.value}}">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="If necessary, report subject additional information ">
                                     <div class="input-group-prepend">
                                         <label id="additional_info_lbl"  class="input-group-text" for="id_additional_info">Additional info:</label>
                                     </div>
-                                    <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" id="id_additional_info" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
+                                    <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" id="id_additional_info" style="margin-top: 0px; margin-bottom: 0px; height: 133px;">{{form_subjects.additional_info.value}}</textarea>
                                 </div>
 
                     <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Update"></span>
@@ -129,8 +133,6 @@
             </div>
         </div>
     </div>
-
- {{form}}
 
     <script>
 
