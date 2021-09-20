@@ -14,3 +14,9 @@ class MeasurementsForm(forms.ModelForm):
             'subjects_id': forms.Select(attrs={'style': 'width:324px'}),
             'project_id': forms.Select(attrs={'style': 'width:329px'})
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['subjects_id'].queryset = self.fields['subjects_id'].queryset.order_by('-pk')
+        self.fields['project_id'].queryset = self.fields['project_id'].queryset.order_by('-pk')
+

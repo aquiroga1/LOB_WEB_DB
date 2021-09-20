@@ -55,11 +55,11 @@
         
                             <div class="input-group mb-3" data-tip="Choose the NIRS system ID">
                                 <div class="input-group-prepend">
-                                         <label id="nirs_systems_id_lbl" class="input-group-text" for="id_nirs_systems_id">NIRS system:</label>
+                                    <label id="nirs_systems_id_lbl" class="input-group-text" for="id_nirs_systems_id">NIRS system:</label>
                                 </div>
-                                <select class="custom-select" name="nirs_systems_id" required="" id="id_nirs_systems_id">
-                                      <option value="{{ form_projects.nirs_systems_id }}"></option>
-                                </select>
+                                <div class="custom-select" name="nirs_systems_id" id="id_nirs_systems_id">
+                                        {{ form_projects.nirs_systems_id }}
+                                </div>
                             </div>
 
                             <div class="input-group mb-3" data-tip="Type Probe Details">
@@ -71,11 +71,11 @@
 
                             <div class="input-group mb-3"data-tip="Choose the Aux system ID">
                                 <div class="input-group-prepend">
-                                       <label id="aux_systems_id_lbl" class="input-group-text" for="id_aux_systems_id">AUX system:</label>
+                                    <label id="aux_systems_id_lbl" class="input-group-text" for="id_aux_systems_id">AUX system:</label>
                                 </div>
-                                <select class="custom-select" name="aux_systems_id" id="id_aux_systems_id">
-                                      <option value="{{ form_projects.aux_systems_id }}"></option>
-                                </select>
+                                <div class="custom-select" name="aux_systems_id" id="id_aux_systems_id">
+                                      {{ form_projects.aux_systems_id }}
+                                </div>
                             </div>
 
                             <div class="input-group mb-3" data-tip="Upload the Project File">

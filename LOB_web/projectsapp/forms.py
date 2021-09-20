@@ -20,3 +20,12 @@ class ProjectsForm(forms.ModelForm):
         fields = ["title", "description", "CAAE", "FPIC_file", "prin_investigator", "co_investigator", "probe_details",
                  "nirs_systems_id", "aux_systems_id", "project_file",
                   ]
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['nirs_systems_id'].queryset = self.fields['nirs_systems_id'].queryset.order_by('-pk')
+        self.fields['aux_systems_id'].queryset = self.fields['aux_systems_id'].queryset.order_by('-pk')
+
+
+        
+    
