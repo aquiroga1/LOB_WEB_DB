@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main_web/templates/base_dt.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_web/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_web/templates/recordcenter/recordcenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/recordcenter/recordcenter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/medical_record_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subject_datatable.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/subjects_app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -64,11 +69,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\projectsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\measurementsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\projectsapp" />
-      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\appcenter" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\adrda\OneDrive\Documentos\LOBWEB\LOB_WEB_DB\LOB_web\main_web" />
@@ -424,7 +429,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629760197844</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="delete redirecting to subjects_db working">
+      <created>1630091731986</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1630091731986</updated>
+    </task>
+    <task id="LOCAL-00044" summary="delete redirecting to subjects_db working">
+      <created>1630357924136</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1630357924136</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,8 +474,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="main working" />
-    <MESSAGE value="logo lob and unicamp base.html" />
     <MESSAGE value="checkout" />
     <MESSAGE value="obj" />
     <MESSAGE value="teste" />
@@ -480,7 +497,9 @@
     <MESSAGE value="update +/- woking" />
     <MESSAGE value="add button delete" />
     <MESSAGE value="subjects update working" />
-    <option name="LAST_COMMIT_MESSAGE" value="subjects update working" />
+    <MESSAGE value="commit to update" />
+    <MESSAGE value="delete redirecting to subjects_db working" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete redirecting to subjects_db working" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
