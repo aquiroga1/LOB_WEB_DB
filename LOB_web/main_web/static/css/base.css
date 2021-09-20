@@ -70,25 +70,39 @@ a {
     border: none;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
-    line-height: 3em;
+    line-height: 1.5em;
     padding: 0;
     -webkit-appearance: none;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    background-color: #ffbb33;
-    color: black;
-    font-weight: bold;
-    /* margin-bottom: em; */
-    text-transform: uppercase;
-    padding: 5px 10px;
-    height: 30px;
 }
 
 a:hover {
     background-color: white;
     color: black
 }
+
+a[type="button"] {
+	border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #ffbb33;
+    color: #00000;
+    font-weight: bold;
+    /* margin-bottom: 2em; */
+    text-transform: uppercase;
+    padding: 5px 10px;
+    height: 30px;
+}
+
+a[type="button"]:hover {
+    background-color: white;
+    color: black
+}
+
+.btn:hover{
+	background-color: white !important;
+    color: black !important
+}
+
 
 div.main{
 background: #0264d6; /* Old browsers */

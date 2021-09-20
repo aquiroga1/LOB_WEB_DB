@@ -11,7 +11,7 @@
                         <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">MEDICAL RECORD</h3>
                                  <div class="input-group mb-3" data-tip="Choose the subject">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_subjects_id">Subject:</label>
+                                         <label class="input-group-text" id="subjects_id_lbl" for="id_subjects_id">Subject:</label>
                                     </div>
                                     <div class="custom-select" name="diseases_id" id="id_diseases_id">
                                         {{ form_medical_records.subjects_id }}
@@ -20,14 +20,14 @@
 
                                 <div class="input-group mb-3" data-tip="Type the HC number">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_HC_number">HC number:</label>
+                                         <label class="input-group-text" id="HC_number_lbl" for="id_HC_number">HC number:</label>
                                     </div>
                                     <input class="form-control" type="number" name="HC_number" id="id_HC_number">
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Choose the diseases">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_diseases_id">Diseases:</label>
+                                         <label class="input-group-text" id="diseases_id_lbl" for="id_diseases_id">Diseases:</label>
                                     </div>
                                     <div class="custom-select" name="diseases_id" id="id_diseases_id" required="">
                                         {{ form_medical_records.diseases_id }}
@@ -43,7 +43,7 @@
 
                                 <div class="input-group mb-3" data-tip="Choose the comorbidities">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
+                                         <label class="input-group-text" id="comorbidities_ids_lbl" for="id_comorbidities_ids">Comorbidities:</label>
                                     </div>
                                     <div class="custom-select" name="comorbidities_ids" id="id_comorbidities_ids" multiple="multiple">
                                         {{ form_medical_records.comorbidities_ids }}
@@ -76,20 +76,28 @@
 
                                 <div class="input-group mb-3" data-tip="Report the surgery patient: name and date">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text" for="id_surgery">Surgery:</label>
+                                        <label class="input-group-text" id="surgery_lbl" for="id_surgery">Surgery:</label>
                                     </div>
                                     <textarea class="form-control" name="surgery" cols="40" rows="10" maxlength="200" id="id_surgery" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                                 </div>
 
                                 <div class="input-group mb-3" data-tip="Report the clinical outcomes">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text" for="id_clinical_outcomes">Clinical outcomes:</label>
+                                        <label class="input-group-text" id="clinical_outcomes_lbl" for="id_clinical_outcomes">Clinical outcomes:</label>
                                     </div>
                                     <textarea class="form-control" name="clinical_outcomes" cols="40" rows="10" maxlength="200" id="id_clinical_outcomes" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                                 </div>
 
 
-                <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+                                <span>
+
+                                    <input style="width:fit-content; text-align:center;  display: inline; float:right; font-family: Arial" type="submit" value="Submit"/></span>
+        
+                                    <a class=" mb-sm-2 btn btn-sm float-left responsive-width " style="width:fit-content; text-align:center;  display: inline-block; font-family: Arial ;font-size: 14px; text-transform: uppercase; font-weight: bold; background-color: #ffbb33; color: black; padding: 5px 10px; height: 30px;" href="{% url 'medical_record_datatable' %}" type="button">
+                                        <span>
+                                            Database
+                                        </span>
+                                    </a>
 
             </form>
             <br style="clear:both">
@@ -97,5 +105,75 @@
     </div>
 </div>
 
+<script>
+
+    let subjects_id_lbl = document.getElementById("subjects_id_lbl")
+    let subjects_id_ipt = document.getElementById("id_subjects_id")
+    let HC_number_lbl = document.getElementById("HC_number_lbl")
+    let HC_number_ipt = document.getElementById("id_HC_number")
+    let diseases_id_lbl = document.getElementById("diseases_id_lbl")
+    let diseases_id_ipt = document.getElementById("id_diseases_id")
+    let comorbidities_ids_lbl = document.getElementById("comorbidities_ids_lbl")
+    let comorbidities_ids_ipt = document.getElementById("id_comorbidities_ids")
+    let surgery_lbl = document.getElementById("surgery_lbl")
+    let surgery_ipt = document.getElementById("id_surgery")
+    let clinical_outcomes_lbl = document.getElementById("clinical_outcomes_lbl")
+    let clinical_outcomes_ipt = document.getElementById("id_clinical_outcomes")
+
+    subjects_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    subjects_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    subjects_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    subjects_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    HC_number_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    HC_number_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    HC_number_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    HC_number_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    diseases_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    diseases_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    diseases_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    diseases_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    comorbidities_ids_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    comorbidities_ids_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    comorbidities_ids_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    comorbidities_ids_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    surgery_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    surgery_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    surgery_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    surgery_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    clinical_outcomes_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    clinical_outcomes_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    clinical_outcomes_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    clinical_outcomes_ipt.addEventListener("mouseleave", ipt_mouseleave)
+
+    function lbl_mouseenter(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#ffbb33'
+        lbl.style.borderColor = '#ffbb33'
+        lbl.style.borderWidth = "thin"
+        lbl.style.color= 'black'
+        lbl.style.fontWeight= 'bold'
+    }
+
+    function lbl_mouseleave(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#E9EcEF'
+        lbl.style.borderColor = '#E9EcEF'
+        lbl.style.color='#495057'
+        lbl.style.fontWeight= 'normal'
+    }
+
+    function ipt_mouseenter(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor = '#ffbb33'
+        ipt.style.borderWidth = "medium"
+    }
+
+    function ipt_mouseleave(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor  = '#E9EcEF'
+        ipt.style.borderWidth = "initial"
+    }
+
+</script>
 
 {% endblock %}

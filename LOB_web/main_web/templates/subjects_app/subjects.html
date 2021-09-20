@@ -3,6 +3,7 @@
 {% block title %}Subject Form{% endblock %}
 <link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
 {% block content %}
+
     <div class="container">
         <div class="col-md-5">
             <div id="formularios">
@@ -122,13 +123,24 @@
                                     <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" id="id_additional_info" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                                 </div>
 
-                    <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
+                                <span><!--<input style="width:40%; text-align:center;  display: inline; float: left; margin-bottom: 20px;" type="button" onclick="location.href='http://127.0.0.1:8000/appcenter/datacenter/subjectsdt/';" value="Show Database" />-->
+
+                                <input style="width:fit-content; text-align:center;  display: inline; float:right; font-family: Arial" type="submit" value="Submit"/></span>
+
+                                <a class=" mb-sm-2 btn btn-sm float-left responsive-width " style="width:fit-content; text-align:center;  display: inline-block; font-family: Arial ;font-size: 14px; text-transform: uppercase; font-weight: bold; background-color: #ffbb33; color: black; padding: 5px 10px; height: 30px;" href="{% url 'subject_datatable' %}" type="button">
+                                    <span>
+                                        Database
+                                    </span>
+                                </a>
+                            <!--"{% url 'subject_datatable' %}" http://127.0.0.1:8000/appcenter/datacenter/subjectsdt/'-->
 
                 </form>
                 <br style="clear:both">
             </div>
         </div>
     </div>
+
+    
 
     <script>
 

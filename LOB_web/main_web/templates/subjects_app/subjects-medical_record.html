@@ -12,7 +12,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                     <label for="id_name" class="input-group-text">Name:</label>
+                                     <label id="name_lbl" for="id_name" class="input-group-text">Name:</label>
                                 </div>
                                 <input type="text" class="form-control" name="name" maxlength="100" required="" id="id_name">
                             </div>
@@ -32,7 +32,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_condition">Condition:</label>
+                                    <label class="input-group-text" id="condition_lbl" for="id_condition">Condition:</label>
                                 </div>
                                 <select class="custom-select" name="condition" required="" id="id_condition">
                                   <option value="" selected="">---------</option>
@@ -45,7 +45,7 @@
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_subjects_id">Subject:</label>
+                                         <label class="input-group-text" id="subjects_id_lbl" for="id_subjects_id">Subject:</label>
                                     </div>
                                     <select class="custom-select"  name="subjects_id" required="" id="id_subjects_id">
                                       <option value="{{ form_medical_records.subjects_id }}"></option>
@@ -54,14 +54,14 @@
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_HC_number">HC number:</label>
+                                         <label class="input-group-text" id="HC_number_lbl" for="id_HC_number">HC number:</label>
                                     </div>
                                     <input class="form-control" type="number" name="HC_number" id="id_HC_number">
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_diseases_id">Diseases:</label>
+                                         <label class="input-group-text" id="diseases_id_lbl" for="id_diseases_id">Diseases:</label>
                                     </div>
                                     <select class="custom-select" name="diseases_id" required="" id="id_diseases_id">
                                         <option value="{{ form_medical_records.diseases_id }}"></option>
@@ -70,7 +70,7 @@
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_comorbidities_ids">Comorbidities:</label>
+                                         <label class="input-group-text" id="comorbidities_ids_lbl" for="id_comorbidities_ids">Comorbidities:</label>
                                     </div>
                                     <select class="custom-select" name="comorbidities_ids" required="" id="id_comorbidities_ids" multiple="">
                                         <option value="{{ form_medical_records.comorbidities_ids }}"></option>
@@ -79,14 +79,14 @@
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text" for="id_surgery">Surgery:</label>
+                                        <label class="input-group-text" id="subjects_lbl" for="id_surgery">Surgery:</label>
                                     </div>
                                     <textarea class="form-control" name="surgery" cols="40" rows="10" maxlength="200" required="" id="id_surgery" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                                 </div>
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text" for="id_clinical_outcomes">Clinical outcomes:</label>
+                                        <label class="input-group-text" id="clinical_outcomes_lbl" for="id_clinical_outcomes">Clinical outcomes:</label>
                                     </div>
                                     <textarea class="form-control" name="clinical_outcomes" cols="40" rows="10" maxlength="200" required="" id="id_clinical_outcomes" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                                 </div>
@@ -95,14 +95,14 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                     <label class="input-group-text" for="id_birth_date">Birth date:</label>
+                                     <label class="input-group-text" id="birth_date_lbl" for="id_birth_date">Birth date:</label>
                                 </div>
                                 <input class="form-control" type="date" name="birth_date" id="id_birth_date">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_gender">Gender:</label>
+                                    <label class="input-group-text" id="gender_lbl" for="id_gender">Gender:</label>
                                 </div>
                                 <select class="custom-select" name="gender" required="" id="id_gender">
                                   <option value="" selected="">---------</option>
@@ -113,21 +113,21 @@
 
                             <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                         <label class="input-group-text" for="id_height">Height:</label>
+                                         <label class="input-group-text" id="height_lbl" for="id_height">Height:</label>
                                     </div>
                                     <input class="form-control" type="number" name="height" step="0.01" min="0" required="" id="id_height">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_weight">Weight:</label>
+                                    <label class="input-group-text" id="weight_lbl" for="id_weight">Weight:</label>
                                 </div>
                                 <input class="form-control" type="number" name="weight" step="0.01" required="" min="0" id="id_weight">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_skin_color">Skin color:</label>
+                                    <label class="input-group-text" id="skin_color_lbl" for="id_skin_color">Skin color:</label>
                                 </div>
                                 <select class="custom-select" name="skin_color" id="id_skin_color">
                                   <option value="N">No info</option>
@@ -140,7 +140,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_handedness">Handedness:</label>
+                                    <label class="input-group-text" id="handedness_lbl" for="id_handedness">Handedness:</label>
                                 </div>
                                 <select class="custom-select" name="handedness" id="id_handedness">
                                   <option value="N">No info</option>
@@ -151,7 +151,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label for="id_scholar_level" class="input-group-text">Scholar level:</label>
+                                    <label id="scholar_level_lbl" for="id_scholar_level" class="input-group-text">Scholar level:</label>
                                 </div>
                                 <select class="custom-select" name="scholar_level" id="id_scholar_level">
                                       <option value="NI">No info</option>
@@ -169,14 +169,14 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                     <label for="id_telephone" class="input-group-text">Telephone:</label>
+                                     <label id="telephone_lbl" for="id_telephone" class="input-group-text">Telephone:</label>
                                 </div>
                                 <input type="text" class="form-control" name="telephone" maxlength="100" required="" id="id_telephone">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                     <label for="id_email" class="input-group-text">Email:</label>
+                                     <label id="email_lbl" for="id_email" class="input-group-text">Email:</label>
                                 </div>
                                 <input type="email" class="form-control" name="email" maxlength="254" required="" id="id_email">
                             </div>
@@ -184,7 +184,7 @@
 <!--                class="input-group input-group-lg"-->
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="id_additional_info">Additional info:</label>
+                                    <label class="input-group-text" id="additional_info_lbl" for="id_additional_info">Additional info:</label>
                                 </div>
                                 <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" required="" id="id_additional_info" style="margin-top: 0px; margin-bottom: 0px; height: 133px;"></textarea>
                             </div>
@@ -197,6 +197,143 @@
     </div>
 </div>
 
+<script>
+
+    let name_lbl = document.getElementById("name_lbl")
+    let name_ipt = document.getElementById("id_name")
+    let condition_lbl = document.getElementById("condition_lbl")
+    let condition_ipt = document.getElementById("id_condition")
+    let subjects_id_lbl = document.getElementById("subjects_id_lbl")
+    let subjects_id_ipt = document.getElementById("id_subjects_id")
+    let HC_number_lbl = document.getElementById("HC_number_lbl")
+    let HC_number_ipt = document.getElementById("id_HC_number")
+    let diseases_id_lbl = document.getElementById("diseases_id_lbl")
+    let diseases_id_ipt = document.getElementById("id_diseases_id")
+    let comorbidities_ids_lbl = document.getElementById("comorbidities_ids_lbl")
+    let comorbidities_ids_ipt = document.getElementById("id_comorbidities_ids")
+    let subjects_lbl = document.getElementById("subjects_lbl")
+    let subjects_ipt = document.getElementById("id_subjects")
+    let clinical_outcomes_lbl = document.getElementById("clinical_outcomes_lbl")
+    let clinical_outcomes_ipt = document.getElementById("id_clinical_outcomes")
+    let birth_date_lbl = document.getElementById("birth_date_lbl")
+    let birth_date_ipt = document.getElementById("id_birth_date")
+    let gender_lbl = document.getElementById("gender_lbl")
+    let gender_ipt = document.getElementById("id_gender")
+    let height_lbl = document.getElementById("height_lbl")
+    let height_ipt = document.getElementById("id_height")
+    let weight_lbl = document.getElementById("weight_lbl")
+    let weight_ipt = document.getElementById("id_weight")
+    let skin_color_lbl = document.getElementById("skin_color_lbl")
+    let skin_color_ipt = document.getElementById("id_skin_color")
+    let handedness_lbl = document.getElementById("handedness_lbl")
+    let handedness_ipt = document.getElementById("id_handedness")
+    let scholar_level_lbl = document.getElementById("scholar_level_lbl")
+    let scholar_level_ipt = document.getElementById("id_scholar_level")
+    let telephone_lbl = document.getElementById("telephone_lbl")
+    let telephone_ipt = document.getElementById("id_telephone")
+    let email_lbl = document.getElementById("email_lbl")
+    let email_ipt = document.getElementById("id_email")
+    let additional_info_lbl = document.getElementById("additional_info_lbl")
+    let additional_info_ipt = document.getElementById("id_additional_info")
+
+
+
+    name_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    name_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    name_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    name_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    condition_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    condition_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    condition_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    condition_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    subjects_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    subjects_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    subjects_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    subjects_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    comorbidities_ids_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    comorbidities_ids_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    comorbidities_ids_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    comorbidities_ids_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    subjects_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    subjects_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    subjects__ipt.addEventListener("mouseenter", ipt_mouseenter)
+    subjects_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    clinical_outcomes_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    clinical_outcomes_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    clinical_outcomes_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    clinical_outcomes_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    birth_date_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    birth_date_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    birth_date_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    birth_date_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    gender_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    gender_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    gender_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    gender_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    height_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    height_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    height_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    height_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    weight_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    weight_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    weight_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    weight_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    skin_color_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    skin_color_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    skin_color_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    skin_color_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    handedness_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    handedness_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    handedness_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    handedness_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    scholar_level_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    scholar_level_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    scholar_level_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    scholar_level_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    telephone_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    telephone_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    telephone_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    telephone_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    email_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    email_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    email_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    email_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    additional_info_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    additional_info_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    additional_info_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    additional_info_ipt.addEventListener("mouseleave", ipt_mouseleave)
+
+
+    function lbl_mouseenter(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#ffbb33'
+        lbl.style.borderColor = '#ffbb33'
+        lbl.style.borderWidth = "thin"
+        lbl.style.color= 'black'
+        lbl.style.fontWeight= 'bold'
+    }
+
+    function lbl_mouseleave(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#E9EcEF'
+        lbl.style.borderColor = '#E9EcEF'
+        lbl.style.color='#495057'
+        lbl.style.fontWeight= 'normal'
+    }
+
+    function ipt_mouseenter(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor = '#ffbb33'
+        ipt.style.borderWidth = "medium"
+    }
+
+    function ipt_mouseleave(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor  = '#E9EcEF'
+        ipt.style.borderWidth = "initial"
+    }
+
+</script>
 
 {% endblock %}
 
