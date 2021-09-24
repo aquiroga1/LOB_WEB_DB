@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Project Form{% endblock %}
-
 <link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
 
 {% block content %}
@@ -16,7 +15,7 @@
                                 <div class="input-group-prepend">
                                      <label id="title_lbl" class="input-group-text" for="id_title" class="input-group-text">Title:</label>
                                 </div>
-                                <input type="text" class="form-control" name="title" maxlength="100" required="" id="id_title">
+                                <input type="text" class="form-control" name="title" maxlength="100" required="" id="id_title" value="{{form_projects.title.value}}">
                             </div>
 
                             <div class="input-group mb-3" data-tip="Type the CAAE number">
@@ -198,5 +197,4 @@
 
 </script>
 {% endblock %}
-
 

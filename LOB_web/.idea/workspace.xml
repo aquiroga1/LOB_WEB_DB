@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appcenter/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appcenter/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/projectsapp/projectsapp.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projectsapp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_web/templates/measurementsapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -63,10 +70,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\measurementsapp" />
+      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\projectsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\subjects_app" />
-      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\projectsapp" />
-      <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\main_web\templates\measurementsapp" />
       <recent name="C:\Users\adrda\Documents\LOB\LOB_WEB_DB\LOB_web\projectsapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -458,7 +465,21 @@
       <option name="project" value="LOCAL" />
       <updated>1632505428385</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="medical record returning to medical record">
+      <created>1632505699594</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1632505699594</updated>
+    </task>
+    <task id="LOCAL-00049" summary="hc number type text">
+      <created>1632505890660</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1632505890660</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,8 +510,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="teste" />
-    <MESSAGE value="checkout commit" />
     <MESSAGE value="ok" />
     <MESSAGE value="comorbidities working" />
     <MESSAGE value="datas tables working" />
@@ -514,7 +533,9 @@
     <MESSAGE value="delete redirecting to subjects_db working" />
     <MESSAGE value="widgets projects" />
     <MESSAGE value="medical record order by -id" />
-    <option name="LAST_COMMIT_MESSAGE" value="medical record order by -id" />
+    <MESSAGE value="medical record returning to medical record" />
+    <MESSAGE value="hc number type text" />
+    <option name="LAST_COMMIT_MESSAGE" value="hc number type text" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

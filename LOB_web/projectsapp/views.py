@@ -40,3 +40,24 @@ def projects_datatable(request):
     projects_data = Projects.objects.all()
     context['projects_data'] = projects_data
     return render(request, "projectsapp/projects_datatable.html", context)
+
+
+def projects_update(request, id):
+  project = Projects.objects.get(id=id)
+
+  form_projects = ProjectsForm(request.POST or None, instance=project)
+
+  if form_projects.is_valid():
+      form_projects.save()
+      return redirect('/appcenter/datacenter/projectsdt/')
+  return render(request, "projectsapp/projects_update.html", {'form_projects': form_projects, 'project': project})
+
+
+def projects_delete(request, id):
+  project = Projects.objects.get(id=id)
+
+  if request.method == 'POST':
+      project.delete()
+      return redirect('/appcenter/datacenter/projectsdt/')
+
+  return render(request, "projectsapp/projects_delete.html", {'project': project})

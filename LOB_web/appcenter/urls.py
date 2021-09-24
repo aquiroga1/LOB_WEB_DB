@@ -19,5 +19,7 @@ urlpatterns = [
     path('datacenter/projectsdt/', projects_datatable, name='projects_datatable'),
     path('datacenter/subjectsdt/subjects_update/<int:id>/', subjects_update, name='subjects_update'),
     path('datacenter/subjectsdt/subjects_delete/<int:id>/', subjects_delete, name='subjects_delete'),
+    path('datacenter/subjectsdt/projects_update/<int:id>/', projects_update, name='projects_update'),
+    path('datacenter/subjectsdt/projects_delete/<int:id>/', projects_delete, name='projects_delete'),
 ]
 
