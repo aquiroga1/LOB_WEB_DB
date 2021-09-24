@@ -43,3 +43,7 @@ class Medical_RecordForm(forms.ModelForm):
 
         fields = ["subjects_id", "HC_number", "diseases_id", "comorbidities_ids", "surgery",
                   "clinical_outcomes"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['subjects_id'].queryset = self.fields['subjects_id'].queryset.order_by('-pk')

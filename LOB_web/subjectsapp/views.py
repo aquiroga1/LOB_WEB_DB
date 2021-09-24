@@ -91,7 +91,8 @@ def medical_records_page(request):
                 print(cmds)
                 # cmd = Comorbidities.objects.filter(name__in=str(cmds))
                 obj.comorbidities_ids.set(cmds)
-                return HttpResponseRedirect('recordcenter/subjects/medical_records/')
+                return HttpResponseRedirect('/appcenter/recordcenter/subjects/medical_records/')
+
         else:
             form_medical_records = Medical_RecordForm()
         return render(request, "subjects_app/medical_record.html", {'form_medical_records': form_medical_records})
@@ -112,30 +113,6 @@ def medical_record_datatable(request):
     comorbidities_data = Medical_Record.objects.prefetch_related('comorbidities_ids')
     context = {'comorbidities_data': comorbidities_data, 'medical_records_data': medical_records_data}
     return render(request, "subjects_app/medical_record_datatable.html", context)
-
-# update view for details
-# def subjects_update(request, id):
-#     # dictionary for initial data with
-#     # field names as keys
-#     context = {}
-#
-#     # fetch the object related to passed id
-#     obj = get_object_or_404(Subjects, id=id)
-#     print(obj)
-#     # pass the object as instance in form
-#     form = SubjectsForm(request.POST or None, instance=obj)
-#
-#     # save the data from the form and
-#     # redirect to detail_view
-#     if form.is_valid():
-#         form.save()
-#         return HttpResponseRedirect("/index" + id)
-#
-#     # add form dictionary to context
-#     context["form"] = form
-#
-#     return render(request, "subjects_app/subjects_update.html", context)
-
 
 def subjects_update(request, id):
   subject = Subjects.objects.get(id=id)

@@ -1,5 +1,4 @@
 from django.urls import path
-
 from . import views
 from subjectsapp.views import *
 from measurementsapp.views import *

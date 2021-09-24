@@ -20,6 +20,11 @@ class ProjectsForm(forms.ModelForm):
         fields = ["title", "description", "CAAE", "FPIC_file", "prin_investigator", "co_investigator", "probe_details", "protocol_details",
                  "nirs_systems_id", "aux_systems_id", "project_file",
                   ]
+
+        widgets = {
+            'nirs_systems_id': forms.Select(attrs={'style': 'width:285px'}),
+            'aux_systems_id': forms.Select(attrs={'style': 'width:290px'})
+        }
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
