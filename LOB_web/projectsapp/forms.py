@@ -17,6 +17,14 @@ class Aux_Systems_Form(forms.ModelForm):
 class ProjectsForm(forms.ModelForm):
     class Meta:
         model = Projects
+
+        widgets = {
+            'nirs_systems_id': forms.Select(attrs={'style': 'width:285px'}),
+            'aux_systems_id': forms.Select(attrs={'style': 'width:290px'})
+
+        }
+
+
         fields = ["title", "description", "CAAE", "FPIC_file", "prin_investigator", "co_investigator", "probe_details",
                  "nirs_systems_id", "aux_systems_id", "project_file",
                   ]
