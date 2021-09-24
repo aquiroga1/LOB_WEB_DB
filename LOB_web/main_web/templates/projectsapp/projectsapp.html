@@ -52,6 +52,13 @@
                                 </div>
                                 <textarea class="form-control"  name="description" cols="40" rows="10" id="id_description"></textarea>
                             </div>
+
+                            <div class="input-group mb-3" data-tip="Type the Protocol Details">
+                                <div class="input-group-prepend">
+                                     <label id="protocol_details_lbl" class="input-group-text" for="id_protocol_details" class="input-group-text">Protocol Details:</label>
+                                </div>
+                                <input type="text" class="form-control" name="protocol_details" maxlength="150" required="" id="id_protocol_details">
+                            </div>
         
                             <div class="input-group mb-3" data-tip="Choose the NIRS system ID">
                                 <div class="input-group-prepend">
@@ -115,6 +122,8 @@
     let co_investigator_ipt = document.getElementById("id_co_investigator")
     let description_lbl = document.getElementById("description_lbl")
     let description_ipt = document.getElementById("id_description")
+    let protocol_details_lbl = document.getElementById("protocol_details_lbl")
+    let protocol_details_ipt = document.getElementById("id_protocol_details")
     let nirs_systems_id_lbl = document.getElementById("nirs_systems_id_lbl")
     let nirs_systems_id_ipt = document.getElementById("id_nirs_systems_id")
     let probe_details_lbl = document.getElementById("probe_details_lbl")
@@ -148,6 +157,10 @@
     description_lbl.addEventListener("mouseleave", lbl_mouseleave)
     description_ipt.addEventListener("mouseenter", ipt_mouseenter)
     description_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    protocol_details_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    protocol_details_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    protocol_details_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    protocol_details_ipt.addEventListener("mouseleave", ipt_mouseleave)
     nirs_systems_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
     nirs_systems_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
     nirs_systems_id_ipt.addEventListener("mouseenter", ipt_mouseenter)

@@ -79,7 +79,7 @@ def medical_records_page(request):
         if request.method == 'POST':
             form_medical_records = Medical_RecordForm(request.POST)
             if form_medical_records.is_valid():
-                obj = Medical_Record().objects.all().order_by('-id')
+                obj = Medical_Record()
                 obj.subjects_id = form_medical_records.cleaned_data['subjects_id']
                 obj.HC_number = form_medical_records.cleaned_data['HC_number']
                 obj.diseases_id = form_medical_records.cleaned_data['diseases_id']
@@ -91,7 +91,7 @@ def medical_records_page(request):
                 print(cmds)
                 # cmd = Comorbidities.objects.filter(name__in=str(cmds))
                 obj.comorbidities_ids.set(cmds)
-                return HttpResponseRedirect('/medical_records')
+                return HttpResponseRedirect('recordcenter/subjects/medical_records/')
         else:
             form_medical_records = Medical_RecordForm()
         return render(request, "subjects_app/medical_record.html", {'form_medical_records': form_medical_records})

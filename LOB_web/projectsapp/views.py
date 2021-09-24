@@ -20,6 +20,7 @@ def projects_page(request):
                 obj.prin_investigator = form_projects.cleaned_data['prin_investigator']
                 obj.co_investigator = form_projects.cleaned_data['co_investigator']
                 obj.probe_details = form_projects.cleaned_data['probe_details']
+                obj.protocol_details = form_projects.cleaned_data['protocol_details']                
                 obj.nirs_systems_id = form_projects.cleaned_data['nirs_systems_id']
                 obj.aux_systems_id = form_projects.cleaned_data['aux_systems_id']
                 obj.project_file = form_projects.cleaned_data['project_file']
