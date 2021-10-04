@@ -33,11 +33,10 @@ urlpatterns = [
     path('appcenter/', include('appcenter.urls')),
     path('login/', login_page),
     path('logout/', logout_page, name='logout'),
+    url(r'^download/(?P<path>.*)$' ,serve, {'document_root':settings.MEDIA_ROOT}),
     path('', login_page),
-    url(r'^document/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns+=static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+    urlpatterns+=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

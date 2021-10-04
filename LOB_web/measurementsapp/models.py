@@ -21,7 +21,7 @@ class Measurements(models.Model):
     local = models.CharField(max_length=100, null=False)
     date = models.DateField(auto_now=False, null=False, blank=True)
     project_id = models.ForeignKey(Projects, on_delete=models.CASCADE)
-    file_name = models.FileField(upload_to='main_web/documents/Measurements/', blank =True, null=True)
+    file_name = models.FileField(upload_to='main_web/media/Measurements/', blank =True, null=True)
     incidents = models.CharField(max_length=20, null=False, choices= incidents_choices)
     observations = models.TextField(null=True, blank=True)
     FPIC_assignement = models.CharField(max_length=20, null=True, blank=True, choices= FPIC_assignement_choices)

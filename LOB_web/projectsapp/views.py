@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.http import HttpResponse
 from .forms import *
 from .models import *
-from django.views.generic import FormView
+
+
 
 
 def projects_page(request):
@@ -29,7 +30,7 @@ def projects_page(request):
                 obj.save()
                     #if se é paciente
                         #return HttpResponseRedirect('/medical_record')
-                return HttpResponseRedirect('/projects')
+                return HttpResponseRedirect('/appcenter/recordcenter/projects')
         else:
             form_projects = ProjectsForm
         return render(request, "projectsapp/projectsapp.html", {'form_projects': form_projects})
