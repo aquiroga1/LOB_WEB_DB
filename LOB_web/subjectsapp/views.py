@@ -116,12 +116,13 @@ def medical_record_datatable(request):
 
 def subjects_update(request, id):
   subject = Subjects.objects.get(id=id)
-  # print(subject)
+  print(subject)
 
   form_subjects = SubjectsForm(request.POST or None, instance=subject)
-  # print(form)
+  print(form_subjects)
 
   if form_subjects.is_valid():
+      print("Entrei")
       form_subjects.save()
       return redirect('/appcenter/datacenter/subjectsdt/')
   return render(request, "subjects_app/subjects_update.html", {'form_subjects': form_subjects, 'subject': subject})

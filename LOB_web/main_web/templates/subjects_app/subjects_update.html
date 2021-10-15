@@ -69,6 +69,7 @@
                                         <label id="skin_color_lbl"  class="input-group-text" for="id_skin_color">Skin color:</label>
                                     </div>
                                     <select class="custom-select" name="skin_color" id="id_skin_color">
+                                      <option hidden="true" disabled selected>{{form_subjects.skin_color.value}}</option>
                                       <option value="No-info">No info</option>
                                       <option value="Black">Black</option>
                                       <option value="White">White</option>
@@ -82,6 +83,7 @@
                                         <label id="handedness_lbl"  class="input-group-text" for="id_handedness">Handedness:</label>
                                     </div>
                                     <select class="custom-select" name="handedness" id="id_handedness">
+                                      <option hidden="true" disabled selected>{{form_subjects.handedness.value}}</option>
                                       <option value="No-info">No info</option>
                                       <option value="Left">Left</option>
                                       <option value="Right">Right</option>
@@ -93,6 +95,7 @@
                                         <label id="scholar_level_lbl"  for="id_scholar_level" class="input-group-text">Scholar level:</label>
                                     </div>
                                     <select class="custom-select" name="scholar_level" id="id_scholar_level">
+                                          <option hidden="true" disabled selected>{{form_subjects.scholar_level.value}}</option>
                                           <option value="No-info">No info</option>
                                           <option value="No-education">No education</option>
                                           <option value="Pre-school">Pre school</option>
@@ -126,7 +129,7 @@
                                     <textarea class="form-control" name="additional_info" cols="40" rows="10" maxlength="200" id="id_additional_info" style="margin-top: 0px; margin-bottom: 0px; height: 133px;">{{form_subjects.additional_info.value}}</textarea>
                                 </div>
 
-                    <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Update"></span>
+                    <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Submit"></span>
 
                 </form>
                 <br style="clear:both">
