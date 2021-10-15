@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Project Form{% endblock %}
+<link href="{% static 'css/subjects_app/subjects.css' %}" rel="stylesheet">
+
+{% block content %}
+<div class="container">
+    <div class="col-md-5">
+        <div id="formularios">
+            <form role="form" action="." method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                        <h3 style="margin-bottom: 25px;margin-top:5px text-align: center; color: white; font-size: 40px;">PROJECT</h3>
+
+                            <div class="input-group mb-3" data-tip="Type the Project Title">
+                                <div class="input-group-prepend">
+                                     <label id="title_lbl" class="input-group-text" for="id_title" class="input-group-text">Title:</label>
+                                </div>
+                                <input type="text" class="form-control" name="title" maxlength="100" required="" id="id_title" value="{{form_projects.title.value}}">
+                            </div>
+
+                            <div class="input-group mb-3" data-tip="Type the CAAE number">
+                                <div class="input-group-prepend">
+                                     <label id="CAAE_lbl" class="input-group-text" for="id_CAAE" class="input-group-text">CAAE:</label>
+                                </div>
+                                <input type="text" class="form-control" name="CAAE" maxlength="100" id="id_CAAE">
+                            </div>
+
+                            <div class="input-group mb-3" data-tip="Upload the FPIC file">
+                                <div class="input-group-prepend">
+                                    <label id="FPIC_file_lbl" class="input-group-text" for="id_FPIC_file">FPIC file:</label>
+                                </div>
+                                <input class="form-control" type="file" name="FPIC_file" id="id_FPIC_file">
+                            </div>
+                    
+                            <div class="input-group mb-3" data-tip="Type the Principal Researcher name">
+                                <div class="input-group-prepend">
+                                    <label id="prin_investigator_lbl" class="input-group-text" for="id_prin_investigator">Principal Researcher:</label>
+                                </div>
+                                <input class="form-control" type="text" name="prin_investigator" maxlength="100" required="" id="id_prin_investigator">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend" data-tip="Type the Co-researchers names">
+                                    <label id="co_investigator_lbl" class="input-group-text"  for="id_co_investigator">Co-researchers:</label>
+                                </div>
+                                <input class="form-control" type="text" name="co_investigator" maxlength="100" id="id_co_investigator">
+                            </div>
+
+<!--                class="input-group input-group-lg"-->
+                            <div class="input-group mb-3" data-tip="Type the project description">
+                                <div class="input-group-prepend">
+                                    <label id="description_lbl" class="input-group-text"  for="id_description">Description:</label>
+                                </div>
+                                <textarea class="form-control"  name="description" cols="40" rows="10" id="id_description"></textarea>
+                            </div>
+        
+                            <div class="input-group mb-3" data-tip="Choose the NIRS system ID">
+                                <div class="input-group-prepend">
+                                    <label id="nirs_systems_id_lbl" class="input-group-text" for="id_nirs_systems_id">NIRS system:</label>
+                                </div>
+                                <div class="custom-select" name="nirs_systems_id" id="id_nirs_systems_id">
+                                        {{ form_projects.nirs_systems_id }}
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3" data-tip="Type Probe Details">
+                                <div class="input-group-prepend">
+                                    <label id="probe_details_lbl" class="input-group-text" for="id_probe_details">Probe Details:</label>
+                                </div>
+                                <textarea class="form-control"  name="probe_details" cols="40" rows="4" id="id_probe_details"></textarea>
+                            </div>
+
+                            <div class="input-group mb-3"data-tip="Choose the Aux system ID">
+                                <div class="input-group-prepend">
+                                    <label id="aux_systems_id_lbl" class="input-group-text" for="id_aux_systems_id">AUX system:</label>
+                                </div>
+                                <div class="custom-select" name="aux_systems_id" id="id_aux_systems_id">
+                                      {{ form_projects.aux_systems_id }}
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3" data-tip="Upload the Project File">
+                                <div class="input-group-prepend">
+                                    <label id="project_file_lbl" class="input-group-text" for="id_project_file">Project File:</label>
+                                </div>
+                                <input class="form-control" type="file" name="project_file" id="id_project_file">
+                            </div>
+
+                            <span>
+
+                                <input style="width:fit-content; text-align:center;  display: inline; float:right; font-family: Arial" type="submit" value="Submit"/></span>
+    
+                                <a class=" mb-sm-2 btn btn-sm float-left responsive-width " style="width:fit-content; text-align:center;  display: inline-block; font-family: Arial ;font-size: 14px; text-transform: uppercase; font-weight: bold; background-color: #ffbb33; color: black; padding: 5px 10px; height: 30px;" href="{% url 'projects_datatable' %}" type="button">
+                                    <span>
+                                        Database
+                                    </span>
+                                </a>
+
+            </form>
+            <br style="clear:both">
+        </div>
+    </div>
+</div>
+
+<script>
+
+    let title_lbl = document.getElementById("title_lbl")
+    let title_ipt = document.getElementById("id_title")
+    let CAAE_lbl = document.getElementById("CAAE_lbl")
+    let CAAE_ipt = document.getElementById("id_CAAE")
+    let FPIC_file_lbl = document.getElementById("FPIC_file_lbl")
+    let FPIC_file_ipt = document.getElementById("id_FPIC_file")
+    let prin_investigator_lbl = document.getElementById("prin_investigator_lbl")
+    let prin_investigator_ipt = document.getElementById("id_prin_investigator")
+    let co_investigator_lbl = document.getElementById("co_investigator_lbl")
+    let co_investigator_ipt = document.getElementById("id_co_investigator")
+    let description_lbl = document.getElementById("description_lbl")
+    let description_ipt = document.getElementById("id_description")
+    let nirs_systems_id_lbl = document.getElementById("nirs_systems_id_lbl")
+    let nirs_systems_id_ipt = document.getElementById("id_nirs_systems_id")
+    let probe_details_lbl = document.getElementById("probe_details_lbl")
+    let probe_details_ipt = document.getElementById("id_probe_details")
+    let aux_systems_id_lbl = document.getElementById("aux_systems_id_lbl")
+    let aux_systems_id_ipt = document.getElementById("id_aux_systems_id")
+    let project_file_lbl = document.getElementById("project_file_lbl")
+    let project_file_ipt = document.getElementById("id_project_file")
+
+    title_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    title_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    title_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    title_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    CAAE_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    CAAE_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    CAAE_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    CAAE_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    FPIC_file_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    FPIC_file_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    FPIC_file_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    FPIC_file_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    prin_investigator_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    prin_investigator_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    prin_investigator_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    prin_investigator_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    co_investigator_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    co_investigator_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    co_investigator_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    co_investigator_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    description_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    description_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    description_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    description_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    nirs_systems_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    nirs_systems_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    nirs_systems_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    nirs_systems_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    probe_details_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    probe_details_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    probe_details_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    probe_details_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    aux_systems_id_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    aux_systems_id_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    aux_systems_id_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    aux_systems_id_ipt.addEventListener("mouseleave", ipt_mouseleave)
+    project_file_lbl.addEventListener("mouseenter", lbl_mouseenter)
+    project_file_lbl.addEventListener("mouseleave", lbl_mouseleave)
+    project_file_ipt.addEventListener("mouseenter", ipt_mouseenter)
+    project_file_ipt.addEventListener("mouseleave", ipt_mouseleave)
+
+    function lbl_mouseenter(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#ffbb33'
+        lbl.style.borderColor = '#ffbb33'
+        lbl.style.borderWidth = "thin"
+        lbl.style.color= 'black'
+        lbl.style.fontWeight= 'bold'
+    }
+
+    function lbl_mouseleave(event) {
+        var lbl = document.getElementById(event.target.id)
+        lbl.style.background = '#E9EcEF'
+        lbl.style.borderColor = '#E9EcEF'
+        lbl.style.color='#495057'
+        lbl.style.fontWeight= 'normal'
+    }
+
+    function ipt_mouseenter(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor = '#ffbb33'
+        ipt.style.borderWidth = "medium"
+    }
+
+    function ipt_mouseleave(event) {
+        var ipt = document.getElementById(event.target.id)
+        ipt.style.borderColor  = '#E9EcEF'
+        ipt.style.borderWidth = "initial"
+    }
+
+</script>
+{% endblock %}

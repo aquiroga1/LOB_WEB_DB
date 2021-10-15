@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e49bcfdc-7aae-4fc3-8ba5-50e12f677b5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appcenter/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appcenter/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subjectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/subjectsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurement_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurements_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/measurementsapp/measurements_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/projectsapp/projects_datatable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects-medical_record.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_web/templates/subjects_app/subjects_update2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/measurementsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/measurementsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projectsapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +45,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="migrations" />
+        <entry key="$PROJECT_DIR$/.." value="projectsupdate" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />

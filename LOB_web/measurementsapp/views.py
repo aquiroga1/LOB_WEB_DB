@@ -41,3 +41,22 @@ def measurement_datatable(request):
     context['measurement_data'] = measurement_data
     return render(request, "measurementsapp/measurement_datatable.html", context)
 
+def measurements_update(request, id):
+  measurement = Measurements.objects.get(id=id)
+
+  form_measurements = MeasurementsForm(request.POST or None, instance=measurement)
+
+  if form_measurements.is_valid():
+      form_measurements.save()
+      return redirect('/appcenter/datacenter/measurementsdt/')
+  return render(request, "measurementsapp/measurements_update.html", {'form_measurements': form_measurements, 'measurement': measurement})
+
+
+def measurements_delete(request, id):
+  measurement = Measurements.objects.get(id=id)
+
+  if request.method == 'POST':
+      measurement.delete()
+      return redirect('/appcenter/datacenter/measurementsdt/')
+
+  return render(request, "measurementsapp/measurements_delete.html", {'measurement': measurement})

@@ -23,14 +23,14 @@
                                 <div class="input-group-prepend">
                                     <label id="local_lbl" class="input-group-text" for="id_local">Local:</label>
                                 </div>
-                                <input class="form-control" type="text" name="local" maxlength="100" required="" id="id_local">
+                                <input class="form-control" type="text" name="local" maxlength="100" required="" id="id_local" value="{{form_measurements.local.value}}">
                             </div>
 
                             <div class="input-group mb-3" data-tip="Insert the date of measurements">
                                 <div class="input-group-prepend">
                                     <label id="date_lbl" class="input-group-text" for="id_date">Date:</label>
                                 </div>
-                                <input class="form-control" type="date" name="date" id="id_date">
+                                <input class="form-control" type="date" name="date" id="id_date" value="{{form_measurements.date.value | date:'c'}}">
                             </div>
 
                             <div class="input-group mb-3" data-tip="Choose the Project ID">
@@ -59,7 +59,7 @@
                                 <div class="input-group-prepend">
                                     <label id="file_name_lbl" class="input-group-text" for="id_file_name">Data File:</label>
                                 </div>
-                                <input class="form-control" type="file" name="file_name" id="id_file_name">
+                                <input class="form-control" type="file" name="file_name" id="id_file_name" value="{{form_measurements.file_name.value}}">
                             </div>
 
                             <div class="input-group mb-3" data-tip="Choose the incidents status">
@@ -79,7 +79,7 @@
                                 <div class="input-group-prepend">
                                     <label id="observations_lbl" class="input-group-text" for="id_observations">Observations:</label>
                                 </div>
-                                <textarea  class="form-control" name="observations" cols="40" rows="10" id="id_observations"></textarea>
+                                <textarea  class="form-control" name="observations" cols="40" rows="10" id="id_observations">{{form_measurements.observations.value}}</textarea>
                             </div>
 
                             <span style="width:90%; text-align:right;  display: inline-block;"><input type="submit" value="Update"></span>
