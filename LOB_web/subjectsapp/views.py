@@ -136,3 +136,24 @@ def subjects_delete(request, id):
 
   return render(request, "subjects_app/subjects_delete.html", {'subject': subject})
 
+def medical_record_update(request, id):
+  medical_record = Medical_Record.objects.get(id=id)
+  # print(subject)
+
+  form_medical_records = Medical_RecordForm(request.POST or None, instance=medical_record)
+  # print(form)
+
+  if form_medical_records.is_valid():
+      form_medical_records.save()
+      return redirect('/appcenter/datacenter/medicaldt/')
+  return render(request, "subjects_app/medical_record_update.html", {'form_medical_records': form_medical_records, 'medical_record': medical_record})
+
+
+def medical_record_delete(request, id):
+  medical_record = Medical_Record.objects.get(id=id)
+
+  if request.method == 'POST':
+      medical_record.delete()
+      return redirect('/appcenter/datacenter/medicaldt/')
+
+  return render(request, "subjects_app/medical_record_delete.html", {'medical_record': medical_record})

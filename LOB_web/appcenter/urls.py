@@ -22,5 +22,8 @@ urlpatterns = [
     path('datacenter/projectsdt/projects_delete/<int:id>/', projects_delete, name='projects_delete'),
     path('datacenter/measurementsdt/measurements_update/<int:id>/', measurements_update, name='measurements_update'),
     path('datacenter/measurementsdt/measurements_delete/<int:id>/', measurements_delete, name='measurements_delete'),
+    path('datacenter/medicaldt/medical_record_update/<int:id>/', medical_record_update, name='medical_record_update'),
+    path('datacenter/medicaldt/medical_record_delete/<int:id>/', medical_record_delete, name='medical_record_delete'),
+
 ]
 
