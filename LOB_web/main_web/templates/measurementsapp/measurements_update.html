@@ -47,11 +47,17 @@
                                     <label id="FPIC_assignement_lbl" class="input-group-text" for="id_FPIC_assignement">Signed FPIC:</label>
                                 </div>
                                     <select class="custom-select" name="FPIC_assignement" id="id_FPIC_assignement">
+                                    {% if form_measurements.FPIC_assignement.value == "Yes" %}
+                                        <option value="Yes" selected>Yes</option>
+                                    {% else %}
+                                        <option value="Yes">Yes</option>
+                                    {% endif %}
 
-                                      <option value="Yes">Yes</option>
-
-                                      <option value="No">No</option>
-
+                                    {% if form_measurements.FPIC_assignement.value == "No" %}
+                                        <option value="No" selected>No</option>
+                                    {% else %}
+                                        <option value="No">No</option>
+                                    {% endif %}
                                     </select>
                             </div>
 
@@ -67,10 +73,17 @@
                                     <label id="incidents_lbl" class="input-group-text" for="id_incidents">Incidents:</label>
                                 </div>
                                 <select class="custom-select" name="incidents" required="" id="id_incidents">
+                                {% if form_measurements.incidents.value == "Yes" %}
+                                    <option value="Yes" selected>Yes</option>
+                                {% else %}
+                                    <option value="Yes">Yes</option>
+                                {% endif %}
 
-                                  <option value="Yes">Yes</option>
-
-                                  <option value="No">No</option>
+                                {% if form_measurements.incidents.value == "No" %}
+                                    <option value="No" selected>No</option>
+                                {% else %}
+                                    <option value="No">No</option>
+                                {% endif %}
                                 </select>
                             </div>
 

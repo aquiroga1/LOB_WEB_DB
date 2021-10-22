@@ -26,8 +26,17 @@
                                         <label id="condition_lbl" class="input-group-text" for="id_condition">Condition:</label>
                                     </div>
                                     <select  class="custom-select" name="condition" required="" id="id_condition">
-                                      <option value="Patient">Patient</option>
-                                      <option value="Healthy">Healthy</option>
+                                        {% if form_subjects.condition.value == "Patient" %}
+                                            <option value="Patient" selected>Patient</option>
+                                        {% else %}
+                                            <option value="Patient" >Patient</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.condition.value == "Healthy" %}
+                                            <option value="Healthy" selected>Healthy</option>
+                                        {% else %}
+                                            <option value="Healthy" >Healthy</option>
+                                        {% endif %}
                                     </select>
                                 </div>
 
@@ -43,8 +52,17 @@
                                         <label id="gender_lbl" class="input-group-text" for="id_gender">Gender:</label>
                                     </div>
                                     <select class="custom-select" name="gender" required="" id="id_gender">
-                                      <option value="Female">Female</option>
-                                      <option value="Male">Male</option>
+                                        {% if form_subjects.gender.value == "Female" %}
+                                            <option value="Female" selected>Female</option>
+                                        {% else %}
+                                            <option value="Female" >Female</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.gender.value == "Male" %}
+                                            <option value="Male" selected>Male</option>
+                                        {% else %}
+                                            <option value="Male" >Male</option>
+                                        {% endif %}
                                     </select>
                                 </div>
 
@@ -67,11 +85,35 @@
                                         <label id="skin_color_lbl"  class="input-group-text" for="id_skin_color">Skin color:</label>
                                     </div>
                                     <select class="custom-select" name="skin_color" id="id_skin_color">
-                                      <option value="No-info">No info</option>
-                                      <option value="Black">Black</option>
-                                      <option value="White">White</option>
-                                      <option value="Yellow">Yellow</option>
-                                      <option value="Brown">Brown</option>
+                                        {% if form_subjects.skin_color.value == "No-info" %}
+                                            <option value="No-info" selected>No info</option>
+                                        {% else %}
+                                            <option value="No-info">No info</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.skin_color.value == "Black" %}
+                                            <option value="Black" selected>Black</option>
+                                        {% else %}
+                                            <option value="Black">Black</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.skin_color.value == "White" %}
+                                            <option value="White" selected>White</option>
+                                        {% else %}
+                                            <option value="White">White</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.skin_color.value == "Yellow" %}
+                                            <option value="Yellow" selected>Yellow</option>
+                                        {% else %}
+                                            <option value="Yellow">Yellow</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.skin_color.value == "Brown" %}
+                                            <option value="Brown" selected>Brown</option>
+                                        {% else %}
+                                            <option value="Brown">Brown</option>
+                                        {% endif %}
                                     </select>
                                 </div>
 
@@ -80,9 +122,23 @@
                                         <label id="handedness_lbl"  class="input-group-text" for="id_handedness">Handedness:</label>
                                     </div>
                                     <select class="custom-select" name="handedness" id="id_handedness">
-                                      <option value="No-info">No info</option>
-                                      <option value="Left">Left</option>
-                                      <option value="Right">Right</option>
+                                        {% if form_subjects.handedness.value == "No-info" %}
+                                            <option value="No-info" selected>No info</option>
+                                        {% else %}
+                                            <option value="No-info">No info</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.handedness.value == "Left" %}
+                                            <option value="Left" selected>Left</option>
+                                        {% else %}  
+                                            <option value="Left">Left</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.handedness.value == "Right" %}
+                                            <option value="Right" selected>Right</option>
+                                        {% else %}
+                                            <option value="Right">Right</option>
+                                        {% endif %}
                                     </select>
                                 </div>
 
@@ -91,15 +147,59 @@
                                         <label id="scholar_level_lbl"  for="id_scholar_level" class="input-group-text">Scholar level:</label>
                                     </div>
                                     <select class="custom-select" name="scholar_level" id="id_scholar_level">
-                                          <option value="No-info">No info</option>
-                                          <option value="No-education">No education</option>
-                                          <option value="Pre-school">Pre school</option>
-                                          <option value="Elementary-school">Elementary school</option>
-                                          <option value="Middle-school">Middle school</option>
-                                          <option value="High-school">High school</option>
-                                          <option value="Technical">Technical</option>
-                                          <option value="Graduate">Graduate</option>
-                                          <option value="Post-Graduate">Post-Graduate</option>
+                                        {% if form_subjects.scholar_level.value == "No-info" %}
+                                            <option value="No-info" selected>No info</option>
+                                        {% else %}
+                                            <option value="No-info">No info</option>
+                                        {% endif %}
+                                        
+                                        {% if form_subjects.scholar_level.value == "No-education" %}
+                                            <option value="No-education" selected>No education</option>
+                                        {% else %}
+                                            <option value="No-education">No education</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.scholar_level.value == "Pre-school" %}
+                                            <option value="Pre-school" selected>Pre school</option>
+                                        {% else %}
+                                            <option value="Pre-school">Pre school</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.scholar_level.value == "Elementary-school" %}
+                                            <option value="Elementary-school" selected>Elementary school</option>
+                                        {% else %}
+                                            <option value="Elementary-school">Elementary school</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.scholar_level.value == "Middle-school" %}
+                                            <option value="Middle-school" selected>Middle school</option>
+                                        {% else %}
+                                            <option value="Middle-school">Middle school</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.scholar_level.value == "High-school" %}
+                                            <option value="High-school" selected>High school</option>
+                                        {% else %}
+                                            <option value="High-school">High school</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.scholar_level.value == "Technical" %}
+                                            <option value="Technical" selected>Technical</option>
+                                        {% else %}
+                                            <option value="Technical" >Technical</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.scholar_level.value == "Graduate" %}
+                                            <option value="Graduate" selected>Graduate</option>
+                                        {% else %}
+                                            <option value="Graduate">Graduate</option>
+                                        {% endif %}
+
+                                        {% if form_subjects.scholar_level.value == "Post-Graduate" %} 
+                                            <option value="Post-Graduate" selected>Post-Graduate</option>
+                                        {% else %}
+                                            <option value="Post-Graduate">Post-Graduate</option>
+                                        {% endif %}
                                     </select>
                                 </div>
 
