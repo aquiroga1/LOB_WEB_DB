@@ -22,28 +22,28 @@
                                 <div class="input-group-prepend">
                                      <label id="CAAE_lbl" class="input-group-text" for="id_CAAE" class="input-group-text">CAAE:</label>
                                 </div>
-                                <input type="text" class="form-control" name="CAAE" maxlength="100" id="id_CAAE">
+                                <input type="text" class="form-control" name="CAAE" maxlength="100" id="id_CAAE" value="{{form_projects.CAAE.value}}">
                             </div>
 
                             <div class="input-group mb-3" data-tip="Upload the FPIC file">
                                 <div class="input-group-prepend">
                                     <label id="FPIC_file_lbl" class="input-group-text" for="id_FPIC_file">FPIC file:</label>
                                 </div>
-                                <input class="form-control" type="file" name="FPIC_file" id="id_FPIC_file">
+                                <input class="form-control" type="file" name="FPIC_file" id="id_FPIC_file" value="{{form_projects.FPIC_file.value}}">
                             </div>
                     
                             <div class="input-group mb-3" data-tip="Type the Principal Researcher name">
                                 <div class="input-group-prepend">
                                     <label id="prin_investigator_lbl" class="input-group-text" for="id_prin_investigator">Principal Researcher:</label>
                                 </div>
-                                <input class="form-control" type="text" name="prin_investigator" maxlength="100" required="" id="id_prin_investigator">
+                                <input class="form-control" type="text" name="prin_investigator" maxlength="100" required="" id="id_prin_investigator" value="{{form_projects.prin_investigator.value}}">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend" data-tip="Type the Co-researchers names">
                                     <label id="co_investigator_lbl" class="input-group-text"  for="id_co_investigator">Co-researchers:</label>
                                 </div>
-                                <input class="form-control" type="text" name="co_investigator" maxlength="100" id="id_co_investigator">
+                                <input class="form-control" type="text" name="co_investigator" maxlength="100" id="id_co_investigator" value="{{form_projects.co_investigator.value}}">
                             </div>
 
 <!--                class="input-group input-group-lg"-->
@@ -51,7 +51,7 @@
                                 <div class="input-group-prepend">
                                     <label id="description_lbl" class="input-group-text"  for="id_description">Description:</label>
                                 </div>
-                                <textarea class="form-control"  name="description" cols="40" rows="10" id="id_description"></textarea>
+                                <textarea class="form-control"  name="description" cols="40" rows="10" id="id_description">{{form_projects.description.value}}</textarea>
                             </div>
         
                             <div class="input-group mb-3" data-tip="Choose the NIRS system ID">
@@ -67,7 +67,7 @@
                                 <div class="input-group-prepend">
                                     <label id="probe_details_lbl" class="input-group-text" for="id_probe_details">Probe Details:</label>
                                 </div>
-                                <textarea class="form-control"  name="probe_details" cols="40" rows="4" id="id_probe_details"></textarea>
+                                <textarea class="form-control"  name="probe_details" cols="40" rows="4" id="id_probe_details">{{form_projects.probe_details.value}}</textarea>
                             </div>
 
                             <div class="input-group mb-3"data-tip="Choose the Aux system ID">
@@ -83,7 +83,7 @@
                                 <div class="input-group-prepend">
                                     <label id="project_file_lbl" class="input-group-text" for="id_project_file">Project File:</label>
                                 </div>
-                                <input class="form-control" type="file" name="project_file" id="id_project_file">
+                                <input class="form-control" type="file" name="project_file" id="id_project_file" value="{{form_projects.project_file.value}}">
                             </div>
 
                             <span>
