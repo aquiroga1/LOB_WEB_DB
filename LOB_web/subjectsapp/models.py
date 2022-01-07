@@ -13,7 +13,7 @@ class Subjects(models.Model):
     ]
     skin_color_choices = [
         ("Black", "Black"),
-        ("Black", "White"),
+        ("White", "White"),
         ("Yellow", "Yellow"),
         ("Brown", "Brown"),
         ("No-info", "No info"),
